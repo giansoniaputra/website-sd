@@ -98,16 +98,21 @@ class AuthController extends Controller
         $request->validate($rules);
 
         $user->fill($request->all());
-        if ($request->password != null) {
+        if ($request->password != null||$request->password != '') {
             $user->password =  Hash::make($request->password);
+        } else {
+            $user2 = User::where('uuid', $uuid)->first();
+            $user->password = $user2->password;
         }
+
         $user->save();
-        return view('/auth/register')->with('message', 'Data User Berhasil Diubah');
+        return redirect('/auth/register')->with('message', 'Data User Berhasil Diubah');
     }
 
-    public function delete(User $user)
+    public function delete($uuid)
     {
+        $user = User::where('uuid', $uuid)->first();
         User::destroy($user->id);
-        return view('/auth/register')->with('message', 'Data User Berhasil Dihapus');
+        return redirect('/auth/register')->with('message', 'Data User Berhasil Dihapus');
     }
 }

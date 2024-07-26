@@ -164,7 +164,7 @@
             <div class="content">
 
                 <!-- Start Content-->
-                <div class="container-fluid">
+                <div class="container-fluid pt-2">
                     @yield('container')
                 </div>
                 <!-- container -->
