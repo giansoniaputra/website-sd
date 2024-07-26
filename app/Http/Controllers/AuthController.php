@@ -48,7 +48,7 @@ class AuthController extends Controller
     public function register()
     {
         // MENUJU HALAMAN REGISTER
-        return view('auth.register');
+        return view('auth.register', ['users' => User::all()]);
     }
     // REGISTRASI USER
     public function store(Request $request)
@@ -65,6 +65,12 @@ class AuthController extends Controller
         $user->uuid = Str::orderedUuid();
         $user->save();
         return redirect('/auth/register')->with('message', 'Registrasi Berhasil');
+    }
+
+    public function edit($uuid)
+    {
+        $user = User::where('uuid', $uuid)->first();
+        return view('auth.edit', ['user' => $user]);
     }
     // UPDATE DATA USER
     public function update(Request $request, $uuid)

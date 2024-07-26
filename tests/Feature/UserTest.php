@@ -180,4 +180,24 @@ class UserTest extends TestCase
         $response->assertStatus(200);
         $response->assertViewHas('message', 'Data User Berhasil Dihapus');
     }
+
+    public function testView()
+    {
+        // TEST VIEW REGISTER
+        $user = User::create([
+            'uuid' => '12345',
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('admin'),
+            'role' => 'ADMIN',
+        ]);
+        $this->actingAs($user)->get('/auth/register')
+            ->assertStatus(200)
+            ->assertViewIs('auth.register');
+
+        // TEST VIEW EDIT USER
+        $this->actingAs($user)->get('/auth/edit/' . $user->uuid)
+            ->assertStatus(200)
+            ->assertViewIs('auth.edit');
+    }
 }
