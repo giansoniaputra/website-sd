@@ -50,6 +50,11 @@ class AuthController extends Controller
         // MENUJU HALAMAN REGISTER
         return view('auth.register', ['users' => User::all()]);
     }
+
+    public function create()
+    {
+        return view('auth.create');
+    }
     // REGISTRASI USER
     public function store(Request $request)
     {

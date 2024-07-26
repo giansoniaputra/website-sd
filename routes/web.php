@@ -30,6 +30,8 @@ Route::middleware(['auth'])->group(function () {
     });
     //ROUTE VIEW REGISTER
     Route::get('/auth/register', [AuthController::class, 'register']);
+    //ROUTE VIEW CREATE
+    Route::get('/auth/create', [AuthController::class, 'create']);
     // ROUTE SIMPAN USER BARU
     Route::post('/auth', [AuthController::class, 'store']);
     // ROUTE VIEW EDIT USER

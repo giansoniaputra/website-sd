@@ -33,6 +33,13 @@
                     <span> Dashboard </span>
                 </a>
             </li>
+            <li class="side-nav-item">
+                <a href="/auth/register" class="side-nav-link">
+                    <i class="ri-dashboard-3-line"></i>
+                    <span class="badge bg-success float-end"></span>
+                    <span> Register </span>
+                </a>
+            </li>
         </ul>
         <!--- End Sidemenu -->
 
