@@ -34,6 +34,69 @@
                 </a>
             </li>
             <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="ri-dashboard-3-line"></i>
+                    <span class="badge bg-success float-end"></span>
+                    <span> Profil Yayasan </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="ri-dashboard-3-line"></i>
+                    <span class="badge bg-success float-end"></span>
+                    <span> Profil Sekolah </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="ri-dashboard-3-line"></i>
+                    <span class="badge bg-success float-end"></span>
+                    <span> Wakasek </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="ri-dashboard-3-line"></i>
+                    <span class="badge bg-success float-end"></span>
+                    <span> Guru & Staff </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="ri-dashboard-3-line"></i>
+                    <span class="badge bg-success float-end"></span>
+                    <span> PPDB </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="ri-dashboard-3-line"></i>
+                    <span class="badge bg-success float-end"></span>
+                    <span> Layanan </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="ri-dashboard-3-line"></i>
+                    <span class="badge bg-success float-end"></span>
+                    <span> Data Siswa </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="ri-dashboard-3-line"></i>
+                    <span class="badge bg-success float-end"></span>
+                    <span> Berita </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="ri-dashboard-3-line"></i>
+                    <span class="badge bg-success float-end"></span>
+                    <span> Galeri </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
                 <a href="/auth/register" class="side-nav-link">
                     <i class="ri-dashboard-3-line"></i>
                     <span class="badge bg-success float-end"></span>
