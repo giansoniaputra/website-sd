@@ -12,14 +12,22 @@ class ProfileController extends Controller
      */
     public function index_yayasan()
     {
-        $data = Profile::where('type', 'yayasan')->get();
-        return view('profil.yayasan.index', ['data' =>  $data]);
+        $data = Profile::where('type', 'yayasan')->first();
+        if ($data) {
+            return view('profil.yayasan.index', ['data' =>  $data]);
+        } else {
+            return view('profil.yayasan.index');
+        }
     }
 
     public function index_sekolah()
     {
-        $data = Profile::where('type', 'sekolah')->get();
-        return view('profil.sekolah.index', ['data' =>  $data]);
+        $data = Profile::where('type', 'sekolah')->first();
+        if ($data) {
+            return view('profil.sekolah.index', ['data' =>  $data]);
+        } else {
+            return view('profil.sekolah.index');
+        }
     }
     /**
      * Show the form for creating a new resource.
