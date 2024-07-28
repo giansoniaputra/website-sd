@@ -42,8 +42,8 @@
     <script src="/assets/sweetalert2.all.min.js"></script>
 
      {{-- Trix --}}
-     <link rel="stylesheet" type="text/css" href="/css/trix.css">
-    <script type="text/javascript" src="/js/trix.umd.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="/assets/css/trix.css">
+    <script type="text/javascript" src="/assets/js/trix.umd.min.js"></script>
 </head>
 
 <body>

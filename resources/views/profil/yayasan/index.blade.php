@@ -1,7 +1,7 @@
 @extends('layout.main')
 @section('container')
 <div class="card-header">
-    <a href="/auth/create" class="btn btn-primary">Tambah Data</a>
+    <a href="/profil/yayasan/create" class="btn btn-primary">Tambah Data</a>
 </div>
 
 {{-- VISI --}}
@@ -11,8 +11,7 @@
         <div class="card-header">
             <h4 class="header-title">Visi</h4>
             <p class="text-muted mb-0">
-                sdsadsadadsadsa
-               {{-- Isi Visi --}}
+                {!!(isset($data))? $data->visi: ""!!}
             </p>
         </div>
     </div>
@@ -24,8 +23,7 @@
         <div class="card-header">
             <h4 class="header-title">Misi</h4>
             <p class="text-muted mb-0">
-                sdsadsadadsadsa
-               {{-- Isi Visi --}}
+                {!!(isset($data))? $data->misi: ""!!}
             </p>
         </div>
     </div>
@@ -37,8 +35,7 @@
         <div class="card-header">
             <h4 class="header-title">Sejarah</h4>
             <p class="text-muted mb-0">
-                sdsadsadadsadsa
-               {{-- Isi Visi --}}
+                {!!(isset($data))? $data->sejarah: ""!!}
             </p>
         </div>
     </div>
