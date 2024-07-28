@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,4 +43,12 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/auth/delete/{uuid}', [AuthController::class, 'delete']);
     // ROUTE LOGOUT USER
     Route::get('/auth/logout', [AuthController::class, 'logout']);
+    // ROUTE TAMPILAN YAYASAN
+    Route::get('/profil/yayasan', [ProfileController::class, 'index_yayasan']);
+    // ROUTE TAMPILAN SEKOLAH
+    Route::get('/profil/sekolah', [ProfileController::class, 'index_sekolah']);
+    // ROUTE TAMPILAN CREATE/EDIT SEKOLAH
+    Route::get('/profil/sekolah/create', [ProfileController::class, 'create_sekolah']);
+    // ROUTE TAMPILAN CREATE/EDIT YAYASAN
+    Route::get('/profil/yayasan/create', [ProfileController::class, 'create_yayasan']);
 });
