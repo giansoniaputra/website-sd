@@ -128,8 +128,9 @@ class UserTest extends TestCase
         $this->assertEquals('Gian Sonia', $user->name);
         $this->assertEquals('giansonia555@gmail.com', $user->email);
         $this->assertTrue(Hash::check('newpassword', $user->password));
-        $response->assertStatus(200);
-        $response->assertViewHas('message', 'Data User Berhasil Diubah');
+        $response->assertStatus(302);
+        $response->assertRedirect('/auth/register');
+        $response->assertSessionHas('message', 'Data User Berhasil Diubah');
         // TEST UPDATE SEMUA VALUE KOSONG
         $response = $this->actingAs($user)->put('/auth/update/12345', [
             'name' => '',
@@ -177,8 +178,9 @@ class UserTest extends TestCase
         ]);
 
         $response = $this->actingAs($user)->delete('/auth/delete/123456');
-        $response->assertStatus(200);
-        $response->assertViewHas('message', 'Data User Berhasil Dihapus');
+        $response->assertStatus(302);
+        $response->assertRedirect('/auth/register');
+        $response->assertSessionHas('message', 'Data User Berhasil Dihapus');
     }
 
     public function testView()

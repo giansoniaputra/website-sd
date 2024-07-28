@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Profile;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -58,6 +59,15 @@ class ProfileController extends Controller
     {
         $cekData = Profile::where("type", $request->type)->first();
         if (!$cekData) {
+            $profil = new Profile($request->all());
+            $profil->uuid = Str::orderedUuid();
+            $profil->save();
+
+            return redirect('/profil/' . $request->type . '/index')->with('message', 'Profile Berhasil Dibuat!');
+        } else {
+            $cekData->fill($request->all());
+            $cekData->save();
+            return redirect('/profil/' . $request->type . '/index')->with('message', 'Profile Berhasil Diubah!');
         }
     }
 

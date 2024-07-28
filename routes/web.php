@@ -51,4 +51,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profil/sekolah/create', [ProfileController::class, 'create_sekolah']);
     // ROUTE TAMPILAN CREATE/EDIT YAYASAN
     Route::get('/profil/yayasan/create', [ProfileController::class, 'create_yayasan']);
+    // ROUTE SINPAN PROFIL
+    Route::post('/profil/store', [ProfileController::class, 'store']);
 });
