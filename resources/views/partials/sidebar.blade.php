@@ -41,7 +41,8 @@
                 </a>
             </li> --}}
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarYayasan" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarYayasan" aria-expanded="false" aria-controls="sidebarPages"
+                    class="side-nav-link">
                     <i class="ri-pages-line"></i>
                     <span> Yayasan </span>
                     <span class="menu-arrow"></span>
@@ -58,7 +59,8 @@
                 </div>
             </li>
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarSekolah" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarSekolah" aria-expanded="false" aria-controls="sidebarPages"
+                    class="side-nav-link">
                     <i class="ri-pages-line"></i>
                     <span> Sekolah </span>
                     <span class="menu-arrow"></span>
@@ -75,12 +77,24 @@
                 </div>
             </li>
             <li class="side-nav-item">
-                <a href="#" class="side-nav-link">
-                    <i class="ri-dashboard-3-line"></i>
-                    <span class="badge bg-success float-end"></span>
+                <a data-bs-toggle="collapse" href="#sidebarWakasek" aria-expanded="false" aria-controls="sidebarWakasek"
+                    class="side-nav-link">
+                    <i class="ri-pages-line"></i>
                     <span> Wakasek </span>
+                    <span class="menu-arrow"></span>
                 </a>
+                <div class="collapse" id="sidebarWakasek">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="/sarana">Sarana</a>
+                        </li>
+                        <li>
+                            <a href="#">Pengurus</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
+
             <li class="side-nav-item">
                 <a href="#" class="side-nav-link">
                     <i class="ri-dashboard-3-line"></i>

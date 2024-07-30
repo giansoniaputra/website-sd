@@ -41,8 +41,8 @@
     <link rel="stylesheet" href="/assets/sweetalert2.min.css">
     <script src="/assets/sweetalert2.all.min.js"></script>
 
-     {{-- Trix --}}
-     <link rel="stylesheet" type="text/css" href="/assets/css/trix.css">
+    {{-- Trix --}}
+    <link rel="stylesheet" type="text/css" href="/assets/css/trix.css">
     <script type="text/javascript" src="/assets/js/trix.umd.min.js"></script>
 </head>
 
