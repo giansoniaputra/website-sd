@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SaranaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\InformasiUmumController;
 
@@ -54,12 +55,28 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profil/yayasan/create', [ProfileController::class, 'create_yayasan']);
     // ROUTE SINPAN PROFIL
     Route::post('/profil/store', [ProfileController::class, 'store']);
-    // ROUTE TAMPILAN INFORMASI UMUM
+    // ROUTE TAMPILAN INFORMASI UMUM------------------------------------------------------------------------------
     Route::get('/informasi-umum', [InformasiUmumController::class, 'index']);
+    // ROUTE TAMBAH DATA INFORMASI UMUM
+    Route::post('/informasi-umum/create', [InformasiUmumController::class, 'create']);
     // ROUTE SIMPAN INFORMASI UMUM
     Route::post('/informasi-umum/store', [InformasiUmumController::class, 'store']);
+    // ROUTE EDIT DATA INFORMASI UMUM
+    Route::get('/informasi-umum/{informasiUmum:uuid}/edit', [InformasiUmumController::class, 'edit']);
     // ROUTE UPDATE INFORMASI UMUM
     Route::put('/informasi-umum/{informasiUmum:uuid}', [InformasiUmumController::class, 'update']);
     // ROUTE HAPUS INFORMASI UMUM
     Route::delete('/informasi-umum/{informasiUmum:uuid}', [InformasiUmumController::class, 'destroy']);
+    // ROUTE TAMPILAN SARANA--------------------------------------------------------------------------------------
+    Route::get('/sarana', [SaranaController::class, 'index']);
+    // ROUTE TAMPILAN TAMBAH SARANA
+    Route::get('/sarana/create', [SaranaController::class, 'create']);
+    // ROUTE SIMPAN SARANA
+    Route::post('/sarana/store', [SaranaController::class, 'store']);
+    // ROUTE TAMPILAN EDIT SARANA
+    Route::get('/sarana/{sarana:uuid}/edit', [SaranaController::class, 'edit']);
+    // ROUTE UPDATE SARANA
+    Route::put('/sarana/{sarana:uuid}', [SaranaController::class, 'update']);
+    // ROUTE DELETE SARANA
+    Route::delete('/sarana/{sarana:uuid}', [SaranaController::class, 'destroy']);
 });
