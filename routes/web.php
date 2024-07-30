@@ -58,4 +58,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/informasi-umum', [InformasiUmumController::class, 'index']);
     // ROUTE SIMPAN INFORMASI UMUM
     Route::post('/informasi-umum/store', [InformasiUmumController::class, 'store']);
+    // ROUTE UPDATE INFORMASI UMUM
+    Route::put('/informasi-umum/{informasiUmum:uuid}', [InformasiUmumController::class, 'update']);
+    // ROUTE HAPUS INFORMASI UMUM
+    Route::delete('/informasi-umum/{informasiUmum:uuid}', [InformasiUmumController::class, 'destroy']);
 });
