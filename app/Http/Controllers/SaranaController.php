@@ -73,14 +73,18 @@ class SaranaController extends Controller
      */
     public function update(Request $request, Sarana $sarana)
     {
-        $validator = Validator::make($request->all(), [
+        $rules = [
             'nama' => 'required',
-            'photo' => 'file|image|max:2048'
-        ], [
+        ];
+        $message = [
             'nama.required' => 'Nama tidak noleh kosong',
-            'photo.image' => 'File harus berupa gambar',
-            'photo.max' => 'Ukuran maksimal gambar adalah 2MB',
-        ]);
+        ];
+        if ($request->photo) {
+            $rules['photo'] = 'file|image|max:2048';
+            $message['photo.image'] = 'File harus berupa gambar';
+            $message['photo.max'] =  'Ukuran maksimal gambar adalah 2MB';
+        }
+        $validator = Validator::make($request->all(), $rules, $message);
         if ($validator->fails()) {
             return redirect()->back()->withInput()->withErrors($validator->errors());
         } else {

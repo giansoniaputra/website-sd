@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Profile;
 use Illuminate\Support\Str;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -64,11 +63,11 @@ class ProfileController extends Controller
             $profil->uuid = Str::orderedUuid();
             $profil->save();
 
-            return redirect('/profil/' . $request->type )->with('message', 'Profile Berhasil Dibuat!');
+            return redirect('/profil/' . $request->type)->with('message', 'Profile Berhasil Dibuat!');
         } else {
             $cekData->fill($request->all());
             $cekData->save();
-            return redirect('/profil/' . $request->type )->with('message', 'Profile Berhasil Diubah!');
+            return redirect('/profil/' . $request->type)->with('message', 'Profile Berhasil Diubah!');
         }
     }
 
