@@ -58,7 +58,7 @@ Route::middleware(['auth'])->group(function () {
     // ROUTE TAMPILAN INFORMASI UMUM------------------------------------------------------------------------------
     Route::get('/informasi-umum', [InformasiUmumController::class, 'index']);
     // ROUTE TAMBAH DATA INFORMASI UMUM
-    Route::post('/informasi-umum/create', [InformasiUmumController::class, 'create']);
+    Route::get('/informasi-umum/create', [InformasiUmumController::class, 'create']);
     // ROUTE SIMPAN INFORMASI UMUM
     Route::post('/informasi-umum/store', [InformasiUmumController::class, 'store']);
     // ROUTE EDIT DATA INFORMASI UMUM

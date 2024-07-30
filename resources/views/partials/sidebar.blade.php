@@ -68,6 +68,9 @@
                         <li>
                             <a href="/profil/sekolah">Profile</a>
                         </li>
+                        <li>
+                            <a href="/informasi-umum">Informasi umum</a>
+                        </li>
                     </ul>
                 </div>
             </li>
