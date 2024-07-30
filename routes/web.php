@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\InformasiUmumController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,4 +54,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profil/yayasan/create', [ProfileController::class, 'create_yayasan']);
     // ROUTE SINPAN PROFIL
     Route::post('/profil/store', [ProfileController::class, 'store']);
+    // ROUTE TAMPILAN INFORMASI UMUM
+    Route::get('/informasi-umum', [InformasiUmumController::class, 'index']);
+    // ROUTE SIMPAN INFORMASI UMUM
+    Route::post('/informasi-umum/store', [InformasiUmumController::class, 'store']);
 });
