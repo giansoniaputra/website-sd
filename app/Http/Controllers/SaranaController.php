@@ -35,7 +35,7 @@ class SaranaController extends Controller
             'nama' => 'required',
             'photo' => 'file|image|max:2048'
         ], [
-            'nama.required' => 'Nama tidak noleh kosong',
+            'nama.required' => 'Nama tidak Boleh kosong',
             'photo.image' => 'File harus berupa gambar',
             'photo.max' => 'Ukuran maksimal gambar adalah 2MB',
         ]);
@@ -73,8 +73,10 @@ class SaranaController extends Controller
      */
     public function update(Request $request, Sarana $sarana)
     {
+        dd($request);
         $rules = [
             'nama' => 'required',
+            'photo' => 'image|max:2048'
         ];
         $message = [
             'nama.required' => 'Nama tidak noleh kosong',
