@@ -14,7 +14,7 @@ class InformasiUmumController extends Controller
      */
     public function index()
     {
-        return view('informasi-umum.index');
+        return view('informasi-umum.index', ['informasi' => InformasiUmum::all()]);
     }
 
     /**
@@ -60,7 +60,7 @@ class InformasiUmumController extends Controller
      */
     public function edit(InformasiUmum $informasiUmum)
     {
-        //
+        return view('informasi-umum.edit', ['data' => $informasiUmum]);
     }
 
     /**
@@ -68,7 +68,20 @@ class InformasiUmumController extends Controller
      */
     public function update(Request $request, InformasiUmum $informasiUmum)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'keterangan' => 'required',
+        ], [
+            'title.required' => 'Title tidak noleh kosong',
+            'keterangan.required' => 'Keterangan tidak noleh kosong',
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()->withInput()->withErrors($validator->errors());
+        } else {
+            $informasiUmum->fill($request->all());
+            $informasiUmum->save();
+            return redirect('/informasi-umum')->with("message", "Informasi Berhasil Diubah!");
+        }
     }
 
     /**
@@ -76,6 +89,7 @@ class InformasiUmumController extends Controller
      */
     public function destroy(InformasiUmum $informasiUmum)
     {
-        //
+        InformasiUmum::destroy($informasiUmum->id);
+        return redirect('/informasi-umum')->with("message", "Informasi Berhasil Dihapus!");
     }
 }
