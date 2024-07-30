@@ -20,6 +20,7 @@ return new class extends Migration
             $table->longText('sejarah')->nullable();
             $table->longText('tujuan')->nullable();
             $table->longText('lokasi')->nullable();
+            $table->longText('strategi')->nullable();
             $table->timestamps();
         });
     }
