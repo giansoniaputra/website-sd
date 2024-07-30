@@ -33,7 +33,7 @@ class SaranaController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nama' => 'required',
-            'photo' => 'file|image|max:2048'
+            'photo' => 'image|max:2048'
         ], [
             'nama.required' => 'Nama tidak Boleh kosong',
             'photo.image' => 'File harus berupa gambar',
@@ -73,27 +73,28 @@ class SaranaController extends Controller
      */
     public function update(Request $request, Sarana $sarana)
     {
-        dd($request);
+        // dd($request);
         $rules = [
             'nama' => 'required',
-            'photo' => 'image|max:2048'
         ];
         $message = [
             'nama.required' => 'Nama tidak noleh kosong',
         ];
         if ($request->photo != null) {
-            $rules['photo'] = 'file|image|max:2048';
-            $message['photo.image'] = 'File harus berupa gambar';
+            $rules['photo'] = 'image|max:2048';
+            $message['photo.image'] = 'Image harus berupa gambar';
             $message['photo.max'] =  'Ukuran maksimal gambar adalah 2MB';
         }
         $validator = Validator::make($request->all(), $rules, $message);
         if ($validator->fails()) {
             return redirect()->back()->withInput()->withErrors($validator->errors());
         } else {
-            $sarana->fill($request->all());
             if ($request->photo != null && $sarana->photo != null) {
+                $sarana->fill($request->all());
                 Storage::delete($sarana->photo);
                 $sarana->photo = $request->file('photo')->store('photo-sarana');
+            } else {
+                $sarana->fill($request->except('photo'));
             }
             $sarana->save();
             return redirect('/sarana')->with('message', 'Sarana dan Prasarana Berhasil Diubah!');
