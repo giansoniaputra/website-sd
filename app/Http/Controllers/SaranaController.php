@@ -92,8 +92,8 @@ class SaranaController extends Controller
             if ($request->photo != null && $sarana->photo != null) {
                 $sarana->fill($request->all());
                 Storage::delete($sarana->photo);
-                $sarana->photo = $request->file('photo')->store('photo-sarana');
             } else {
+                $sarana->photo = $request->file('photo')->store('photo-sarana');
                 $sarana->fill($request->except('photo'));
             }
             $sarana->save();
