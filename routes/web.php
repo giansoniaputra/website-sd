@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\KelasController;
 use App\Http\Controllers\SaranaController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ProfileController;
@@ -83,6 +84,8 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/sarana/{sarana:uuid}', [SaranaController::class, 'destroy']);
     // ROUTE KE CONTROLLER PEGAWAI
     Route::resource('/pegawai', PegawaiController::class);
-    // ROUTE KE CONTROLLER PEGAWAI
+    // ROUTE KE CONTROLLER TTAHUN AJARAN
     Route::resource('/tahun-ajaran', TahunAjaranController::class);
+    // ROUTE KE CONTROLLER KELAS
+    Route::resource('/kelas', KelasController::class);
 });

@@ -14,7 +14,7 @@ class TahunAjaranController extends Controller
      */
     public function index()
     {
-        return view('tahun-ajaran.index');
+        return view('tahun-ajaran.index', ['tahunAjarans' => TahunAjaran::latest()->get()]);
     }
 
     /**
