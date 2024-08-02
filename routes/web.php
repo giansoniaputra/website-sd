@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SaranaController;
+use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\InformasiUmumController;
 
@@ -79,4 +80,6 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/sarana/{sarana:uuid}', [SaranaController::class, 'update']);
     // ROUTE DELETE SARANA
     Route::delete('/sarana/{sarana:uuid}', [SaranaController::class, 'destroy']);
+    // ROUTE KE CONTROLLER PEGAWAI
+    Route::resource('/pegawai', PegawaiController::class);
 });
