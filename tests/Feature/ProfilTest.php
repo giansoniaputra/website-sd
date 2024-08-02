@@ -44,7 +44,7 @@ class ProfilTest extends TestCase
         ]);
 
         $request->assertStatus(302);
-        $request->assertRedirect('/profil/yayasan/index');
+        $request->assertRedirect('/profil/yayasan');
         $request->assertSessionHas('message', 'Profile Berhasil Dibuat!');
     }
 
@@ -89,7 +89,7 @@ class ProfilTest extends TestCase
         $this->assertEquals('lokasi2', $profil->lokasi);
         $this->assertEquals('strategi2', $profil->strategi);
         $request->assertStatus(302);
-        $request->assertRedirect('/profil/yayasan/index');
+        $request->assertRedirect('/profil/yayasan');
         $request->assertSessionHas('message', 'Profile Berhasil Diubah!');
     }
 }
