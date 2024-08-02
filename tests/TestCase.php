@@ -2,7 +2,11 @@
 
 namespace Tests;
 
+use App\Models\User;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
@@ -17,5 +21,32 @@ abstract class TestCase extends BaseTestCase
         DB::delete("DELETE FROM informasi_umums");
         DB::delete("DELETE FROM saranas");
         DB::delete("DELETE FROM pegawais");
+        DB::delete("DELETE FROM tahun_ajarans");
+    }
+
+    // BUKAN METHOD UNTUK TESTING GUYS JANGAN DI COBA DI FRONT END
+    public function _createDumUser()
+    {
+        $user = User::create([
+            'uuid' => '12345',
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('admin'),
+            'role' => 'ADMIN',
+        ]);
+
+        return $user;
+    }
+
+    public function _createDumImage($size, $notFile = false)
+    {
+        // SET UP
+        Storage::fake('public');
+        if ($notFile == false) {
+            $file = UploadedFile::fake()->image('example.jpg')->size($size);
+        } else {
+            $file = UploadedFile::fake()->create('document.pdf', 500);
+        }
+        return $file;
     }
 }
