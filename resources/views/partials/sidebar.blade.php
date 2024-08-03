@@ -117,8 +117,8 @@
                 </a>
             </li>
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarDataSiswa" aria-expanded="false"
-                    aria-controls="sidebarDataSiswa" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarDataSiswa" aria-expanded="false" aria-controls="sidebarDataSiswa"
+                    class="side-nav-link">
                     <i class="ri-pages-line"></i>
                     <span> Data Siswa </span>
                     <span class="menu-arrow"></span>
@@ -126,7 +126,7 @@
                 <div class="collapse" id="sidebarDataSiswa">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="/kelas">Kelas</a>
+                            <a href="/tahun-ajaran">Tahun Ajaran</a>
                         </li>
                     </ul>
                 </div>
