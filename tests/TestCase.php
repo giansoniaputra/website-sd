@@ -4,7 +4,11 @@ namespace Tests;
 
 use App\Models\User;
 use Illuminate\Http\UploadedFile;
+use App\Models\User;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
@@ -22,7 +26,6 @@ abstract class TestCase extends BaseTestCase
         DB::delete("DELETE FROM saranas");
         DB::delete("DELETE FROM pegawais");
         DB::delete("DELETE FROM tahun_ajarans");
-        DB::delete("DELETE FROM kelas");
     }
 
     // BUKAN METHOD UNTUK TESTING GUYS JANGAN DI COBA DI FRONT END
