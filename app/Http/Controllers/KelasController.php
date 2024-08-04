@@ -27,7 +27,7 @@ class KelasController extends Controller
      */
     public function create()
     {
-        return view('kelas.create');
+        return view('kelas.create', ['tahunAjaran' => TahunAjaran::all()]);
     }
 
     /**
