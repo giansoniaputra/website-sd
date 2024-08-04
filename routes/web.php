@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KelasController;
+use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SaranaController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ProfileController;
@@ -88,4 +89,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/tahun-ajaran', TahunAjaranController::class);
     // ROUTE KE CONTROLLER KELAS
     Route::resource('/kelas', KelasController::class);
+    // ROUTE SISWA
+    Route::resource('/siswa', SiswaController::class);
 });
