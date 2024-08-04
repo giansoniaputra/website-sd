@@ -5,6 +5,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="header-title">Data Kelas</h4>
+                    <a href="/kelas/create" class="btn btn-primary">Tambah Data Kelas</a>
                 </div>
                 <div class="card-body">
                     <div class="row">
