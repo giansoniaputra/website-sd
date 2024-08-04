@@ -73,7 +73,7 @@ class KelasController extends Controller
      */
     public function edit(Kelas $kela)
     {
-        return view('kelas.edit', ['kelas' => $kela]);
+        return view('kelas.edit', ['kelas' => $kela,'tahunAjaran' => TahunAjaran::all()]);
     }
 
     /**
