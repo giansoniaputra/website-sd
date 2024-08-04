@@ -17,32 +17,13 @@ class Siswa extends Model
         return 'uuid';
     }
 
-    public static function getDataSiswa($kelas, $tahun)
+    public static function getDataSiswa($kelas_uuid)
     {
-        if ($tahun != "" && $kelas != "") {
-            return DB::table('siswas as a')
-                ->join('kelas as b', 'a.kelas_uuid', '=', 'b.uuid', 'left')
-                ->select('a.*', 'b.nama_kelas', 'b.kelas')
-                ->where('a.tahun_ajaran_uuid', $tahun)
-                ->where('a.kelas', $kelas)
-                ->get();
-        } else if ($tahun != "" && $kelas == "") {
-            return DB::table('kelas as a')
-                ->join('tahun_ajarans as b', 'a.tahun_ajaran_uuid', '=', 'b.uuid', 'left')
-                ->select('a.*', 'b.tahun_awal', 'b.tahun_akhir')
-                ->where('a.tahun_ajaran_uuid', $tahun)
-                ->get();
-        } else if ($tahun == "" && $kelas != "") {
-            return DB::table('kelas as a')
-                ->join('tahun_ajarans as b', 'a.tahun_ajaran_uuid', '=', 'b.uuid', 'left')
-                ->select('a.*', 'b.tahun_awal', 'b.tahun_akhir')
-                ->where('a.kelas', $kelas)
-                ->get();
-        } else {
-            return DB::table('kelas as a')
-                ->join('tahun_ajarans as b', 'a.tahun_ajaran_uuid', '=', 'b.uuid', 'left')
-                ->select('a.*', 'b.tahun_awal', 'b.tahun_akhir')
-                ->get();
-        }
+        return DB::table('siswas as a')
+            ->join('kelas as b', 'a.kelas_uuid', '=', 'b.uuid', 'left')
+            ->join('tahun_ajarans as c', 'b.tahun_ajaran_uuid', '=', 'c.uuid', 'left')
+            ->select('a.*', 'b.nama_kelas', 'c.tahun_awal', 'c.tahun_akhir')
+            ->where('a.kelas_uuid', $kelas_uuid)
+            ->get();
     }
 }
