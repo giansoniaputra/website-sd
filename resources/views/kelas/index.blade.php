@@ -31,7 +31,7 @@
                                                 class="form-control">
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4 d-flex justify-content-center align-items-center">
                                         <div class="mb-3">
                                             <button class="btn btn-primary">Filter</button>
                                             <a href="/kelas" class="btn btn-secondary">Reset</a>
@@ -56,21 +56,31 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($kelas as $kela)
+                                    @foreach ($kelas as $kelas)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $kela->tahunAjaran->tahun_ajaran }}</td>
-                                            <td>{{ $kela->kelas }}</td>
-                                            <td>{{ $kela->nama_kelas }}</td>
-                                            <td>{{ $kela->jumlah_lk }}</td>
-                                            <td>{{ $kela->jumlah_pr }}</td>
                                             <td>
-                                                <a href="/kelas/{{ $kela->uuid }}/edit"
-                                                    class="btn btn-sm btn-primary">Edit</a>
-                                                <form action="/kelas/{{ $kela->uuid }}" method="POST" class="d-inline">
+                                                @foreach ($tahunAjaran as $tahun)
+                                                    @if ($kelas->tahun_ajaran_uuid == $tahun->uuid)
+                                                        {{ $tahun->tahun_awal }}/{{ $tahun->tahun_akhir }}
+                                                    @endif
+                                                @endforeach
+                                            </td>
+                                            <td>{{ $kelas->kelas }}</td>
+                                            <td>{{ $kelas->nama_kelas }}</td>
+                                            <td>{{ $kelas->jumlah_lk }}</td>
+                                            <td>{{ $kelas->jumlah_pr }}</td>
+                                            <td class="text-center">
+                                                <a title="edit data" href="/kelas/{{ $kelas->uuid }}/edit"
+                                                    class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
+                                                <form action="/kelas/{{ $kelas->uuid }}" method="POST"
+                                                    style="display:inline">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button class="btn btn-sm btn-danger">Hapus</button>
+                                                    <button type="submit" class="btn btn-danger text-light"
+                                                        onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i
+                                                            class="mdi mdi-delete-forever"></i> </button>
+                                                    {{-- <a title="delete data" class="btn btn-warning"><i class="mdi-delete-forever"></i></a> --}}
                                                 </form>
                                             </td>
                                         </tr>
