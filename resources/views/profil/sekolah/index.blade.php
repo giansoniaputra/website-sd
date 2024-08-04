@@ -65,18 +65,6 @@
     </div>
 </div>
 
-{{-- Informasi Umum --}}
-<div class="col-12 mt-2">
-    <div class="card">
-        <div class="card-header">
-            <h4 class="header-title">Informasi Umum</h4>
-            <p class="text-muted mb-0">
-                {!!(isset($data))? $data->informasiUmum: ""!!}
-            </p>
-        </div>
-    </div>
-</div>
-
 {{-- Lokasi --}}
 <div class="col-12 mt-2">
     <div class="card">

@@ -14,7 +14,7 @@ class InformasiUmumController extends Controller
      */
     public function index()
     {
-        return view('informasi-umum.index', ['informasi' => InformasiUmum::all()]);
+        return view('profil.sekolah.informasi-umum.index', ['informasi' => InformasiUmum::all()]);
     }
 
     /**
@@ -22,7 +22,7 @@ class InformasiUmumController extends Controller
      */
     public function create()
     {
-        return view('informasi-umum.create');
+        return view('profil.sekolah.informasi-umum.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class InformasiUmumController extends Controller
      */
     public function edit(InformasiUmum $informasiUmum)
     {
-        return view('informasi-umum.edit', ['data' => $informasiUmum]);
+        return view('profil.sekolah.informasi-umum.edit', ['data' => $informasiUmum]);
     }
 
     /**
