@@ -103,7 +103,7 @@
                 </a>
             </li>
             <li class="side-nav-item">
-                <a href="#" class="side-nav-link">
+                <a href="/ppdb" class="side-nav-link">
                     <i class="ri-dashboard-3-line"></i>
                     <span class="badge bg-success float-end"></span>
                     <span> PPDB </span>
@@ -125,6 +125,9 @@
                 </a>
                 <div class="collapse" id="sidebarDataSiswa">
                     <ul class="side-nav-second-level">
+                        <li>
+                            <a href="/kelas">Kelas</a>
+                        </li>
                         <li>
                             <a href="/tahun-ajaran">Tahun Ajaran</a>
                         </li>
