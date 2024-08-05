@@ -126,7 +126,7 @@
                 <div class="collapse" id="sidebarDataSiswa">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="/tahun-ajaran">Tahun Ajaran</a>
+                            <a href="/kelas">Kelas</a>
                         </li>
                         <li>
                             <a href="/tahun-ajaran">Tahun Ajaran</a>
