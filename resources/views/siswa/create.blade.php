@@ -37,36 +37,7 @@ sd@extends('layout.main')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>
-
                                 <button type="submit" class="btn btn-primary">Simpan</button>
-                                <a href="{{ route('siswa.index', ['kelas_uuid' => $kelas_uuid]) }}"
-                                    class="btn btn-secondary">Kembali</a>
-
-                                <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Nama</label>
-                                    <input type="text" id="nama" name="nama"
-                                        class="form-control  @error('nama') is-invalid @enderror"
-                                        value="{{ old('nama') }}">
-                                    @error('nama')
-                                        <div class="invalid-feedback">
-                                            <small class="text-danger">{{ $message }}</small>
-                                        </div>
-                                    @enderror
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="photo" class="form-label">File
-                                        Input Foto</label>
-                                    <input type="file" id="photo" name="photo"
-                                        class="form-control  @error('photo') is-invalid @enderror" placeholder=""
-                                        value="{{ old('photo') }}">
-                                    @error('photo')
-                                        <div class="invalid-feedback">
-                                            <small class="text-danger">{{ $message }}</small>
-                                        </div>
-                                    @enderror
-                                </div>
-                                <button class="btn btn-primary">SUBMIT</button>
                             </form>
                         </div>
                     </div>
