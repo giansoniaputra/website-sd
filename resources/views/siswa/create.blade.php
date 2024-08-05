@@ -11,7 +11,7 @@
                         <div class="col-lg-6">
                             <form action="/siswa" method="POST">
                                 @csrf
-                                <input type="text" name="kelas_uuid" value="{{ $kelas_uuid }}">
+                                <input type="hidden" name="kelas_uuid" value="{{ $kelas_uuid }}">
 
                                 <div class="mb-3">
                                     <label>Nama Siswa</label>
