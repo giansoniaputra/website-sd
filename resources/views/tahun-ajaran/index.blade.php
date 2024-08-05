@@ -7,7 +7,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <a href="tahun-ajaran/create" class="btn btn-primary">Tambah Data</a>
+                <a href="/tahun-ajaran/create" class="btn btn-primary">Tambah Data</a>
             </div>
             <div class="card-body">
                 <table id="table-user" class="table table-striped dt-responsive nowrap w-100">
@@ -27,7 +27,7 @@
                                 <td>{{ $TahunAjaran->tahun_akhir }}</td>
                                 <td class="text-center">
                                     <a title="edit data" href="/tahun-ajaran/{{ $TahunAjaran->uuid }}/edit" class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
-                                    <form action="/tahun-ajaran/{{ $TahunAjaran->uuid }}" method="POST" style="display:inline">
+                                    <form action="/tahun-ajaran/{{$TahunAjaran->uuid }}" method="POST" style="display:inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger text-light" onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i class="mdi mdi-delete-forever"></i> </button>
