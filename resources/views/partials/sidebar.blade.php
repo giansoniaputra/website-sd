@@ -135,6 +135,21 @@
                 </div>
             </li>
             <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarBerita" aria-expanded="false" aria-controls="sidebarBerita"
+                    class="side-nav-link">
+                    <i class="ri-pages-line"></i>
+                    <span> Berita </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarBerita">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="/kategori">Kategori</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="side-nav-item">
                 <a href="#" class="side-nav-link">
                     <i class="ri-dashboard-3-line"></i>
                     <span class="badge bg-success float-end"></span>
