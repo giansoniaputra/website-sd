@@ -4,7 +4,11 @@ namespace Tests;
 
 use App\Models\User;
 use Illuminate\Http\UploadedFile;
+use App\Models\User;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;

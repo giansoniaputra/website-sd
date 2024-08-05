@@ -96,7 +96,7 @@
             </li>
 
             <li class="side-nav-item">
-                <a href="#" class="side-nav-link">
+                <a href="/pegawai" class="side-nav-link">
                     <i class="ri-dashboard-3-line"></i>
                     <span class="badge bg-success float-end"></span>
                     <span> Guru & Staff </span>
@@ -117,11 +117,19 @@
                 </a>
             </li>
             <li class="side-nav-item">
-                <a href="#" class="side-nav-link">
-                    <i class="ri-dashboard-3-line"></i>
-                    <span class="badge bg-success float-end"></span>
+                <a data-bs-toggle="collapse" href="#sidebarDataSiswa" aria-expanded="false"
+                    aria-controls="sidebarDataSiswa" class="side-nav-link">
+                    <i class="ri-pages-line"></i>
                     <span> Data Siswa </span>
+                    <span class="menu-arrow"></span>
                 </a>
+                <div class="collapse" id="sidebarDataSiswa">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="/kelas">Kelas</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li class="side-nav-item">
                 <a href="#" class="side-nav-link">
