@@ -4,7 +4,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="header-title">Data Kelas</h4>
+                    <h2>Data Kelas</h2>
                 </div>
                 <div class="card-body">
                     <a href="/kelas/create" class="btn btn-primary mb-3">Tambah Data Kelas</a>
