@@ -8,8 +8,6 @@ use App\Models\Siswa;
 use Database\Seeders\KelasSeeder;
 use Database\Seeders\SiswaSeeder;
 use Database\Seeders\TahunAjaranSeeder;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class SiswaTest extends TestCase
 {
