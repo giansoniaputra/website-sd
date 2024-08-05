@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PPDBController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SaranaController;
@@ -91,4 +92,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/kelas', KelasController::class);
     // ROUTE SISWA
     Route::resource('/siswa', SiswaController::class);
+    // ROUTE PPDB
+    Route::resource('/ppdb', PPDBController::class);
 });

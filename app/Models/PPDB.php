@@ -9,6 +9,7 @@ class PPDB extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    protected $table = 'ppdbs';
 
     public function getRouteKeyName()
     {

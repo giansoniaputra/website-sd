@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('p_p_d_b_s', function (Blueprint $table) {
+        Schema::create('ppdbs', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->string('nama_kegiantan');
+            $table->string('nama_kegiatan');
             $table->date('tanggal_regular');
-            $table->date('tanggal_preatasi');
+            $table->date('tanggal_prestasi')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('p_p_d_b_s');
+        Schema::dropIfExists('ppdbs');
     }
 };

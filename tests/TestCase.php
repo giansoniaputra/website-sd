@@ -24,6 +24,7 @@ abstract class TestCase extends BaseTestCase
         DB::delete("DELETE FROM tahun_ajarans");
         DB::delete("DELETE FROM kelas");
         DB::delete("DELETE FROM siswas");
+        DB::delete("DELETE FROM ppdbs");
     }
 
     // BUKAN METHOD UNTUK TESTING GUYS JANGAN DI COBA DI FRONT END

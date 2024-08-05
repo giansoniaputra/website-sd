@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\PPDB;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class PPDBController extends Controller
 {
@@ -28,13 +30,29 @@ class PPDBController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'nama_kegiatan' => 'required',
+            'tanggal_regular' => 'required',
+        ];
+        $pesan = [
+            'nama_kegiatan.required' => 'Nama kegiatan tidak boleh kosong',
+            'tanggal_regular.required' => 'Tanggal regular tidak boleh kosong',
+        ];
+        $validator = Validator::make($request->all(), $rules, $pesan);
+        if ($validator->fails()) {
+            return redirect()->back()->withInput()->withErrors($validator->errors());
+        } else {
+            $ppdb = new PPDB($request->all());
+            $ppdb->uuid = Str::orderedUuid();
+            $ppdb->save();
+            return redirect('/ppdb')->with('message', 'Kegiatan Berhasil Ditambahkan!');
+        }
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(PPDB $pPDB)
+    public function show(PPDB $ppdb)
     {
         //
     }
@@ -42,24 +60,40 @@ class PPDBController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PPDB $pPDB)
+    public function edit(PPDB $ppdb)
     {
-        //
+        return view('ppdb.edit', ['ppdb' => $ppdb]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, PPDB $pPDB)
+    public function update(Request $request, PPDB $ppdb)
     {
-        //
+        $rules = [
+            'nama_kegiatan' => 'required',
+            'tanggal_regular' => 'required',
+        ];
+        $pesan = [
+            'nama_kegiatan.required' => 'Nama kegiatan tidak boleh kosong',
+            'tanggal_regular.required' => 'Tanggal regular tidak boleh kosong',
+        ];
+        $validator = Validator::make($request->all(), $rules, $pesan);
+        if ($validator->fails()) {
+            return redirect()->back()->withInput()->withErrors($validator->errors());
+        } else {
+            $ppdb->fill($request->all());
+            $ppdb->save();
+            return redirect('/ppdb')->with('message', 'Kegiatan Berhasil Diubah!');
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PPDB $pPDB)
+    public function destroy(PPDB $ppdb)
     {
-        //
+        PPDB::destroy($ppdb->id);
+        return redirect('/ppdb')->with('message', 'Kegiatan Berhasil Dihapus!');
     }
 }
