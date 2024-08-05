@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\PPDBController;
 use App\Http\Controllers\HumasController;
 use App\Http\Controllers\KelasController;
@@ -100,4 +101,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/humas', HumasController::class);
     // ROUTE KATEGORI BERITA
     Route::resource('/kategori', KategoriBeritaController::class);
+    // ROUTE NEWS
+    Route::resource('/news', PostController::class);
 });
