@@ -9,7 +9,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-6">
-                            <form action="tahun-ajaran/store" method="POST" enctype="multipart/form-data">
+                            <form action="/tahun-ajaran" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Tahun Awal</label>
