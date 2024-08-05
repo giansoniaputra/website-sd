@@ -32,8 +32,18 @@
 
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Kelas</label>
-                                    <input id="kelas" type="text"
-                                        class="form-control @error('kelas') is-invalid @enderror" name="kelas">
+                                    <select id="kelas" class="form-control @error('kelas') is-invalid @enderror"
+                                        name="kelas">
+                                        <option value="">-- Pilih Kelas --</option>
+                                        <option value="I">I</option>
+                                        <option value="II">II</option>
+                                        <option value="III">III</option>
+                                        <option value="IV">IV</option>
+                                        <option value="V">V</option>
+                                        <option value="VI">VI</option>
+                                    </select>
+                                    {{-- <input id="kelas" type="text"
+                                        class="form-control @error('kelas') is-invalid @enderror" name="kelas"> --}}
                                     @error('kelas')
                                         <span class="invalid-feedback">
                                             <strong>{{ $message }}</strong>
