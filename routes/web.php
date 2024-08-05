@@ -11,6 +11,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TahunAjaranController;
 use App\Http\Controllers\InformasiUmumController;
+use App\Http\Controllers\KategoriBeritaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -97,4 +98,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/ppdb', PPDBController::class);
     // ROUTE HUMAS
     Route::resource('/humas', HumasController::class);
+    // ROUTE KATEGORI BERITA
+    Route::resource('/kategori', KategoriBeritaController::class);
 });
