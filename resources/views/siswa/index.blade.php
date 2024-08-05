@@ -7,7 +7,7 @@
                     <h4 class="header-title">Data Siswa</h4>
                 </div>
                 <div class="card-body">
-                    <a href="/kelas/create" class="btn btn-primary mb-3">Tambah Data Siswa</a>
+                    <a href="/siswa/create?kelas_uuid={{ $kelas_uuid }}" class="btn btn-primary mb-3">Tambah Data Siswa</a>
                     <div class="row">
                         <div class="col-lg-12">
                             <table id="table-user" class="table table-striped dt-responsive nowrap w-100">
@@ -26,14 +26,17 @@
                                             <td>{{ $siswa->nama_siswa }}</td>
                                             <td>{{ $siswa->jenis_kelamin }}</td>
                                             <td>
-                                                <a href="{{ route('siswa.edit', ['siswa' => $siswa->id, 'kelas_uuid' => $kelas_uuid]) }}"
-                                                    class="btn btn-sm btn-primary">Edit</a>
-                                                <form
-                                                    action="{{ route('siswa.destroy', ['siswa' => $siswa->id, 'kelas_uuid' => $kelas_uuid]) }}"
-                                                    method="POST" class="d-inline">
+                                                <a title="edit data"
+                                                    href="/siswa/{{ $siswa->uuid }}/edit?kelas_uuid={{ $kelas_uuid }}"
+                                                    class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
+                                                <form action="/siswa/{{ $siswa->uuid }}" method="POST"
+                                                    style="display:inline">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                                                    <button type="submit" class="btn btn-danger text-light"
+                                                        onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i
+                                                            class="mdi mdi-delete-forever"></i> </button>
+                                                    {{-- <a title="delete data" class="btn btn-warning"><i class="mdi-delete-forever"></i></a> --}}
                                                 </form>
                                             </td>
                                         </tr>
