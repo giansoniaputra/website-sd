@@ -5,9 +5,9 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="header-title">Data Kelas</h4>
-                    <a href="/kelas/create" class="btn btn-primary">Tambah Data Kelas</a>
                 </div>
                 <div class="card-body">
+                    <a href="/kelas/create" class="btn btn-primary mb-3">Tambah Data Kelas</a>
                     <div class="row">
                         <div class="col-lg-12">
                             <form action="/kelas" method="GET">
@@ -27,8 +27,19 @@
                                     <div class="col-lg-4">
                                         <div class="mb-3">
                                             <label for="filter_kelas" class="form-label">Kelas</label>
-                                            <input type="text" id="filter_kelas" name="filter_kelas"
-                                                class="form-control">
+                                            <select id="filter_kelas"
+                                                class="form-control @error('kelas') is-invalid @enderror"
+                                                name="filter_kelas">
+                                                <option value="">-- Pilih Kelas --</option>
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value="V">V</option>
+                                                <option value="VI">VI</option>
+                                            </select>
+                                            {{-- <input type="text" id="filter_kelas" name="filter_kelas"
+                                                class="form-control"> --}}
                                         </div>
                                     </div>
                                     <div class="col-lg-4 d-flex justify-content-center align-items-center">
@@ -71,6 +82,8 @@
                                             <td>{{ $kelas->jumlah_lk }}</td>
                                             <td>{{ $kelas->jumlah_pr }}</td>
                                             <td class="text-center">
+                                                <a title="tambah siswa" href="/siswa?kelas_uuid={{ $kelas->uuid }}"
+                                                    class="btn btn-primary"><i class="bi bi-person-fill-add"></i></a>
                                                 <a title="edit data" href="/kelas/{{ $kelas->uuid }}/edit"
                                                     class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
                                                 <form action="/kelas/{{ $kelas->uuid }}" method="POST"
