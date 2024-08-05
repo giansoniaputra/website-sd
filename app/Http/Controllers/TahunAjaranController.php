@@ -14,7 +14,7 @@ class TahunAjaranController extends Controller
      */
     public function index()
     {
-        return view('tahun-ajaran.index', ['tahunAjarans' => TahunAjaran::latest()->get()]);
+        return view('tahun-ajaran.index');
     }
 
     /**
@@ -63,7 +63,7 @@ class TahunAjaranController extends Controller
      */
     public function edit(TahunAjaran $tahunAjaran)
     {
-        //
+        return view('tahun-ajaran.edit', ['tahun_ajaran' => $tahunAjaran]);
     }
 
     /**
@@ -71,7 +71,22 @@ class TahunAjaranController extends Controller
      */
     public function update(Request $request, TahunAjaran $tahunAjaran)
     {
-        //
+        $rules = [
+            'tahun_awal' => 'required',
+            'tahun_akhir' => 'required',
+        ];
+        $messages = [
+            'tahun_awal.required' => 'Tahun awal tidak boleh kosong',
+            'tahun_akhir.required' => 'Tahun akhir tidak boleh kosong',
+        ];
+        $validator = Validator::make($request->all(), $rules, $messages);
+        if ($validator->fails()) {
+            return redirect()->back()->withInput()->withErrors($validator->errors());
+        } else {
+            $tahunAjaran->fill($request->all());
+            $tahunAjaran->save();
+            return redirect('/tahun-ajaran')->with('message', 'Tahun Ajaran Berhasil Diubah');
+        }
     }
 
     /**
@@ -79,6 +94,7 @@ class TahunAjaranController extends Controller
      */
     public function destroy(TahunAjaran $tahunAjaran)
     {
-        //
+        TahunAjaran::destroy($tahunAjaran->id);
+        return redirect('/tahun-ajaran')->with('message', 'Tahun Ajaran Berhasil Dihapus');
     }
 }
