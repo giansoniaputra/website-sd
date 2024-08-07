@@ -92,12 +92,11 @@ class PostController extends Controller
             'category_id' => 'required',
             'body' => 'required',
         ];
-
         if ($request->slug != $post->slug) {
             $data['slug'] = 'required|unique:posts';
         }
         if ($request->file('image')) {
-            $data['image'] = 'image|file|max:1024';
+            $data['image'] = 'image|file|max:2048';
         }
         $validateData = $request->validate($data);
 

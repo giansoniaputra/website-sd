@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Profile;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class ProfileController extends Controller
 {
@@ -57,15 +59,35 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
+        if ($request->file('photo')) {
+            $validator = Validator::make($request->all(), [
+                'photo' => 'file|image|max:2048'
+            ], [
+                'photo.image' => 'Format photo tidak valid',
+                'photo.max' => 'Maximal ukuran photo 2MB'
+            ]);
+            if ($validator->fails()) {
+                return redirect()->back()->withInput()->withErrors($validator->errors());
+            }
+        }
         $cekData = Profile::where("type", $request->type)->first();
         if (!$cekData) {
             $profil = new Profile($request->all());
             $profil->uuid = Str::orderedUuid();
+            if ($request->file('photo')) {
+                $profil->photo = $request->file('photo')->store('profile');
+            }
             $profil->save();
 
             return redirect('/profil/' . $request->type)->with('message', 'Profile Berhasil Dibuat!');
         } else {
-            $cekData->fill($request->all());
+            $cekData->fill($request->except('photo'));
+            if ($request->file('photo')) {
+                if ($cekData->photo != null) {
+                    Storage::delete($cekData->photo);
+                }
+                $cekData->photo = $request->file('photo')->store('profile');
+            }
             $cekData->save();
             return redirect('/profil/' . $request->type)->with('message', 'Profile Berhasil Diubah!');
         }
