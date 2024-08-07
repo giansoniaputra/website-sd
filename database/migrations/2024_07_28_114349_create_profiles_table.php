@@ -21,6 +21,7 @@ return new class extends Migration
             $table->longText('tujuan')->nullable();
             $table->longText('lokasi')->nullable();
             $table->longText('strategi')->nullable();
+            $table->longText('sambutan')->nullable();
             $table->timestamps();
         });
     }
