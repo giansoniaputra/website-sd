@@ -16,7 +16,6 @@ class GallerySeeder extends Seeder
      */
     public function run(): void
     {
-        Gallery::truncate();
         for ($i = 0; $i < 30; $i++) {
             Storage::fake('public');
             $file = UploadedFile::fake()->image('example.jpg')->size(500);
