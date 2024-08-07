@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gallery;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class GalleryController extends Controller
 {
@@ -30,7 +33,24 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'photo' => 'required|file|image|max:2048',
+        ];
+        $pesan = [
+            'photo.required' => 'Photo tidak boleh kosong',
+            'photo.image' => 'Photo tidak valid',
+            'photo.max' => 'Maximal ukuran 2MB',
+        ];
+        $validator = Validator::make($request->all(), $rules, $pesan);
+        if ($validator->fails()) {
+            return redirect()->back()->withInput()->withErrors($validator->errors());
+        } else {
+            $gallery = new Gallery($request->all());
+            $gallery->uuid = Str::orderedUuid();
+            $gallery->photo = $request->file('photo')->store('gallery');
+            $gallery->save();
+            return redirect('/gallery')->with('message', 'Photo Berhasil Diupload!');
+        }
     }
 
     /**
@@ -62,6 +82,7 @@ class GalleryController extends Controller
      */
     public function destroy(Gallery $gallery)
     {
-        //
+        Storage::delete($gallery->id);
+        return redirect('/gallery')->with('message', 'Photo Berhasil Dihapus!');
     }
 }
