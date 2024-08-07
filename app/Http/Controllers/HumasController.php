@@ -91,7 +91,7 @@ class HumasController extends Controller
         }
         $validator = Validator::make($request->all(), $rules, $pesan);
         if ($validator->fails()) {
-            return redirect()->back()->withInput()->withError($validator->error());
+            return redirect()->back()->withInput()->withErrors($validator->errors());
         } else {
             $huma->fill($request->except('photo'));
             if ($request->file('photo')) {
