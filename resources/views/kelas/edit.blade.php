@@ -35,9 +35,22 @@
 
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Kelas</label>
-                                    <input id="kelas" type="text"
-                                        class="form-control @error('kelas') is-invalid @enderror" name="kelas"
-                                        value="{{ old('kelas', $kelas->kelas) }}">
+                                    <select id="kelas" class="form-control @error('kelas') is-invalid @enderror"
+                                        name="kelas">
+                                        <option value="">-- Pilih Kelas --</option>
+                                        <option value="I" {{ old('kelas', $kelas->kelas) == 'I' ? 'selected' : '' }}>
+                                            I</option>
+                                        <option value="II" {{ old('kelas', $kelas->kelas) == 'II' ? 'selected' : '' }}>
+                                            II</option>
+                                        <option value="III" {{ old('kelas', $kelas->kelas) == 'III' ? 'selected' : '' }}>
+                                            III</option>
+                                        <option value="IV" {{ old('kelas', $kelas->kelas) == 'IV' ? 'selected' : '' }}>
+                                            IV</option>
+                                        <option value="V" {{ old('kelas', $kelas->kelas) == 'V' ? 'selected' : '' }}>
+                                            V</option>
+                                        <option value="VI" {{ old('kelas', $kelas->kelas) == 'VI' ? 'selected' : '' }}>
+                                            VI</option>
+                                    </select>
                                     @error('kelas')
                                         <span class="invalid-feedback">
                                             <strong>{{ $message }}</strong>
