@@ -41,6 +41,7 @@ class ProfilTest extends TestCase
             'tujuan' => 'tujuan',
             'lokasi' => 'lokasi',
             'strategi' => 'strategi',
+            'sambutan' => 'sambutan',
         ]);
 
         $request->assertStatus(302);
@@ -68,6 +69,7 @@ class ProfilTest extends TestCase
             'tujuan' => 'tujuan',
             'lokasi' => 'lokasi',
             'strategi' => 'strategi',
+            'sambutan' => 'sambutan',
         ]);
         $request = $this->actingAs($user)->post("/profil/store", [
             'type' => 'yayasan',
@@ -77,6 +79,7 @@ class ProfilTest extends TestCase
             'tujuan' => 'tujuan2',
             'lokasi' => 'lokasi2',
             'strategi' => 'strategi2',
+            'sambutan' => 'sambutan2',
         ]);
 
         // Validasi bahwa data berhasil diperbarui
@@ -88,6 +91,7 @@ class ProfilTest extends TestCase
         $this->assertEquals('tujuan2', $profil->tujuan);
         $this->assertEquals('lokasi2', $profil->lokasi);
         $this->assertEquals('strategi2', $profil->strategi);
+        $this->assertEquals('sambutan2', $profil->sambutan);
         $request->assertStatus(302);
         $request->assertRedirect('/profil/yayasan');
         $request->assertSessionHas('message', 'Profile Berhasil Diubah!');
