@@ -80,7 +80,7 @@ class SaranaController extends Controller
         $message = [
             'nama.required' => 'Nama tidak noleh kosong',
         ];
-        if ($request->photo != null) {
+        if ($request->file('photo')) {
             $rules['photo'] = 'image|max:2048';
             $message['photo.image'] = 'Image harus berupa gambar';
             $message['photo.max'] =  'Ukuran maksimal gambar adalah 2MB';
@@ -89,12 +89,14 @@ class SaranaController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withInput()->withErrors($validator->errors());
         } else {
-            if ($request->photo != null && $sarana->photo != null) {
-                $sarana->fill($request->all());
-                Storage::delete($sarana->photo);
-            } else {
+            $sarana->fill($request->except('photo'));
+            if ($request->file('photo')) {
+                if ($sarana->photo != null) {
+                    Storage::delete($sarana->photo);
+                }
                 $sarana->photo = $request->file('photo')->store('photo-sarana');
-                $sarana->fill($request->except('photo'));
+            } else if ($request->file('photo') && $sarana->photo == null) {
+                $sarana->photo = $request->file('photo')->store('photo-sarana');
             }
             $sarana->save();
             return redirect('/sarana')->with('message', 'Sarana dan Prasarana Berhasil Diubah!');

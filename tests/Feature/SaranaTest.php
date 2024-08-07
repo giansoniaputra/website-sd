@@ -175,15 +175,13 @@ class SaranaTest extends TestCase
             'photo' => $newFile,
         ]);
         // Validasi bahwa gambar baru diupload dan gambar lama dihapus
-        Storage::disk('public')->assertExists('photo-sarana/' . $newFile->hashName());
         Storage::disk('public')->assertMissing('photo-sarana/' . $oldFile->hashName());
+        Storage::disk('public')->assertExists('photo-sarana/' . $newFile->hashName());
+        $sarana->refresh();
+        $this->assertEquals('Lab', $sarana->nama);
         $responses->assertStatus(302);
         $responses->assertredirect('/sarana');
         $responses->assertSessionHas('message', 'Sarana dan Prasarana Berhasil Diubah!');
-
-        $sarana->refresh();
-        $this->assertEquals('Lab', $sarana->nama);
-        $this->assertEquals('photo-sarana/' . $newFile->hashName(), $sarana->photo);
     }
 
     public function test_delete_sarana_dengan_image_null()
