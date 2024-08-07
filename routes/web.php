@@ -102,5 +102,8 @@ Route::middleware(['auth'])->group(function () {
     // ROUTE KATEGORI BERITA
     Route::resource('/kategori', KategoriBeritaController::class);
     // ROUTE NEWS
-    Route::resource('/news', PostController::class);
+    Route::resource('/news', PostController::class)->parameters([
+        'news' => 'post'
+    ]);;
+    Route::get('/cek-slug', [PostController::class, 'cekSlug']);
 });
