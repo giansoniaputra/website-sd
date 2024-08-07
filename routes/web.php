@@ -8,6 +8,7 @@ use App\Http\Controllers\HumasController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SaranaController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TahunAjaranController;
@@ -106,4 +107,6 @@ Route::middleware(['auth'])->group(function () {
         'news' => 'post'
     ]);;
     Route::get('/cek-slug', [PostController::class, 'cekSlug']);
+    // ROUTE GALLERY
+    Route::resource('/gallery', GalleryController::class);
 });
