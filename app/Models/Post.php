@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends Model
 {
-    use Sluggable, HasFactory;
+    use Sluggable;
+    use HasFactory;
 
     protected $guarded = ['id'];
 
