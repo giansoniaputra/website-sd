@@ -176,7 +176,7 @@
                             <a href="/gallery">Foto</a>
                         </li>
                         <li>
-                            <a href="/humas">Humas</a>
+                            <a href="/humas">Video</a>
                         </li>
                     </ul>
                 </div>
