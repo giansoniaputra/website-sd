@@ -53,7 +53,7 @@
                             <a href="/profil/yayasan">Profil</a>
                         </li>
                         <li>
-                            <a href="#">Pengurus</a>
+                            <a href="/profil/yayasan/pengurus">Pengurus</a>
                         </li>
                     </ul>
                 </div>
