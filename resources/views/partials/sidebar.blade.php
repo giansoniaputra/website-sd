@@ -164,6 +164,24 @@
                 </a>
             </li>
             <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarGaleri" aria-expanded="false"
+                    aria-controls="sidebarGaleri" class="side-nav-link">
+                    <i class="ri-pages-line"></i>
+                    <span> Galeri </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarGaleri">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="/gallery">Foto</a>
+                        </li>
+                        <li>
+                            <a href="/humas">Humas</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="side-nav-item">
                 <a href="/auth/register" class="side-nav-link">
                     <i class="ri-dashboard-3-line"></i>
                     <span class="badge bg-success float-end"></span>
