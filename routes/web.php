@@ -13,6 +13,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KurikulumController;
+use App\Http\Controllers\SampulPpdbController;
 use App\Http\Controllers\TahunAjaranController;
 use App\Http\Controllers\InformasiUmumController;
 use App\Http\Controllers\KategoriBeritaController;
@@ -117,4 +118,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/video', VideoController::class);
     // KURIKULUM
     Route::resource('/kurikulum', KurikulumController::class);
+    // COVER PPDB
+    Route::resource('/cover-ppdb', SampulPpdbController::class);
 });
