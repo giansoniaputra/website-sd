@@ -32,6 +32,16 @@ class ProfileController extends Controller
             return view('profil.sekolah.index');
         }
     }
+
+    public function index_pengurus()
+    {
+        $data = Profile::where('type', 'pengurus')->first();
+        if ($data) {
+            return view('profil.pengurus.index', ['data' =>  $data]);
+        } else {
+            return view('profil.pengurus.index');
+        }
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -52,6 +62,15 @@ class ProfileController extends Controller
             return view('profil.sekolah.create');
         } else {
             return view('profil.sekolah.create', ['data' => $cekData]);
+        }
+    }
+    public function create_pengurus()
+    {
+        $cekData = Profile::where("type", "pengurus")->first();
+        if (!$cekData) {
+            return view('profil.pengurus.create');
+        } else {
+            return view('profil.pengurus.create', ['data' => $cekData]);
         }
     }
     /**

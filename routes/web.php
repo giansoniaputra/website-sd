@@ -7,6 +7,7 @@ use App\Http\Controllers\PPDBController;
 use App\Http\Controllers\HumasController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\VideoController;
 use App\Http\Controllers\SaranaController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PegawaiController;
@@ -58,6 +59,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profil/yayasan', [ProfileController::class, 'index_yayasan']);
     // ROUTE TAMPILAN SEKOLAH
     Route::get('/profil/sekolah', [ProfileController::class, 'index_sekolah']);
+    // ROUTE TAMPILAN pengurus
+    Route::get('/profil/pengurus', [ProfileController::class, 'index_pengurus']);
     // ROUTE TAMPILAN CREATE/EDIT SEKOLAH
     Route::get('/profil/sekolah/create', [ProfileController::class, 'create_sekolah']);
     // ROUTE TAMPILAN CREATE/EDIT YAYASAN
@@ -109,4 +112,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/cek-slug', [PostController::class, 'cekSlug']);
     // ROUTE GALLERY
     Route::resource('/gallery', GalleryController::class);
+    // VIDEOS
+    Route::resource('/video', VideoController::class);
 });
