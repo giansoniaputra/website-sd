@@ -30,6 +30,7 @@ abstract class TestCase extends BaseTestCase
         DB::delete("DELETE FROM posts");
         DB::delete("DELETE FROM galleries");
         DB::delete("DELETE FROM videos");
+        DB::delete("DELETE FROM kurikulums");
     }
 
     // BUKAN METHOD UNTUK TESTING GUYS JANGAN DI COBA DI FRONT END
@@ -54,6 +55,18 @@ abstract class TestCase extends BaseTestCase
             $file = UploadedFile::fake()->image('example.jpg')->size($size);
         } else {
             $file = UploadedFile::fake()->create('document.pdf', 500);
+        }
+        return $file;
+    }
+
+    public function _createDumPDF($size, $notFile = false)
+    {
+        // SET UP
+        Storage::fake('public');
+        if ($notFile == false) {
+            $file = UploadedFile::fake()->create('document.pdf', $size, 'application/pdf');
+        } else {
+            $file = UploadedFile::fake()->image('example.jpg')->size($size);
         }
         return $file;
     }
