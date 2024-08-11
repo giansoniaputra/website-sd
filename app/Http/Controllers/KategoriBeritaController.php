@@ -60,7 +60,7 @@ class KategoriBeritaController extends Controller
      */
     public function edit(KategoriBerita $kategori)
     {
-        return view('kategori.edit');
+        return view('kategori.edit', ['kategori' => $kategori]);
     }
 
     /**

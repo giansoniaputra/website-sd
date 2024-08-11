@@ -82,7 +82,8 @@ class GalleryController extends Controller
      */
     public function destroy(Gallery $gallery)
     {
-        Storage::delete($gallery->id);
+        Storage::delete($gallery->photo);
+Gallery::destroy($gallery->id);
         return redirect('/gallery')->with('message', 'Photo Berhasil Dihapus!');
     }
 }

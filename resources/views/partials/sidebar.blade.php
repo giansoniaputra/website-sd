@@ -41,7 +41,8 @@
                 </a>
             </li> --}}
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarYayasan" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarYayasan" aria-expanded="false" aria-controls="sidebarPages"
+                    class="side-nav-link">
                     <i class="ri-pages-line"></i>
                     <span> Yayasan </span>
                     <span class="menu-arrow"></span>
@@ -49,7 +50,7 @@
                 <div class="collapse" id="sidebarYayasan">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="/profil/yayasan">Profile</a>
+                            <a href="/profil/yayasan">Profil</a>
                         </li>
                         <li>
                             <a href="#">Pengurus</a>
@@ -58,7 +59,8 @@
                 </div>
             </li>
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarSekolah" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarSekolah" aria-expanded="false" aria-controls="sidebarPages"
+                    class="side-nav-link">
                     <i class="ri-pages-line"></i>
                     <span> Sekolah </span>
                     <span class="menu-arrow"></span>
@@ -66,7 +68,7 @@
                 <div class="collapse" id="sidebarSekolah">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="/profil/sekolah">Profile</a>
+                            <a href="/profil/sekolah">Profil</a>
                         </li>
                         <li>
                             <a href="/informasi-umum">Informasi umum</a>
@@ -75,7 +77,8 @@
                 </div>
             </li>
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarWakasek" aria-expanded="false" aria-controls="sidebarWakasek" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarWakasek" aria-expanded="false" aria-controls="sidebarWakasek"
+                    class="side-nav-link">
                     <i class="ri-pages-line"></i>
                     <span> Wakasek </span>
                     <span class="menu-arrow"></span>
@@ -86,7 +89,7 @@
                             <a href="/sarana">Sarana</a>
                         </li>
                         <li>
-                            <a href="#">Pengurus</a>
+                            <a href="/humas">Humas</a>
                         </li>
                     </ul>
                 </div>
@@ -106,13 +109,13 @@
                     <span> PPDB </span>
                 </a>
             </li>
-            <li class="side-nav-item">
+            {{-- <li class="side-nav-item">
                 <a href="/humas" class="side-nav-link">
                     <i class="ri-dashboard-3-line"></i>
                     <span class="badge bg-success float-end"></span>
                     <span> Humas </span>
                 </a>
-            </li>
+            </li> --}}
             <li class="side-nav-item">
                 <a href="#" class="side-nav-link">
                     <i class="ri-dashboard-3-line"></i>
@@ -121,7 +124,8 @@
                 </a>
             </li>
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarDataSiswa" aria-expanded="false" aria-controls="sidebarDataSiswa" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarDataSiswa" aria-expanded="false"
+                    aria-controls="sidebarDataSiswa" class="side-nav-link">
                     <i class="ri-pages-line"></i>
                     <span> Data Siswa </span>
                     <span class="menu-arrow"></span>
@@ -138,11 +142,19 @@
                 </div>
             </li>
             <li class="side-nav-item">
-                <a href="#" class="side-nav-link">
-                    <i class="ri-dashboard-3-line"></i>
-                    <span class="badge bg-success float-end"></span>
+                <a data-bs-toggle="collapse" href="#sidebarBerita" aria-expanded="false" aria-controls="sidebarBerita"
+                    class="side-nav-link">
+                    <i class="ri-pages-line"></i>
                     <span> Berita </span>
+                    <span class="menu-arrow"></span>
                 </a>
+                <div class="collapse" id="sidebarBerita">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="/kategori">Kategori</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li class="side-nav-item">
                 <a href="#" class="side-nav-link">
@@ -150,6 +162,24 @@
                     <span class="badge bg-success float-end"></span>
                     <span> Galeri </span>
                 </a>
+            </li>
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarGaleri" aria-expanded="false"
+                    aria-controls="sidebarGaleri" class="side-nav-link">
+                    <i class="ri-pages-line"></i>
+                    <span> Galeri </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarGaleri">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="/gallery">Foto</a>
+                        </li>
+                        <li>
+                            <a href="/humas">Video</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li class="side-nav-item">
                 <a href="/auth/register" class="side-nav-link">
