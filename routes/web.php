@@ -19,6 +19,7 @@ use App\Http\Controllers\SampulPpdbController;
 use App\Http\Controllers\TahunAjaranController;
 use App\Http\Controllers\InformasiUmumController;
 use App\Http\Controllers\KategoriBeritaController;
+use App\Http\Controllers\PelayananPublicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -124,4 +125,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/prestasi', PrestasiController::class);
     // CAROUSEL
     Route::resource('/carousel', CarouselController::class);
+    // Pelayanan Public
+    Route::resource('/pelayanan-public', PelayananPublicController::class);
 });
