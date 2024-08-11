@@ -91,6 +91,9 @@
                         <li>
                             <a href="/humas">Humas</a>
                         </li>
+                        <li>
+                            <a href="/kurikulum">Kurikulum</a>
+                        </li>
                     </ul>
                 </div>
             </li>
