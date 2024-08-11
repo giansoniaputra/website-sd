@@ -178,13 +178,6 @@
                 </div>
             </li>
             <li class="side-nav-item">
-                <a href="#" class="side-nav-link">
-                    <i class="ri-dashboard-3-line"></i>
-                    <span class="badge bg-success float-end"></span>
-                    <span> Galeri </span>
-                </a>
-            </li>
-            <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarGaleri" aria-expanded="false"
                     aria-controls="sidebarGaleri" class="side-nav-link">
                     <i class="ri-pages-line"></i>
