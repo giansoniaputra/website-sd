@@ -12,6 +12,7 @@ use App\Http\Controllers\SaranaController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\SampulPpdbController;
 use App\Http\Controllers\TahunAjaranController;
@@ -120,4 +121,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/kurikulum', KurikulumController::class);
     // COVER PPDB
     Route::resource('/cover-ppdb', SampulPpdbController::class);
+    // PRESTASI
+    Route::resource('/prestasi', PrestasiController::class);
 });
