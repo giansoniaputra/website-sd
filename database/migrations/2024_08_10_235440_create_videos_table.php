@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->string('sampul');
+            $table->string('sampul')->nullable();
             $table->string('link');
             $table->timestamps();
         });

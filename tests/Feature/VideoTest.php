@@ -52,7 +52,6 @@ class VideoTest extends TestCase
         $responses->assertStatus(302);
         $responses->assertSessionHasErrors(
             [
-                'sampul' => 'Sampul tida boleh kosong',
                 'link' => 'Link tida boleh kosong',
             ]
         );
