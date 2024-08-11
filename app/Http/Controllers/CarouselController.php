@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Gallery;
+use App\Models\Carousel;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
-class GalleryController extends Controller
+class CarouselController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('gallery.index', [
-            'galleries' => Gallery::latest()->paginate(10)
+        return view('carousel.index', [
+            'carousels' => Carousel::latest()->paginate(10)
         ]);
     }
 
@@ -25,7 +25,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        return view('gallery.create');
+        return view('carousel.create');
     }
 
     /**
@@ -45,18 +45,18 @@ class GalleryController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withInput()->withErrors($validator->errors());
         } else {
-            $gallery = new Gallery($request->all());
-            $gallery->uuid = Str::orderedUuid();
-            $gallery->photo = $request->file('photo')->store('gallery');
-            $gallery->save();
-            return redirect('/gallery')->with('message', 'Photo Berhasil Diupload!');
+            $carousel = new Carousel($request->all());
+            $carousel->uuid = Str::orderedUuid();
+            $carousel->photo = $request->file('photo')->store('carousel');
+            $carousel->save();
+            return redirect('/carousel')->with('message', 'Photo Berhasil Diupload!');
         }
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Gallery $gallery)
+    public function show(Carousel $carousel)
     {
         //
     }
@@ -64,7 +64,7 @@ class GalleryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Gallery $gallery)
+    public function edit(Carousel $carousel)
     {
         //
     }
@@ -72,7 +72,7 @@ class GalleryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Gallery $gallery)
+    public function update(Request $request, Carousel $carousel)
     {
         //
     }
@@ -80,10 +80,10 @@ class GalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Gallery $gallery)
+    public function destroy(Carousel $carousel)
     {
-        Storage::delete($gallery->photo);
-        Gallery::destroy($gallery->id);
-        return redirect('/gallery')->with('message', 'Photo Berhasil Dihapus!');
+        Storage::delete($carousel->photo);
+        Carousel::destroy($carousel->id);
+        return redirect('/carousel')->with('message', 'Photo Berhasil Dihapus!');
     }
 }
