@@ -36,10 +36,12 @@
                                         <td>{{ $pegawai->jabatan }}</td>
                                         <td>{{ $pegawai->pendidikan }}</td>
                                         <td>{{ $pegawai->ampuan }}</td>
-                                        <td>{{ $pegawai->photo }}</td>
-                                        <td class="text-center">
-                                            <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
+                                        <td> <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
                                                 class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a>
+                                        </td>
+                                        <td class="text-center">
+                                            {{-- <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
+                                                class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a> --}}
                                             <a title="edit data" href="/pegawai/{{ $pegawai->uuid }}/edit"
                                                 class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
                                             <form action="/pegawai/{{ $pegawai->uuid }}" method="POST"
@@ -90,10 +92,12 @@
                                         <td>{{ $pegawai->jabatan }}</td>
                                         <td>{{ $pegawai->pendidikan }}</td>
                                         <td>{{ $pegawai->ampuan }}</td>
-                                        <td>{{ $pegawai->photo }}</td>
-                                        <td class="text-center">
-                                            <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
+                                        <td> <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
                                                 class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a>
+                                        </td>
+                                        <td class="text-center">
+                                            {{-- <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
+                                                class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a> --}}
                                             <a title="edit data" href="/pegawai/{{ $pegawai->uuid }}/edit"
                                                 class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
                                             <form action="/pegawai/{{ $pegawai->uuid }}" method="POST"
