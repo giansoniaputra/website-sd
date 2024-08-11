@@ -18,6 +18,7 @@ class PegawaiController extends Controller
         return view('pegawai.index', [
             'teachers' => Pegawai::where('type', 'guru')->get(),
             'staffs' => Pegawai::where('type', 'staff')->get(),
+            'pengurus' => Pegawai::where('type', 'pengurus')->get(),
         ]);
     }
 

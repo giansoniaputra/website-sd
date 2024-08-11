@@ -62,8 +62,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profil/yayasan', [ProfileController::class, 'index_yayasan']);
     // ROUTE TAMPILAN SEKOLAH
     Route::get('/profil/sekolah', [ProfileController::class, 'index_sekolah']);
-    // ROUTE TAMPILAN pengurus
-    Route::get('/profil/pengurus', [ProfileController::class, 'index_pengurus']);
     // ROUTE TAMPILAN CREATE/EDIT SEKOLAH
     Route::get('/profil/sekolah/create', [ProfileController::class, 'create_sekolah']);
     // ROUTE TAMPILAN CREATE/EDIT YAYASAN
