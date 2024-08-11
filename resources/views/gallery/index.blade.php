@@ -22,7 +22,12 @@
                                     @foreach ($galleries as $gallery)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td><img src="/storage/{{ $gallery->photo }}" alt="Foto" width="100">
+                                            <td>
+                                                <a title="lihat gambar" href="/storage/{{ $gallery->photo }}"
+                                                    class="btn btn-transparent" target="_blank">
+                                                    <img src="/storage/{{ $gallery->photo }}" alt="Foto" width="50">
+                                                </a>
+                                                {{-- <img src="/storage/{{ $gallery->photo }}" alt="Foto" width="100"> --}}
                                             </td>
                                             <td class="text-center">
                                                 <form action="/gallery/{{ $gallery->uuid }}" method="POST"
