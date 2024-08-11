@@ -172,6 +172,9 @@
                 <div class="collapse" id="sidebarBerita">
                     <ul class="side-nav-second-level">
                         <li>
+                            <a href="/news">Input Berita</a>
+                        </li>
+                        <li>
                             <a href="/kategori">Kategori</a>
                         </li>
                     </ul>
