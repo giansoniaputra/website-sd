@@ -33,11 +33,10 @@ class VideoController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'sampul' => 'required|file|image|max:2048',
+            'sampul' => 'file|image|max:2048',
             'link' => 'required',
         ];
         $pesan = [
-            'sampul.required' => 'Sampul tida boleh kosong',
             'sampul.image' => 'Format sampul tidak valid',
             'sampul.max' => 'Maximal ukuran sampul 2MB',
             'link.required' => 'Link tida boleh kosong',
