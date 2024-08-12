@@ -5,5 +5,5 @@ use App\Http\Controllers\LandingPageController;
 
 // ROUTE UNTUK HALAMAN LANDING PAGE
 Route::get('/landing', [LandingPageController::class, 'index'])->name('landing');
-Route::get('/landing/profil', [LandingPageController::class, 'profil']);
-// Route::get('/landing/contact', [LandingPageController::class, 'contact']);
+Route::get('/landing/profilSekolah', [LandingPageController::class, 'profilSekolah']);
+Route::get('/landing/profilYayasan', [LandingPageController::class, 'profilYayasan']);

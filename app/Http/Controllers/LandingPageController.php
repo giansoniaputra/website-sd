@@ -13,9 +13,15 @@ class LandingPageController extends Controller
     }
 
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
-    public function profil()
+    public function profilSekolah()
     {
-        return view('landing.profil');
+        return view('landing.profilSekolah');
+    }
+
+    // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
+    public function profilYayasan()
+    {
+        return view('landing.profilYayasan');
     }
 
 }
