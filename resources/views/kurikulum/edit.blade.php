@@ -13,7 +13,7 @@
                                 @csrf
                                 @method('PUT')
                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Nama</label>
+                                    <label for="simpleinput" class="form-label">Keterangan</label>
                                     <input type="text" id="nama" name="nama"
                                         class="form-control  @error('nama') is-invalid @enderror"
                                         value="{{ old('nama', $kurikulum) }}">
@@ -39,7 +39,7 @@
 
                                 <div class="mb-3">
                                     <label for="pdf" class="form-label">PDF</label>
-                                    <input type="file" class="form-control @error('photo') is-invalid @enderror"
+                                    <input type="file" class="form-control @error('pdf') is-invalid @enderror"
                                         id="pdf" name="pdf">
                                     <a href="{{ asset('storage/' . $kurikulum->pdf) }}" target="_blank"
                                         class="btn btn-success mt-1">PDF Sebelumnya</a>
