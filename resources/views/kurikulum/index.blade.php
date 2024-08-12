@@ -14,7 +14,7 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Judul</th>
+                                        <th>Keterangan</th>
                                         <th>Foto</th>
                                         <th>PDF</th>
                                         <th class="text-center">Action</th>
