@@ -21,6 +21,9 @@
                                             {{ old('type', $pegawai->type) == 'guru' ? 'selected' : '' }}>Guru</option>
                                         <option value="staff"
                                             {{ old('type', $pegawai->type) == 'staff' ? 'selected' : '' }}>Staff</option>
+                                        <option value="pengurus"
+                                            {{ old('type', $pegawai->type) == 'pengurus' ? 'selected' : '' }}>Pengurus
+                                        </option>
                                     </select>
                                     @error('type')
                                         <div class="invalid-feedback">
@@ -41,44 +44,22 @@
                                     @enderror
                                 </div>
 
-                                <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Status</label>
-                                    <input type="hidden" id="status-input" name="status"
-                                        class="form-control  @error('status') is-invalid @enderror"
-                                        value="{{ old('status', $pegawai) }}">
-                                    @error('status')
-                                        <div class="invalid-feedback">
-                                            <small class="text-danger">{{ $message }}</small>
-                                        </div>
-                                    @enderror
-                                </div>
+                                <input type="hidden" id="status-input" name="status"
+                                    class="form-control  @error('status') is-invalid @enderror"
+                                    value="{{ old('status', $pegawai) }}">
+                                <input type="hidden" id="pendidikan" name="pendidikan"
+                                    class="form-control  @error('pendidikan') is-invalid @enderror"
+                                    value="{{ old('pendidikan', $pegawai) }}">
+                                <input type="hidden" id="jabatan" name="jabatan"
+                                    class="form-control  @error('jabatan') is-invalid @enderror"
+                                    value="{{ old('jabatan', $pegawai) }}">
 
                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Jabatan</label>
-                                    <input type="text" id="jabatan" name="jabatan"
-                                        class="form-control  @error('jabatan') is-invalid @enderror"
-                                        value="{{ old('jabatan', $pegawai) }}">
-                                    @error('jabatan')
-                                        <div class="invalid-feedback">
-                                            <small class="text-danger">{{ $message }}</small>
-                                        </div>
-                                    @enderror
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Pendidikan</label>
-                                    <input type="text" id="pendidikan" name="pendidikan"
-                                        class="form-control  @error('pendidikan') is-invalid @enderror"
-                                        value="{{ old('pendidikan', $pegawai) }}">
-                                    @error('pendidikan')
-                                        <div class="invalid-feedback">
-                                            <small class="text-danger">{{ $message }}</small>
-                                        </div>
-                                    @enderror
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Ampuan</label>
+                                    @if ($pegawai->type == 'guru')
+                                        <label for="simpleinput" class="form-label" id="ampuan">Ampuan</label>
+                                    @elseif($pegawai->type == 'staff' || $pegawai->type == 'pengurus')
+                                        <label for="simpleinput" class="form-label" id="ampuan">Jabatan</label>
+                                    @endif
                                     <input type="text" id="ampuan" name="ampuan"
                                         class="form-control  @error('ampuan') is-invalid @enderror"
                                         value="{{ old('ampuan', $pegawai) }}">
@@ -104,4 +85,19 @@
                         </div>
                     </div>
                 </div> <!-- end col -->
+
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+                <script>
+                    $(document).ready(function() {
+                        $('#type').on('change', function() {
+                            var type = $(this).val();
+                            if (type == 'guru') {
+                                $('#ampuan').text('Ampuan');
+                            } else if (type == 'staff' || type == 'pengurus') {
+                                $('#ampuan').text('Jabatan');
+                            }
+                        });
+                    });
+                </script>
             @endsection

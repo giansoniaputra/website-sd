@@ -28,6 +28,8 @@
                                     <label for="photo" class="form-label">Unggah Foto</label>
                                     <input type="file" id="photo" name="photo"
                                         class="form-control  @error('photo') is-invalid @enderror" placeholder="">
+                                    <a href="{{ asset('storage/' . $kurikulum->photo) }}" target="_blank"
+                                        class="btn btn-success mt-1">Foto Sebelumnya</a>
                                     @error('photo')
                                         <div class="invalid-feedback">
                                             <small class="text-danger">{{ $message }}</small>
@@ -39,8 +41,8 @@
                                     <label for="pdf" class="form-label">PDF</label>
                                     <input type="file" class="form-control @error('photo') is-invalid @enderror"
                                         id="pdf" name="pdf">
-                                    <p>Current PDF: <a href="{{ asset('storage/' . $kurikulum->pdf) }}"
-                                            target="_blank">Download current PDF</a></p>
+                                    <a href="{{ asset('storage/' . $kurikulum->pdf) }}" target="_blank"
+                                        class="btn btn-success mt-1">PDF Sebelumnya</a>
                                     @error('pdf')
                                         <div class="invalid-feedback">
                                             <small class="text-danger">{{ $message }}</small>

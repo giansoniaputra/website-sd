@@ -53,7 +53,7 @@
                             <a href="/profil/yayasan">Profil</a>
                         </li>
                         <li>
-                            <a href="#">Pengurus</a>
+                            <a href="/profil/yayasan/pengurus">Pengurus</a>
                         </li>
                     </ul>
                 </div>
@@ -102,7 +102,7 @@
                 <a href="/pegawai" class="side-nav-link">
                     <i class="ri-dashboard-3-line"></i>
                     <span class="badge bg-success float-end"></span>
-                    <span> Guru & Staff </span>
+                    <span> Pegawai </span>
                 </a>
             </li>
             {{-- <li class="side-nav-item">
