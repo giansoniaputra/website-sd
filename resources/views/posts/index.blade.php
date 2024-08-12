@@ -31,7 +31,7 @@
                                 <td>{{ $post->title }}</td>
                                 <td>{{ $post->author }}</td>
                                 <td>{{ $post->category->kategori }}</td>
-                                <td><img src="{{ asset('post-images/' . $post->image) }}" alt="{{ $post->image }}" width="50"></td>
+                                <td><img src="{{ asset('post-images/' . $post->image) }}" alt="Foto" width="50"></td>
                                 <td>{!! $post->body !!}</td>
                                 <td>
                                     <a title="lihat gambar" href="/storage/{{ $post->image }}" class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a>
