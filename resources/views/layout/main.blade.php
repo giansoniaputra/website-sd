@@ -455,6 +455,20 @@
             }
         })
     </script>
+    <script>
+        $(document).ready(function() {
+            $("#table-pengurus").DataTable()
+            //Flash Message
+            const flashData = $('#success-update').data('flash');
+            if (flashData) {
+                Swal.fire(
+                    'Good job!',
+                    flashData,
+                    'success'
+                )
+            }
+        })
+    </script>
 
     <!-- App js -->
     <script src="/assets/js/app.min.js"></script>
