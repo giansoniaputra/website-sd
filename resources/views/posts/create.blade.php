@@ -42,7 +42,7 @@
                             <div class="mb-3">
                                 <label for="image" class="form-label">File
                                     Input Foto</label>
-                                <input type="file" id="image" name="image" class="form-control  @error('image') is-invalid @enderror" placeholder="" value="{{ old('image') }}">
+                                <input type="file" id="image" name="image" class="form-control  @error('image') is-invalid @enderror" placeholder="">
                                 @error('image')
                                 <div class="invalid-feedback">
                                     <small class="text-danger">{{ $message }}</small>
