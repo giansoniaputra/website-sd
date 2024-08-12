@@ -20,6 +20,7 @@
                             <th>Author</th>
                             <th>Category</th>
                             <th>Image</th>
+                            <th>Body</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -29,12 +30,13 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $post->title }}</td>
                                 <td>{{ $post->author }}</td>
-                                <td>{{ $post->category->name }}</td>
-                                <td><img src="{{ asset('post-images/' . $post->image) }}" alt="{{ $post->title }}" width="50"></td>
+                                <td>{{ $post->category->kategori }}</td>
+                                <td><img src="{{ asset('post-images/' . $post->image) }}" alt="{{ $post->image }}" width="50"></td>
+                                <td>{!! $post->body !!}</td>
                                 <td>
-                                    <a title="lihat gambar" href="{{ route('news.show', $post->slug) }}" class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a>
-                                    <a title="edit data"  href="{{ route('news.edit', $post->slug) }}" class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
-                                    <form action="{{ route('news.destroy', $post->slug) }}" method="post" style="display:inline">
+                                    <a title="lihat gambar" href="/storage/{{ $post->image }}" class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a>
+                                    <a title="edit data"  href="/news/{{$post->slug}}/edit" class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
+                                    <form action="/news/{{$post->slug}}" method="post" style="display:inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger text-light" onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i class="mdi mdi-delete-forever"></i> </button>

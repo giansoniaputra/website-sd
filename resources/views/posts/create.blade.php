@@ -1,15 +1,13 @@
 @extends('layout.main')
 @section('container')
-<div class="row">
-    <div class="col-12">
         <div class="card">
             <div class="card-header">
                 <h4 class="header-title">Tambah Data Input Berita</h4>
             </div>
             <div class="card-body">
+                <form action="/news" method="POST" enctype="multipart/form-data">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <form action="/news" method="POST" enctype="multipart/form-data">
+                    <div class="col-sm-6">
                             @csrf
                             <div class="mb-3">
                                 <label for="simpleinput" class="form-label">Title</label>
@@ -33,7 +31,7 @@
 
                             <div class="mb-3">
                                 <label for="simpleinput" class="form-label">Slug</label>
-                                <input type="text" id="slug" name="slug" class="form-control  @error('slug') is-invalid @enderror" value="{{ old('slug') }}">
+                                <input type="text" id="slug" name="slug" class="form-control  @error('slug') is-invalid @enderror" readonly style="background-color: rgb(237, 225, 225)" value="{{ old('slug') }}">
                                 @error('slug')
                                 <div class="invalid-feedback">
                                     <small class="text-danger">{{ $message }}</small>
@@ -57,9 +55,10 @@
                                 <select id="category_id"
                                     class="form-control @error('category_id') is-invalid @enderror"
                                     name="category_id">
+                                    <option value="">-- Pilih Kategori --</option>
                                     @foreach ($categories as $kategori)
-                                            <option value="{{ $kategori->uuid }}">
-                                                {{ $kategori->$kategori }}</option>
+                                            <option value="{{ $kategori->id }}">
+                                                {{ $kategori->kategori }}</option>
                                         @endforeach
                                 </select>
                                 @error('category_id')
@@ -68,9 +67,36 @@
                                     </span>
                                 @enderror
                             </div>
-                            <button class="btn btn-primary">SUBMIT</button>
-                        </form>
+                    </div>
+                    <div class="col-sm-6">
+
+                        <div class="mb-3">
+                            <label for="body" class="form-label">Body</label>
+                            <input id="body" type="hidden" name="body">
+                            <trix-editor style="height: 350px" input="body" class="form-control @error('body') is-invalid @enderror"></trix-editor>
+                            @error('body')
+                                <span class="invalid-feedback">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <button style="float: right" class="btn btn-primary">SUBMIT</button>
                     </div>
                 </div>
-            </div> <!-- end col -->
+                </form>
+            </div>
+        </div>
+            <script>
+                const title = document.querySelector('#title');
+                const slug = document.querySelector('#slug');
+
+                title.addEventListener('change', function() {
+                    fetch('/cek-slug?title=' + title.value)
+                    .then(response => response.json())
+                    .then(data => slug.value= data.slug)
+                });
+
+            </script>
+
             @endsection
