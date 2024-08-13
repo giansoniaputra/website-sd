@@ -10,7 +10,7 @@
                             <a href="/video/create" class="btn btn-primary">Tambah Video</a>
                         </div>
                         <div class="card-body">
-                            <table id="table-user" class="table table-striped dt-responsive nowrap w-100">
+                            <table id="table-user" class="table table-striped table-bordered table-responsive">
                                 <thead>
                                     <tr class="text-center">
                                     <tr>
