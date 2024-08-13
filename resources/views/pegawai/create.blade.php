@@ -18,6 +18,7 @@
                                         <option value="">-- Pilih Tipe --</option>
                                         <option value="guru">Guru</option>
                                         <option value="staff">Staff</option>
+                                        <option value="pengurus">Pengurus</option>
                                     </select>
                                     @error('type')
                                         <div class="invalid-feedback">
@@ -26,73 +27,68 @@
                                     @enderror
                                 </div>
 
-                                <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Nama</label>
-                                    <input type="text" id="nama" name="nama"
-                                        class="form-control  @error('nama') is-invalid @enderror">
-                                    @error('nama')
-                                        <div class="invalid-feedback">
-                                            <small class="text-danger">{{ $message }}</small>
-                                        </div>
-                                    @enderror
-                                </div>
+                                <div id="input-fields" style="display: none;">
+                                    <div class="mb-3">
+                                        <label for="photo" class="form-label">Unggah Foto</label>
+                                        <input type="file" id="photo" name="photo"
+                                            class="form-control  @error('photo') is-invalid @enderror" placeholder="">
+                                        @error('photo')
+                                            <div class="invalid-feedback">
+                                                <small class="text-danger">{{ $message }}</small>
+                                            </div>
+                                        @enderror
+                                    </div>
 
-                                <div class="mb-3">
-                                    <input type="hidden" id="status-input" name="status" value="null"
-                                        class="form-control  @error('status') is-invalid @enderror">
-                                    @error('status')
-                                        <div class="invalid-feedback">
-                                            <small class="text-danger">{{ $message }}</small>
-                                        </div>
-                                    @enderror
-                                </div>
+                                    <div class="mb-3">
+                                        <label for="nama" class="form-label">Nama</label>
+                                        <input type="text" id="nama" name="nama"
+                                            class="form-control  @error('nama') is-invalid @enderror">
+                                        @error('nama')
+                                            <div class="invalid-feedback">
+                                                <small class="text-danger">{{ $message }}</small>
+                                            </div>
+                                        @enderror
+                                    </div>
 
-                                <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Jabatan</label>
-                                    <input type="text" id="jabatan" name="jabatan"
-                                        class="form-control  @error('jabatan') is-invalid @enderror">
-                                    @error('jabatan')
-                                        <div class="invalid-feedback">
-                                            <small class="text-danger">{{ $message }}</small>
-                                        </div>
-                                    @enderror
+                                    <div class="mb-3">
+                                        <label for="ampuan" class="form-label" id="ampuan-label">Ampuan</label>
+                                        <input type="text" id="ampuan" name="ampuan"
+                                            class="form-control  @error('ampuan') is-invalid @enderror">
+                                        @error('ampuan')
+                                            <div class="invalid-feedback">
+                                                <small class="text-danger">{{ $message }}</small>
+                                            </div>
+                                        @enderror
+                                    </div>
                                 </div>
+                                {{-- Input Hidden Untuk Tetap Dimasukan Ke Database --}}
+                                <input type="hidden" id="status-input" name="status" value="null">
+                                <input type="hidden" id="status-input" name="jabatan" value="null">
+                                <input type="hidden" id="status-input" name="pendidikan" value="null">
 
-                                <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Pendidikan</label>
-                                    <input type="text" id="pendidikan" name="pendidikan"
-                                        class="form-control  @error('pendidikan') is-invalid @enderror">
-                                    @error('pendidikan')
-                                        <div class="invalid-feedback">
-                                            <small class="text-danger">{{ $message }}</small>
-                                        </div>
-                                    @enderror
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Ampuan</label>
-                                    <input type="text" id="ampuan" name="ampuan"
-                                        class="form-control  @error('ampuan') is-invalid @enderror">
-                                    @error('ampuan')
-                                        <div class="invalid-feedback">
-                                            <small class="text-danger">{{ $message }}</small>
-                                        </div>
-                                    @enderror
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="photo" class="form-label">Unggah Foto</label>
-                                    <input type="file" id="photo" name="photo"
-                                        class="form-control  @error('photo') is-invalid @enderror" placeholder="">
-                                    @error('photo')
-                                        <div class="invalid-feedback">
-                                            <small class="text-danger">{{ $message }}</small>
-                                        </div>
-                                    @enderror
-                                </div>
                                 <button class="btn btn-primary">SUBMIT</button>
                             </form>
                         </div>
                     </div>
                 </div> <!-- end col -->
-            @endsection
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#type').on('change', function() {
+                var type = $(this).val();
+                $('#input-fields').show();
+
+                if (type == 'guru') {
+                    $('#ampuan-label').text('Ampuan');
+                } else if (type == 'staff' || type == 'pengurus') {
+                    $('#ampuan-label').text('Jabatan');
+                }
+            });
+        });
+    </script>
+@endsection

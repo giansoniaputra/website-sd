@@ -1,0 +1,104 @@
+
+/* Animation Spin */
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); 
+	}
+	
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); 
+	} 
+}
+
+
+/* Site play button animation */
+
+@-webkit-keyframes play-pluse {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(.5);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(.5);
+    opacity: 0;
+  }
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(.5);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(.5);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.6);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes play-pluse {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(.5);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(.5);
+    opacity: 0;
+  }
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(.5);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(.5);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.6);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.6);
+    opacity: 0;
+  }
+}
+
+/*Ups Down Animation*/
+
+@-webkit-keyframes upsDown {
+    0% { 
+		transform: translateY(0); 
+	}
+    100% { 
+		transform: translateY(-20px); 
+	}
+}
+
+@keyframes upsDown {
+    0% { 
+		transform: translateY(0); 
+	}
+    100% { 
+		transform: translateY(-20px); 
+	}
+}
+
+/*
+Left Right
+*/
+
+@-webkit-keyframes leftRight {
+    0% { 
+		transform: translateX(0); 
+	}
+    100% { 
+		transform: translateX(-20px); 
+	}
+}
+
+@keyframes leftRight {
+    0% { 
+		transform: translateX(0); 
+	}
+    100% { 
+		transform: translateX(-20px); 
+	}
+}
+
+
+
+
+
+
+
+
+
