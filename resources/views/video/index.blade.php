@@ -15,27 +15,27 @@
                                     <tr class="text-center">
                                     <tr>
                                         <th>No</th>
-                                        <th>Sampul</th>
+                                        {{-- <th>Sampul</th> --}}
                                         <th>Link</th>
                                         <th class="text-center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($videos as $video)
-                                        <tr class="text-center">
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>
+                                        <tr>
+                                            <td class="text-center">{{ $loop->iteration }}</td>
+                                            {{-- <td>
                                                 @if ($video->sampul)
                                                     <a title="lihat gambar" href="/storage/{{ $video->sampul }}"
                                                         class="btn btn-transparent" target="_blank">
                                                         <img src="/storage/{{ $video->sampul_ }}" alt="Sampul"
                                                             width="50">
                                                 @endif
-                                            </td>
+                                            </td> --}}
                                             <td>{{ $video->link }}</td>
                                             <td>
                                                 <a title="edit data" href="/video/{{ $video->uuid }}/edit"
-                                                    class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
+                                                    class="btn btn-warning mb-1"><i class="ri-edit-2-line"></i></a>
                                                 <form action="/video/{{ $video->uuid }}" method="POST"
                                                     style="display:inline">
                                                     @csrf
