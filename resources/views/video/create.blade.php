@@ -11,7 +11,7 @@
                         <div class="col-lg-6">
                             <form action="/video" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <label for="sampul" class="form-label">Unggah Sampul</label>
                                     <input type="file" id="sampul" name="sampul"
                                         class="form-control  @error('sampul') is-invalid @enderror" placeholder="">
@@ -20,7 +20,7 @@
                                             <small class="text-danger">{{ $message }}</small>
                                         </div>
                                     @enderror
-                                </div>
+                                </div> --}}
                                 {{-- <div class="mb-3">
                                     <label for="link" class="form-label">Link</label>
                                     <input id="link" type="hidden" name="link">
