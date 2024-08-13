@@ -47,7 +47,9 @@ class VideoController extends Controller
         } else {
             $video = new Video($request->all());
             $video->uuid = Str::orderedUuid();
-            $video->sampul = $request->file('sampul')->store('sampul-video');
+            if ($request->sampul) {
+                $video->sampul = $request->file('sampul')->store('sampul-video');
+            }
             $video->save();
             return redirect('/video')->with('message', 'Vidio Berhasil Ditambahkan!');
         }
@@ -89,7 +91,9 @@ class VideoController extends Controller
         } else {
             $video->fill($request->all());
             if ($request->file('sampul')) {
-                Storage::delete($video->sampul);
+                if ($video->sampul != null) {
+                    Storage::delete($video->sampul);
+                }
                 $video->sampul = $request->file('sampul')->store('sampul-video');
             }
             $video->save();
@@ -102,7 +106,9 @@ class VideoController extends Controller
      */
     public function destroy(Video $video)
     {
-        Storage::delete($video->sampul);
+        if ($video->sampul != null) {
+            Storage::delete($video->sampul);
+        }
         Video::destroy($video->id);
         return redirect('/video')->with('message', 'Vidio Berhasil Dihapus!');
     }
