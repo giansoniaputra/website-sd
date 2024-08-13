@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid')->unique();
             $table->string('sampul')->nullable();
-            $table->string('link');
+            $table->longText('link');
             $table->timestamps();
         });
     }
