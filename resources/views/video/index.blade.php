@@ -13,7 +13,6 @@
                             <table id="table-user" class="table table-striped table-bordered table-responsive">
                                 <thead>
                                     <tr class="text-center">
-                                    <tr>
                                         <th>No</th>
                                         {{-- <th>Sampul</th> --}}
                                         <th>Link</th>
@@ -22,8 +21,8 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($videos as $video)
-                                        <tr>
-                                            <td class="text-center">{{ $loop->iteration }}</td>
+                                        <tr class="text-center">
+                                            <td>{{ $loop->iteration }}</td>
                                             {{-- <td>
                                                 @if ($video->sampul)
                                                     <a title="lihat gambar" href="/storage/{{ $video->sampul }}"
@@ -32,7 +31,7 @@
                                                             width="50">
                                                 @endif
                                             </td> --}}
-                                            <td>{{ $video->link }}</td>
+                                            <td>{!! $video->link !!}</td>
                                             <td>
                                                 <a title="edit data" href="/video/{{ $video->uuid }}/edit"
                                                     class="btn btn-warning mb-1"><i class="ri-edit-2-line"></i></a>
