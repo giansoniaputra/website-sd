@@ -27,19 +27,24 @@
         <ul class="side-nav">
             <li class="side-nav-title">Main</li>
             <li class="side-nav-item">
-                <a href="index.html" class="side-nav-link">
-                    <i class="ri-dashboard-3-line"></i>
-                    <span class="badge bg-success float-end">9+</span>
-                    <span> Dashboard </span>
-                </a>
-            </li>
-            {{-- <li class="side-nav-item">
-                <a href="/profil/yayasan" class="side-nav-link">
-                    <i class="ri-dashboard-3-line"></i>
-                    <span class="badge bg-success float-end"></span>
-                    <span> Profil Yayasan </span>
-                </a>
-            </li> --}}
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" href="#sidebarHome" aria-expanded="false" aria-controls="sidebarPages"
+                        class="side-nav-link">
+                        <i class="ri-pages-line"></i>
+                        <span> Home </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="sidebarHome">
+                        <ul class="side-nav-second-level">
+                            <li>
+                                <a href="#">Sambutan</a>
+                            </li>
+                            <li>
+                                <a href="/carousel">Input Carousel</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarYayasan" aria-expanded="false" aria-controls="sidebarPages"
                     class="side-nav-link">
