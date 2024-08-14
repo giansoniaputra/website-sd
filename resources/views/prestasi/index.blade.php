@@ -1,16 +1,15 @@
 @extends('layout.main')
 @section('container')
-    <div class="row ms-2 mb-2">
         <div class="row">
             <div class="col-12">
                 <section>
                     <div class="card">
                         <div class="card-header">
-                            <h2>Data Pelayanan Publik</h2>
-                            <a href="/prestasi/create" class="btn btn-primary">Tambah Data Pelayanan Publik</a>
+                            <h2>Data Prestasi</h2>
+                            <a href="/prestasi/create" class="btn btn-primary">Tambah Data Prestasi</a>
                         </div>
                         <div class="card-body">
-                            <table id="table-user" class="table table-striped dt-responsive nowrap w-100">
+                            <table id="table-user" class="table table-striped table-bordered table-responsive">
                                 <thead>
                                     <tr>
                                         <th>No</th>

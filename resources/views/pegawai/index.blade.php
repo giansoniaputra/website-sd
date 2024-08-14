@@ -2,7 +2,7 @@
 @section('container')
     <div class="row ms-2 mb-2">
         <div class="col-sm-12">
-            <h3 class="card-title">Data Pegawai</h3>
+            <h2>Data Pegawai</h2>
             <a href="/pegawai/create" class="btn btn-primary mt-1">Tambah Data Pegawai</a>
         </div>
     </div>
@@ -15,7 +15,7 @@
                     </div>
                     <div class="card-body">
                         <table id="table-user" class="table table-striped dt-responsive nowrap w-100">
-                            <thead>
+                            <thead class="text-center">
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
@@ -29,7 +29,7 @@
                             </thead>
                             <tbody>
                                 @foreach ($teachers as $pegawai)
-                                    <tr>
+                                    <tr class="text-center">
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $pegawai->nama }}</td>
                                         {{-- <td>{{ $pegawai->status }}</td> --}}
@@ -85,7 +85,7 @@
                             </thead>
                             <tbody>
                                 @foreach ($staffs as $pegawai)
-                                    <tr>
+                                    <tr class="text-center">
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $pegawai->nama }}</td>
                                         {{-- <td>{{ $pegawai->status }}</td> --}}
@@ -141,7 +141,7 @@
                             </thead>
                             <tbody>
                                 @foreach ($pengurus as $pegawai)
-                                    <tr>
+                                    <tr class="text-center">
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $pegawai->nama }}</td>
                                         {{-- <td>{{ $pegawai->status }}</td> --}}

@@ -1,16 +1,14 @@
 @extends('layout.main')
 @section('container')
-<div class="row ms-2 mb-2">
-    <div class="col-sm-12"><h3 class="card-title">Data Tahun Ajaran</h3></div>
-</div>
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <a href="/tahun-ajaran/create" class="btn btn-primary">Tambah Data</a>
+                <h2>Data Tahun Ajaran</h2>
+                <a href="/tahun-ajaran/create" class="btn btn-primary">Tambah Data Tahun Ajaran</a>
             </div>
             <div class="card-body">
-                <table id="table-user" class="table table-striped dt-responsive nowrap w-100">
+                <table id="table-user" class="table table-striped table-bordered table-responsive">
                     <thead>
                         <tr>
                             <th>No</th>

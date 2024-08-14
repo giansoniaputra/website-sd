@@ -25,8 +25,12 @@
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $kur->nama }}</td>
-                                            <td><img src="{{ asset('storage/' . $kur->photo) }}" alt="Photo"
-                                                    width="50"></td>
+                                            <td>
+                                                <a title="lihat gambar" href="/storage/{{ $kur->photo }}"
+                                                class="btn btn-transparent" target="_blank">
+                                                <img src="/storage/{{ $kur->photo }}" alt="Foto" width="50">
+                                                </a>
+                                            </td>
                                             <td>
                                                 <a href="{{ asset('storage/' . $kur->pdf) }}" target="_blank"
                                                     class="btn btn-primary">Download

@@ -1,6 +1,5 @@
 @extends('layout.main')
 @section('container')
-    <div class="row ms-2 mb-2">
         <div class="row">
             <div class="col-12">
                 <section>
@@ -10,7 +9,7 @@
                             <a href="/cover-ppdb/create" class="btn btn-primary">Tambah Sampul</a>
                         </div>
                         <div class="card-body">
-                            <table id="table-user" class="table table-striped dt-responsive nowrap w-100">
+                            <table id="table-user" class="table table-striped table-bordered table-responsive">
                                 <thead>
                                     <tr class="text-center">
                                         <th>Sampul Depan</th>
@@ -68,4 +67,5 @@
                 </section>
             </div><!-- end col-->
         </div> <!-- end row-->
+
     @endsection

@@ -37,7 +37,7 @@
                                         </div>
                                     @enderror
                                 </div>
-                                <button class="btn btn-primary">UPDATE</button>
+                                <button class="btn btn-primary">PERBARUI</button>
                             </form>
                         </div>
                     </div>

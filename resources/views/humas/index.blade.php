@@ -1,14 +1,10 @@
 @extends('layout.main')
 @section('container')
-<div class="row ms-2 mb-2">
-    <div class="col-sm-12">
-        <h3 class="card-title">Data Humas</h3>
-    </div>
-</div>
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
+                <h2>Data Humas</h2>
                 <a href="/humas/create" class="btn btn-primary">Tambah Data Humas</a>
             </div>
             <div class="card-body">
@@ -28,9 +24,9 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $Humas->nama }}</td>
                             <td>{{ $Humas->link }}</td>
-                            <td>{{ $Humas->photo }}</td>
+                            <td><a title="lihat gambar" href="/storage/{{ $Humas->photo }}" class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a></td>
                             <td class="text-center">
-                                <a title="lihat gambar" href="/storage/{{ $Humas->photo }}" class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a>
+
                                 <a title="edit data" href="/humas/{{ $Humas->uuid }}/edit" class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
                                 <form action="/humas/{{ $Humas->uuid }}" method="POST" style="display:inline">
                                     @csrf

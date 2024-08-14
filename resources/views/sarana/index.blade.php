@@ -1,18 +1,14 @@
 @extends('layout.main')
 @section('container')
-    <div class="row ms-2 mb-2">
-        <div class="col-sm-12">
-            <h3 class="card-title">Data Sarana</h3>
-        </div>
-    </div>
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
+                    <h2>Data Sarana</h2>
                     <a href="/sarana/create" class="btn btn-primary">Tambah Data Sarana</a>
                 </div>
                 <div class="card-body">
-                    <table id="table-user" class="table table-striped dt-responsive nowrap w-100">
+                    <table id="table-user" class="table table-striped table-bordered table-responsive">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -29,7 +25,7 @@
                                     <td>
                                         @if ($sarana->photo)
                                             <a title="lihat gambar" href="/storage/{{ $sarana->photo }}"
-                                                class="btn btn-success " target="_blank"><i class="bi-card-image"></i>
+                                                class="btn btn-primary " target="_blank"><i class="bi-card-image"></i>
                                                 {{-- <img src="/storage/{{ $sarana->photo }}" alt="Sampul Depan" width="50"> --}}
                                             </a>
                                         @endif

@@ -3,10 +3,8 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <div class="card-header">
-                    <h2>Data Kelas</h2>
-                </div>
                 <div class="card-body">
+                    <h2>Data Kelas</h2>
                     <a href="/kelas/create" class="btn btn-primary mb-3">Tambah Data Kelas</a>
                     <div class="row">
                         <div class="col-lg-12">

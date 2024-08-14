@@ -2,7 +2,7 @@
 <div class="leftside-menu">
 
     <!-- Brand Logo Light -->
-    <a href="index.html" class="logo logo-light">
+    <a href="#" class="logo logo-light">
         <span class="logo-lg">
             <img src="/assets/images/logo.png" alt="logo">
         </span>
@@ -12,7 +12,7 @@
     </a>
 
     <!-- Brand Logo Dark -->
-    <a href="index.html" class="logo logo-dark">
+    <a href="#" class="logo logo-dark">
         <span class="logo-lg">
             <img src="/assets/images/logo-dark.png" alt="dark logo">
         </span>
@@ -30,14 +30,14 @@
                 <li class="side-nav-item">
                     <a data-bs-toggle="collapse" href="#sidebarHome" aria-expanded="false" aria-controls="sidebarPages"
                         class="side-nav-link">
-                        <i class="ri-pages-line"></i>
+                        <i class="mdi mdi-home"></i>
                         <span> Home </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarHome">
                         <ul class="side-nav-second-level">
                             <li>
-                                <a href="/carousel">Input Carousel</a>
+                                <a href="/carousel">Input Foto Slide</a>
                             </li>
                         </ul>
                     </div>
@@ -45,7 +45,7 @@
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarYayasan" aria-expanded="false" aria-controls="sidebarPages"
                     class="side-nav-link">
-                    <i class="ri-pages-line"></i>
+                    <i class="mdi mdi-hands-pray"></i>
                     <span> Yayasan </span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -54,16 +54,13 @@
                         <li>
                             <a href="/profil/yayasan">Profil</a>
                         </li>
-                        <li>
-                            <a href="/profil/yayasan/pengurus">Pengurus</a>
-                        </li>
                     </ul>
                 </div>
             </li>
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarSekolah" aria-expanded="false" aria-controls="sidebarPages"
                     class="side-nav-link">
-                    <i class="ri-pages-line"></i>
+                    <i class="mdi mdi-school"></i>
                     <span> Sekolah </span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -81,7 +78,7 @@
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarWakasek" aria-expanded="false" aria-controls="sidebarWakasek"
                     class="side-nav-link">
-                    <i class="ri-pages-line"></i>
+                    <i class="mdi mdi-school-outline"></i>
                     <span> Wakasek </span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -102,7 +99,7 @@
 
             <li class="side-nav-item">
                 <a href="/pegawai" class="side-nav-link">
-                    <i class="ri-dashboard-3-line"></i>
+                    <i class="mdi mdi-account-tie"></i>
                     <span class="badge bg-success float-end"></span>
                     <span> Pegawai </span>
                 </a>
@@ -141,14 +138,14 @@
             </li> --}}
             <li class="side-nav-item">
                 <a href="/pelayanan-public" class="side-nav-link">
-                    <i class="ri-dashboard-3-line"></i>
+                    <i class="mdi mdi-bullhorn"></i>
                     <span class="badge bg-success float-end"></span>
                     <span> Pelayanan Publik </span>
                 </a>
             </li>
             <li class="side-nav-item">
                 <a href="/prestasi" class="side-nav-link">
-                    <i class="ri-dashboard-3-line"></i>
+                    <i class="mdi mdi-star"></i>
                     <span class="badge bg-success float-end"></span>
                     <span> Prestasi </span>
                 </a>
@@ -156,7 +153,7 @@
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarDataSiswa" aria-expanded="false"
                     aria-controls="sidebarDataSiswa" class="side-nav-link">
-                    <i class="ri-pages-line"></i>
+                    <i class="mdi mdi-account-group"></i>
                     <span> Data Siswa </span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -174,7 +171,7 @@
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarBerita" aria-expanded="false"
                     aria-controls="sidebarBerita" class="side-nav-link">
-                    <i class="ri-pages-line"></i>
+                    <i class="mdi mdi-newspaper-variant"></i>
                     <span> Berita </span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -192,7 +189,7 @@
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarGaleri" aria-expanded="false"
                     aria-controls="sidebarGaleri" class="side-nav-link">
-                    <i class="ri-pages-line"></i>
+                    <i class="mdi mdi-view-gallery"></i>
                     <span> Galeri </span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -209,7 +206,7 @@
             </li>
             <li class="side-nav-item">
                 <a href="/auth/register" class="side-nav-link">
-                    <i class="ri-dashboard-3-line"></i>
+                    <i class="mdi mdi-account-lock-open"></i>
                     <span class="badge bg-success float-end"></span>
                     <span> Register </span>
                 </a>

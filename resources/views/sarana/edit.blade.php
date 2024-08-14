@@ -23,16 +23,17 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="photo" class="form-label">File
-                                    Input Foto</label>
+                                <label for="photo" class="form-label">Unggah Foto Sarana</label>
                                 <input type="file" id="photo" name="photo" class="form-control  @error('photo') is-invalid @enderror" placeholder="">
+                                <a href="{{ asset('storage/' . $sarana->photo) }}" target="_blank"
+                                    class="btn btn-success mt-1">Foto Sebelumnya</a>
                                 @error('photo')
                                 <div class="invalid-feedback">
                                     <small class="text-danger">{{ $message }}</small>
                                 </div>
                                 @enderror
                             </div>
-                            <button class="btn btn-primary">UPDATE</button>
+                            <button class="btn btn-primary">PERBARUI</button>
                         </form>
                     </div>
                 </div>

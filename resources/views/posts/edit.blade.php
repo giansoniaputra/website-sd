@@ -83,7 +83,7 @@
                                 </span>
                             @enderror
                         </div>
-                        <button class="btn btn-primary" style="float: right">UPDATE</button>
+                        <button class="btn btn-primary" style="float: right">PERBARUI</button>
                     </div>
                 </div>
                 </form>

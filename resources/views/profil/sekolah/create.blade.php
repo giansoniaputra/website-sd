@@ -73,7 +73,7 @@
                                     </trix-editor>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="photo" class="form-label">Unggah Foto</label>
+                                    <label for="photo" class="form-label">Unggah Foto Kepala Sekolah</label>
                                     <input type="file" id="photo" name="photo"
                                         class="form-control  @error('photo') is-invalid @enderror" placeholder="">
                                     @error('photo')
@@ -82,7 +82,7 @@
                                         </div>
                                     @enderror
                                 </div>
-                                <button class="btn btn-primary">SUBMIT</button>
+                                <button class="btn btn-primary">SIMPAN</button>
                             </form>
                         </div>
                     </div>
