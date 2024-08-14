@@ -37,9 +37,6 @@
                     <div class="collapse" id="sidebarHome">
                         <ul class="side-nav-second-level">
                             <li>
-                                <a href="#">Sambutan</a>
-                            </li>
-                            <li>
                                 <a href="/carousel">Input Carousel</a>
                             </li>
                         </ul>
