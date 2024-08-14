@@ -291,14 +291,14 @@
         <div class="portfolio-items-area">
             <div class="row">
                 <div class="col-xl-12 portfolio-content">
-                    <div class="mix-item-menu active-theme text-center">
+                    {{-- <div class="mix-item-menu active-theme text-center">
                         <button class="active" data-filter="*">All</button>
                         <button data-filter=".kategori1" class="">Kategori 1</button>
                         <button data-filter=".kategori2" class="">Kategori 2</button>
                         <button data-filter=".kategori3" class="">Kategori 3 </button>
                         <button data-filter=".kategori4" class="">Kategori 4</button>
                         <button data-filter=".kategori5" class="">Kategori 5</button>
-                    </div>
+                    </div> --}}
                     <!-- End Mixitup Nav-->
                     <div class="magnific-mix-gallery masonary">
                         <div id="portfolio-grid" class="portfolio-items">

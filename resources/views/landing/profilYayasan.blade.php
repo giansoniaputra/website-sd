@@ -84,7 +84,7 @@
 		============================================= -->
 <div class="rel-project de-pb" id="pengurus">
     <div class="container">
-        <h2 class="text-center mb-40 mt-40">Guru & Staff</h2>
+        <h2 class="text-center mb-40 mt-40">Pengurus Yayasan</h2>
         <div class="rel-wpr grid-4">
             <div class="rel-box">
                 <div class="rel-img">

@@ -48,12 +48,12 @@
                             <tr>
                                 <td>Kelas 1</td>
                                 <td><img src="/assets2/img/visi.png" alt="Visi Yayasan" style="width: 100px;"></td>
-                                <td><a href="/assets2/pdf/visi.pdf" class="btn btn-primary" download>Download PDF</a></td>
+                                <td><a href="#" class="btn btn-primary">Download PDF</a></td>
                             </tr>
                             <tr>
                                 <td>Kelas 2</td>
                                 <td><img src="/assets2/img/misi.png" alt="Misi Yayasan" style="width: 100px;"></td>
-                                <td><a href="/assets2/pdf/misi.pdf" class="btn btn-primary" download>Download PDF</a></td>
+                                <td><a href="#" class="btn btn-primary">Download PDF</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -79,13 +79,22 @@
                     <h5 class="text-center">Tahun Ajaran 2024/2025</h5>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#kelasX2024">Kelas X</a>
+                            <a class="nav-link active" data-toggle="tab" href="#">Kelas I</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#kelasXI2024">Kelas XI</a>
+                            <a class="nav-link" data-toggle="tab" href="#">Kelas II</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#kelasXII2024">Kelas XII</a>
+                            <a class="nav-link" data-toggle="tab" href="#">Kelas III</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#">Kelas IV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#">Kelas V</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#">Kelas VI</a>
                         </li>
                     </ul>
 
@@ -121,13 +130,22 @@
                     <h5 class="text-center mt-5">Tahun Ajaran 2023/2024</h5>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#kelasX2023">Kelas X</a>
+                            <a class="nav-link active" data-toggle="tab" href="#">Kelas I</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#kelasXI2023">Kelas XI</a>
+                            <a class="nav-link" data-toggle="tab" href="#">Kelas II</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#kelasXII2023">Kelas XII</a>
+                            <a class="nav-link" data-toggle="tab" href="#">Kelas III</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#">Kelas IV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#">Kelas V</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#">Kelas VI</a>
                         </li>
                     </ul>
 
@@ -184,7 +202,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <table class="table table-striped table-bordered">
+                <table id="example1" class="table table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -193,6 +211,116 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>Laki-Laki</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Aisyah</td>
+                            <td>Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>Laki-Laki</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Aisyah</td>
+                            <td>Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>Laki-Laki</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Aisyah</td>
+                            <td>Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>Laki-Laki</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Aisyah</td>
+                            <td>Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>Laki-Laki</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Aisyah</td>
+                            <td>Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>Laki-Laki</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Aisyah</td>
+                            <td>Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>Laki-Laki</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Aisyah</td>
+                            <td>Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>Laki-Laki</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Aisyah</td>
+                            <td>Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>Laki-Laki</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Aisyah</td>
+                            <td>Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>Laki-Laki</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Aisyah</td>
+                            <td>Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad</td>
+                            <td>Laki-Laki</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Aisyah</td>
+                            <td>Perempuan</td>
+                        </tr>
                         <tr>
                             <td>1</td>
                             <td>Ahmad</td>
@@ -307,7 +435,7 @@
                     <h2 class="text-center">
                         Prestasi Peserta Didik
                     </h2>
-                    <table class="table table-striped table-bordered">
+                    <table id="prestasiTable" class="table table-striped table-bordered">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -318,6 +446,90 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Porsada</td>
+                                <td>Priangan Timur</td>
+                                <td>12 Mei 2024</td>
+                                <td>Juara 1 Cabang Basket</td>
+                            </tr>
                             <tr>
                                 <td>1</td>
                                 <td>Porsada</td>

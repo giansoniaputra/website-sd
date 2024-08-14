@@ -34,7 +34,7 @@
         </h2>
         <div class="project-wpr">
             <div class="project-img">
-                <img src="/assets2/img/portfolio/570x570.png" alt="thumb" class="img-fluid w-100">
+                <img src="/assets2/img/portfolio/1140x1140.png" alt="thumb" class="img-fluid w-100">
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
         </h2>
         <div class="project-wpr">
             <div class="project-img">
-                <img src="/assets2/img/portfolio/570x570.png" alt="thumb" class="img-fluid w-100">
+                <img src="/assets2/img/portfolio/1140x1140.png" alt="thumb" class="img-fluid w-100">
             </div>
         </div>
     </div>
@@ -80,10 +80,16 @@
                         </thead>
                         <tbody>
                             <tr>
-
+                                <td>1</td>
+                                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam accusamus repellat, autem expedita non eaque, hic perferendis possimus animi amet, nam harum aspernatur atque nesciunt ullam culpa deserunt numquam quidem.</td>
+                                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam accusamus repellat, autem expedita non eaque, hic perferendis possimus animi amet, nam harum aspernatur atque nesciunt ullam culpa deserunt numquam quidem.</td>
+                                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam accusamus repellat, autem expedita non eaque, hic perferendis possimus animi amet, nam harum aspernatur atque nesciunt ullam culpa deserunt numquam quidem.</td>
                             </tr>
                             <tr>
-
+                                <td>2</td>
+                                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam accusamus repellat, autem expedita non eaque, hic perferendis possimus animi amet, nam harum aspernatur atque nesciunt ullam culpa deserunt numquam quidem.</td>
+                                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam accusamus repellat, autem expedita non eaque, hic perferendis possimus animi amet, nam harum aspernatur atque nesciunt ullam culpa deserunt numquam quidem.</td>
+                                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam accusamus repellat, autem expedita non eaque, hic perferendis possimus animi amet, nam harum aspernatur atque nesciunt ullam culpa deserunt numquam quidem.</td>
                             </tr>
                         </tbody>
                     </table>

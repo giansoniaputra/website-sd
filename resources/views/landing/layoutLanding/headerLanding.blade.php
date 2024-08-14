@@ -4,14 +4,14 @@
     <div class="main-navigation">
         <div class="navbar navbar-expand-lg bsnav bsnav-sticky bsnav-sticky-slide bsnav-transparent bsnav-scrollspy">
             <div class="container">
-                <a class="navbar-brand" href="/landing">
+                <a class="navbar-brand" href="/">
                     <img src="/assets/images/logo-sd.png" class="logo-display" alt="thumb">
                     <img src="/assets/images/logo-sd2.png" class="logo-scrolled" alt="thumb">
                 </a>
                 <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse justify-content-sm-end">
                     <ul class="navbar-nav navbar-mobile ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="/landing">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="/landing/profilYayasan">Yayasan <i class="caret ti-angle-down"></i></a>
                             <ul class="navbar-nav">

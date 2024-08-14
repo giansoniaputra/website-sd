@@ -26,7 +26,7 @@
 </div>
 <!-- End Hero -->
 
-<!-- Start Gambar ============================================= -->
+{{-- <!-- Start Gambar ============================================= -->
 <div class="project-single de-padding">
     <div class="container">
         <h2 class="text-center">
@@ -39,7 +39,7 @@
         </div>
     </div>
 </div>
-<!-- End Gambar -->
+<!-- End Gambar --> --}}
 
 <!-- Start Layanan Publik ============================================= -->
 <div class="about-12 de-padding" id="kurikulum">
