@@ -1,6 +1,6 @@
 @extends('landing.layoutLanding.app')
 
-@section('title', 'Profil Sekolah Page')
+@section('title', 'Profil Sekolah')
 
 @section('content')
 <!-- Start Hero ============================================= -->

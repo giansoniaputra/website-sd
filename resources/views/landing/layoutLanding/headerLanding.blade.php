@@ -15,9 +15,9 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="/landing/profilYayasan">Yayasan <i class="caret ti-angle-down"></i></a>
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link" href="#">Visi Misi</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Sejarah</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Pengurus</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/landing/profilYayasan#visiMisi">Visi Misi</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/landing/profilYayasan#sejarah">Sejarah</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/landing/profilYayasan#pengurus">Pengurus</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -32,23 +32,30 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Wakasek <i class="caret ti-angle-down"></i></a>
+                            <a class="nav-link" href="/landing/wakasek">Wakasek <i class="caret ti-angle-down"></i></a>
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link" href="#">Kurikulum</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Kesiswaan</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Sarana</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Humas</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/landing/wakasek#kurikulum">Kurikulum</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#">Kesiswaan <i class="ti-angle-right"></i></a>
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item"><a class="nav-link" href="/landing/wakasek#pesertaDidik">Peserta Didik</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="/landing/wakasek#prestasi">Prestasi</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="/landing/wakasek#saranaPrasarana">Sarana</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/landing/wakasek#humas">Humas</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Guru</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">PPDB</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Layanan Publik</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Berita</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="/landing/guru">Guru</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/landing/ppdb">PPDB</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/landing/layanan">Layanan Publik</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/landing/berita">Berita</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Galeri <i class="caret ti-angle-down"></i></a>
+                            <a class="nav-link" href="/landing/galeri">Galeri <i class="caret ti-angle-down"></i></a>
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link" href="#">Video</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Foto</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/landing/galeri#video">Video</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/landing/galeri#foto">Foto</a></li>
                             </ul>
                         </li>
                     </ul>
