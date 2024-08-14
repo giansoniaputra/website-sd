@@ -3981,25 +3981,3 @@ header.header.single-head .navbar.in {
     margin-bottom: 20px;
     color: #333;
 } */
-
-/* Tambahkan ini di file CSS atau di dalam style tag */
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-    padding: 0.5em 1em;
-    margin-left: 2px;
-    background: #007bff;
-    color: white !important;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-    background: #0056b3;
-    color: white !important;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button.current {
-    background: #0056b3;
-    color: white !important;
-    cursor: default;
-}
