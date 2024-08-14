@@ -16,7 +16,7 @@
                                         aria-label="Close"></button> {{ session('error') }}
                                 </div>
                             @endif
-                            <form action="/profil/store" method="POST">
+                            <form action="/profil/store" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <input type="hidden" value="sekolah" name="type">
                                 <div class="mb-3">
@@ -46,8 +46,8 @@
                                 <div class="mb-3">
                                     <label for="strategi" class="form-label">Strategi</label>
                                     <input id="strategi" type="hidden" name="strategi">
-                                    <trix-editor input="strategis">
-                                        {!!(isset($data))? $data->sejarah: ""!!}
+                                    <trix-editor input="strategi">
+                                        {!!(isset($data))? $data->strategi: ""!!}
                                     </trix-editor>
                                 </div>
 
@@ -59,18 +59,28 @@
                                     </trix-editor>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="informasiUmum" class="form-label">Infomasi Umum</label>
-                                    <input id="informasiUmum" type="hidden" name="informasiUmum">
-                                    <trix-editor input="informasiUmum">
-                                        {!!(isset($data))? $data->informasiUmum: ""!!}
-                                    </trix-editor>
-                                </div>
-                                <div class="mb-3">
                                     <label for="lokasi" class="form-label">Lokasi</label>
                                     <input id="lokasi" type="hidden" name="lokasi">
                                     <trix-editor input="lokasi">
                                         {!!(isset($data))? $data->lokasi: ""!!}
                                     </trix-editor>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="sambutan" class="form-label">Sambutan</label>
+                                    <input id="sambutan" type="hidden" name="sambutan">
+                                    <trix-editor input="sambutan">
+                                        {!!(isset($data))? $data->sambutan: ""!!}
+                                    </trix-editor>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="photo" class="form-label">Unggah Foto</label>
+                                    <input type="file" id="photo" name="photo"
+                                        class="form-control  @error('photo') is-invalid @enderror" placeholder="">
+                                    @error('photo')
+                                        <div class="invalid-feedback">
+                                            <small class="text-danger">{{ $message }}</small>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <button class="btn btn-primary">SUBMIT</button>
                             </form>
