@@ -1,12 +1,10 @@
 @extends('layout.main')
 @section('container')
-    <div class="row ms-2 mb-2">
-        <div class="col-sm-12"><h3 class="card-title">Data User</h3></div>
-    </div>
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
+                    <h2 class="card-title">Data User</h2>
                     <a href="/auth/create" class="btn btn-primary">Tambah Data</a>
                 </div>
                 <div class="card-body">

@@ -4,7 +4,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="header-title">Tambah Foto Carousel</h4>
+                    <h4 class="header-title">Tambah Foto Slide</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -21,7 +21,7 @@
                                         </div>
                                     @enderror
                                 </div>
-                                <button class="btn btn-primary">SUBMIT</button>
+                                <button class="btn btn-primary">SIMPAN</button>
                             </form>
                         </div>
                     </div>

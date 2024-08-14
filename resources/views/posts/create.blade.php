@@ -81,7 +81,7 @@
                             @enderror
                         </div>
 
-                        <button style="float: right" class="btn btn-primary">SUBMIT</button>
+                        <button style="float: right" class="btn btn-primary">SIMPAN</button>
                     </div>
                 </div>
                 </form>

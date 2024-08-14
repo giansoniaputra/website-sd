@@ -24,8 +24,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="photo" class="form-label">File
-                                        Input Foto</label>
+                                    <label for="photo" class="form-label">Unggah Foto Sarana</label>
                                     <input type="file" id="photo" name="photo"
                                         class="form-control  @error('photo') is-invalid @enderror" placeholder=""
                                         value="{{ old('photo') }}">
@@ -35,7 +34,7 @@
                                         </div>
                                     @enderror
                                 </div>
-                                <button class="btn btn-primary">SUBMIT</button>
+                                <button class="btn btn-primary">SIMPAN</button>
                             </form>
                         </div>
                     </div>

@@ -1,6 +1,5 @@
 @extends('layout.main')
 @section('container')
-    <div class="row ms-2 mb-2">
         <div class="row">
             <div class="col-12">
                 <section>
@@ -11,14 +10,14 @@
                         </div>
                         <div class="card-body">
                             <table id="table-user" class="table table-striped dt-responsive nowrap w-100">
-                                <thead>
+                                <thead class="text-center">
                                     <tr>
                                         <th>No</th>
                                         <th>Foto</th>
                                         <th class="text-center">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="text-center">
                                     @foreach ($galleries as $gallery)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>

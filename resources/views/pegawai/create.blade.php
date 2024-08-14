@@ -4,7 +4,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="header-title">Tambah Data Guru / Staff</h4>
+                    <h4 class="header-title">Tambah Data Pegawai</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -66,7 +66,7 @@
                                 <input type="hidden" id="status-input" name="jabatan" value="null">
                                 <input type="hidden" id="status-input" name="pendidikan" value="null">
 
-                                <button class="btn btn-primary">SUBMIT</button>
+                                <button class="btn btn-primary">SIMPAN</button>
                             </form>
                         </div>
                     </div>
