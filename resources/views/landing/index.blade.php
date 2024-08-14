@@ -1,6 +1,6 @@
 @extends('landing.layoutLanding.app')
 
-@section('title', 'Home Page')
+@section('title', 'Halaman Utama')
 
 @section('content')
 <!-- Start Hero ============================================= -->
@@ -129,7 +129,7 @@
 <!-- Start Blog
     ============================================= -->
 <div class="blog-area posi-rel de-padding">
-    <div class="hero-animation">
+    {{-- <div class="hero-animation">
         <img src="/assets2/img/animation/ani-1.png" alt="thumb">
         <img src="/assets2/img/animation/ani-2.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
@@ -138,7 +138,7 @@
         <img src="/assets2/img/animation/ani-6.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-    </div>
+    </div> --}}
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2">
@@ -201,7 +201,7 @@
 <!-- Start Blog
     ============================================= -->
 <div class="blog-area posi-rel de-padding">
-    <div class="hero-animation">
+    {{-- <div class="hero-animation">
         <img src="/assets2/img/animation/ani-1.png" alt="thumb">
         <img src="/assets2/img/animation/ani-2.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
@@ -210,7 +210,7 @@
         <img src="/assets2/img/animation/ani-6.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-    </div>
+    </div> --}}
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2">
@@ -273,13 +273,13 @@
 <!-- Start work
     ============================================= -->
 <div id="portfolio" class="portfolio-area posi-rel de-padding">
-    <div class="portfolio-animation">
+    {{-- <div class="portfolio-animation">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
         <img src="/assets2/img/animation/ani-4.png" alt="thumb">
         <img src="/assets2/img/animation/ani-5.png" alt="thumb">
         <img src="/assets2/img/animation/ani-6.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-    </div>
+    </div> --}}
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2">

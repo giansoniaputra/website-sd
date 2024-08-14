@@ -40,7 +40,7 @@ Route::post('/authenticate', [AuthController::class, 'authenticate']);
 // SEMUA ROUTE AYNG MENGHARUSKAN LOGIN TERLEBIH DAHULU
 Route::middleware(['auth'])->group(function () {
     // ROUTE DASHBOARD
-    Route::get('/', function () {
+    Route::get('/dashboard', function () {
         return view('welcome');
     });
     Route::get('/home', function () {
