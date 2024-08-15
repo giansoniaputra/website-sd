@@ -38,13 +38,13 @@
                         Visi
                     </h2>
                     <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
+                        {!!$visi!!}
                     </p>
                     <h2>
                         Misi
                     </h2>
                     <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
+                        {!!$misi!!}
                     </p>
                     {{-- <a href="#" class="theme-btn">Lebih Lanjut</a> --}}
                 </div>

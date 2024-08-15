@@ -76,114 +76,54 @@
                     </h2>
 
                     <!-- Tahun Ajaran 2024/2025 -->
-                    <h5 class="text-center">Tahun Ajaran 2024/2025</h5>
+                    @foreach ($tahun_ajaran as $item)
+                    @php
+                    $kelas = getKelas($item->uuid);
+                    @endphp
+                    <h5 class="text-center">Tahun Ajaran {{$item->tahun_awal}} - {{$item->tahun_akhir}}</h5>
                     <ul class="nav nav-tabs">
+                        @foreach ($kelas as $index => $row)
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#">Kelas I</a>
+                            <a class="nav-link @if ($index == 0)
+                                active
+                            @endif" data-toggle="tab" href="#">{{$row->nama_kelas}}</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#">Kelas II</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#">Kelas III</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#">Kelas IV</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#">Kelas V</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#">Kelas VI</a>
-                        </li>
-                    </ul>
-
-                    <div class="tab-content">
-                        <div id="kelasX2024" class="tab-pane fade show active">
-                            <table class="table table-striped table-bordered mt-3">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Kelas</th>
-                                        <th>Laki-Laki</th>
-                                        <th>Perempuan</th>
-                                        <th>Jumlah</th>
-                                        <th>Detail</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>IIS I</td>
-                                        <td>15</td>
-                                        <td>15</td>
-                                        <td>30</td>
-                                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailModal1">Detail</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        @endforeach
+                        @php
+                        $siswa = getSiswa($row->uuid);
+                        @endphp
+                        <div class="tab-content">
+                            <div id="kelasX2024" class="tab-pane fade show active">
+                                <table class="table table-striped table-bordered mt-3">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Kelas</th>
+                                            <th>Laki-Laki</th>
+                                            <th>Perempuan</th>
+                                            <th>Jumlah</th>
+                                            <th>Detail</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>IIS I</td>
+                                            <td>15</td>
+                                            <td>15</td>
+                                            <td>30</td>
+                                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailModal1">Detail</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Tabs for Kelas XI and XII go here -->
                         </div>
-                        <!-- Tabs for Kelas XI and XII go here -->
-                    </div>
-
-                    <!-- Tahun Ajaran 2023/2024 -->
-                    <h5 class="text-center mt-5">Tahun Ajaran 2023/2024</h5>
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#">Kelas I</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#">Kelas II</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#">Kelas III</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#">Kelas IV</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#">Kelas V</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#">Kelas VI</a>
-                        </li>
                     </ul>
+                    @endforeach
 
-                    <div class="tab-content">
-                        <div id="kelasX2023" class="tab-pane fade show active">
-                            <table class="table table-striped table-bordered mt-3">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Kelas</th>
-                                        <th>Laki-Laki</th>
-                                        <th>Perempuan</th>
-                                        <th>Jumlah</th>
-                                        <th>Detail</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>MIA I</td>
-                                        <td>14</td>
-                                        <td>15</td>
-                                        <td>29</td>
-                                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailModal2">Detail</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>MIA II</td>
-                                        <td>28</td>
-                                        <td>28</td>
-                                        <td>56</td>
-                                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailModal3">Detail</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- Tabs for Kelas XI and XII go here -->
-                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -553,9 +493,10 @@
     <div class="container">
         <h2 class="text-center mb-40 mt-40">Sarana & Prasarana</h2>
         <div class="rel-wpr grid-4">
+            @foreach ($sarana as $row)
             <div class="rel-box">
                 <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
+                    <img src="/storage/{{$row->photo}}" alt="thumb">
                 </div>
                 <div class="rel-info mt-20 text-center">
                     <a href="project-single.html">
@@ -563,121 +504,11 @@
                     </a>
                 </div>
             </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h6 class="mb-10">Nama Sarana</h6>
-                    </a>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h6 class="mb-10">Nama Sarana</h6>
-                    </a>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h6 class="mb-10">Nama Sarana</h6>
-                    </a>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h6 class="mb-10">Nama Sarana</h6>
-                    </a>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h6 class="mb-10">Nama Sarana</h6>
-                    </a>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h6 class="mb-10">Nama Sarana</h6>
-                    </a>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h6 class="mb-10">Nama Sarana</h6>
-                    </a>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h6 class="mb-10">Nama Sarana</h6>
-                    </a>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h6 class="mb-10">Nama Sarana</h6>
-                    </a>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h6 class="mb-10">Nama Sarana</h6>
-                    </a>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h6 class="mb-10">Nama Sarana</h6>
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
 <!-- End Sarana & Prasarana -->
-
 <!-- Start Humas
 		============================================= -->
 <div class="service-area posi-rel bg de-padding" id="humas">

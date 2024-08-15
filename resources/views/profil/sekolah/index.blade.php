@@ -91,13 +91,11 @@
     <div class="card">
         <div class="card-header">
             <h4 class="header-title">Foto Kepala Sekolah</h4>
-            <a title="lihat gambar" href="/storage/{{ $data->photo }}"
-                class="btn btn-transparent" target="_blank">
-                <img src="/storage/{{ $data->photo }}" alt="Foto" width="50">
+            <a title="lihat gambar" href="{{(isset($data) ? "/storage/".$data->photo : '#')}}" class="btn btn-transparent" target="_blank">
+                <img src="{{(isset($data) ? "/storage/".$data->photo : '')}}" alt="Foto" width="50">
             </a>
         </div>
     </div>
 </div>
 
 @endsection
-

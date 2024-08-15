@@ -5,8 +5,8 @@
         <div class="navbar navbar-expand-lg bsnav bsnav-sticky bsnav-sticky-slide bsnav-transparent bsnav-scrollspy">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="/assets/images/logo-sd.png" class="logo-display" alt="thumb">
-                    <img src="/assets/images/logo-sd2.png" class="logo-scrolled" alt="thumb">
+                    <img src="/assets/images/logo-sd-text.png" class="logo-display" alt="thumb">
+                    <img src="/assets/images/logo-sd2-text.png" class="logo-scrolled" alt="thumb">
                 </a>
                 <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse justify-content-sm-end">
