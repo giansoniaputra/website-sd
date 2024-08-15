@@ -10,20 +10,20 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="table-user" class="table table-striped table-bordered">
-                            <thead>
+                            <thead class="text-center">
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
                                     <th>PDF</th>
-                                    <th class="text-center">Action</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($Pelayanans as $pelayanan)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td class="text-center">{{ $loop->iteration }}</td>
                                         <td>{{ $pelayanan->nama }}</td>
-                                        <td>
+                                        <td class="text-center">
                                             <a href="{{ asset('storage/' . $pelayanan->pdf) }}" target="_blank"
                                                 class="btn btn-primary">Download
                                                 PDF</a>

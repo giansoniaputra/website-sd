@@ -10,14 +10,14 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="table-user" class="table table-striped table-bordered">
-                            <thead>
+                            <thead class="text-center">
                                 <tr>
                                     <th>No</th>
                                     <th>Kategori</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
                                 @foreach ($kategori as $KategoriBerita)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>

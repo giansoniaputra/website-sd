@@ -10,20 +10,20 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="table-user" class="table table-striped table-bordered">
-                            <thead>
+                            <thead class="text-center">
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
                                     <th>Foto</th>
-                                    <th class="text-center">Action</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($saranas as $sarana)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td class="text-center">{{ $loop->iteration }}</td>
                                         <td>{{ $sarana->nama }}</td>
-                                        <td>
+                                        <td class="text-center">
                                             @if ($sarana->photo)
                                                 <a title="lihat gambar" href="/storage/{{ $sarana->photo }}"
                                                     class="btn btn-primary " target="_blank"><i class="bi-card-image"></i>

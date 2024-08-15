@@ -11,14 +11,14 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <table id="table-user" class="table table-striped table-bordered">
-                                <thead>
+                                <thead class="text-center">
                                     <tr>
                                         <th>No</th>
                                         <th>Foto</th>
-                                        <th class="text-center">Action</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="text-center">
                                     @foreach ($carousels as $Carousel)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>

@@ -10,18 +10,18 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="table-user" class="table table-striped table-bordered">
-                            <thead>
+                            <thead class="text-center">
                                 <tr>
                                     <th>No</th>
                                     <th>Title</th>
                                     <th>Keterangan</th>
-                                    <th class="text-center">Action</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($informasi as $InformasiUmum)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td class="text-center">{{ $loop->iteration }}</td>
                                         <td>{{ $InformasiUmum->title }}</td>
                                         <td>{{ $InformasiUmum->keterangan }}</td>
                                         <td class="text-center">

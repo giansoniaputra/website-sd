@@ -11,21 +11,21 @@
                     <div class="table-responsive">
                         <table id="table-user" class="table table-striped table-bordered"">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th>No</th>
                                     <th>Nama</th>
                                     <th>Link</th>
                                     <th>Foto</th>
-                                    <th class="text-center">Action</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($humas as $Humas)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $Humas->nama }}</td>
+                                        <td class="text-center">{{ $loop->iteration }}</td>
+                                        <td class="text-center">{{ $Humas->nama }}</td>
                                         <td>{{ $Humas->link }}</td>
-                                        <td><a title="lihat gambar" href="/storage/{{ $Humas->photo }}"
+                                        <td class="text-center"><a title="lihat gambar" href="/storage/{{ $Humas->photo }}"
                                                 class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a>
                                         </td>
                                         <td class="text-center">

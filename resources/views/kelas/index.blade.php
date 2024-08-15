@@ -40,7 +40,7 @@
                                                 class="form-control"> --}}
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                                    <div class="col-lg-4 d-flex justify-content-center align-items-center mt-3">
                                         <div class="mb-3">
                                             <button class="btn btn-primary">Filter</button>
                                             <a href="/kelas" class="btn btn-secondary">Reset</a>
@@ -54,7 +54,7 @@
                         <div class="col-lg-12">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered">
-                                    <thead>
+                                    <thead class="text-center">
                                         <tr>
                                             <th>No</th>
                                             <th>Tahun Ajaran</th>
@@ -65,7 +65,7 @@
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="text-center">
                                         @foreach ($kelas as $kelas)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
