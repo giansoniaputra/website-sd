@@ -31,15 +31,15 @@
                                 <tbody>
                                     @foreach ($teachers as $pegawai)
                                         <tr class="text-center">
-                                            <td>{{ $loop->iteration }}</td>
+                                            <td class="text-center">{{ $loop->iteration }}</td>
                                             <td>{{ $pegawai->nama }}</td>
                                             {{-- <td>{{ $pegawai->status }}</td> --}}
                                             {{-- <td>{{ $pegawai->jabatan }}</td>
                                         <td>{{ $pegawai->pendidikan }}</td> --}}
-                                            <td>{{ $pegawai->ampuan }}</td>
-                                            <td> <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
-                                                    class="btn btn-primary" target="_blank"><i
-                                                        class="bi bi-card-image"></i></a>
+                                            <td class="text-center">{{ $pegawai->ampuan }}</td>
+                                            <td class="text-center"> <a title="lihat gambar"
+                                                    href="/storage/{{ $pegawai->photo }}" class="btn btn-primary"
+                                                    target="_blank"><i class="bi bi-card-image"></i></a>
                                             </td>
                                             <td class="text-center">
                                                 {{-- <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
@@ -88,15 +88,15 @@
                                 <tbody>
                                     @foreach ($staffs as $pegawai)
                                         <tr class="text-center">
-                                            <td>{{ $loop->iteration }}</td>
+                                            <td class="text-center">{{ $loop->iteration }}</td>
                                             <td>{{ $pegawai->nama }}</td>
                                             {{-- <td>{{ $pegawai->status }}</td> --}}
                                             {{-- <td>{{ $pegawai->jabatan }}</td>
                                         <td>{{ $pegawai->pendidikan }}</td> --}}
-                                            <td>{{ $pegawai->ampuan }}</td>
-                                            <td> <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
-                                                    class="btn btn-primary" target="_blank"><i
-                                                        class="bi bi-card-image"></i></a>
+                                            <td class="text-center">{{ $pegawai->ampuan }}</td>
+                                            <td class="text-center"> <a title="lihat gambar"
+                                                    href="/storage/{{ $pegawai->photo }}" class="btn btn-primary"
+                                                    target="_blank"><i class="bi bi-card-image"></i></a>
                                             </td>
                                             <td class="text-center">
                                                 {{-- <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
@@ -145,15 +145,15 @@
                                 <tbody>
                                     @foreach ($pengurus as $pegawai)
                                         <tr class="text-center">
-                                            <td>{{ $loop->iteration }}</td>
+                                            <td class="text-center">{{ $loop->iteration }}</td>
                                             <td>{{ $pegawai->nama }}</td>
                                             {{-- <td>{{ $pegawai->status }}</td> --}}
                                             {{-- <td>{{ $pegawai->jabatan }}</td>
                                         <td>{{ $pegawai->pendidikan }}</td> --}}
-                                            <td>{{ $pegawai->ampuan }}</td>
-                                            <td> <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
-                                                    class="btn btn-primary" target="_blank"><i
-                                                        class="bi bi-card-image"></i></a>
+                                            <td class="text-center">{{ $pegawai->ampuan }}</td>
+                                            <td class="text-center"> <a title="lihat gambar"
+                                                    href="/storage/{{ $pegawai->photo }}" class="btn btn-primary"
+                                                    target="_blank"><i class="bi bi-card-image"></i></a>
                                             </td>
                                             <td class="text-center">
                                                 {{-- <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"

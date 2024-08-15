@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="table-user" class="table table-striped table-bordered">
-                            <thead>
+                            <thead class="text-center">
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Kegiatan</th>
@@ -22,10 +22,10 @@
                             <tbody>
                                 @foreach ($ppdbs as $PPDB)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td class="text-center">{{ $loop->iteration }}</td>
                                         <td>{{ $PPDB->nama_kegiatan }}</td>
-                                        <td>{{ $PPDB->tanggal_regular }}</td>
-                                        <td>{{ $PPDB->tanggal_prestasi }}</td>
+                                        <td class="text-center">{{ $PPDB->tanggal_regular }}</td>
+                                        <td class="text-center">{{ $PPDB->tanggal_prestasi }}</td>
                                         <td class="text-center">
                                             <a title="edit data" href="/ppdb/{{ $PPDB->uuid }}/edit"
                                                 class="btn btn-warning"><i class="ri-edit-2-line"></i></a>

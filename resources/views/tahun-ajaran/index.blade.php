@@ -10,15 +10,15 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="table-user" class="table table-striped table-bordered">
-                            <thead>
+                            <thead class="text-center">
                                 <tr>
                                     <th>No</th>
                                     <th>Tahun Awal</th>
                                     <th>Tahun Akhir</th>
-                                    <th class="text-center">Action</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
                                 @foreach ($tahunAjarans as $TahunAjaran)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>

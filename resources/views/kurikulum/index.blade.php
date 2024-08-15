@@ -11,27 +11,27 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <table id="table-user" class="table table-striped table-bordered">
-                                <thead>
+                                <thead class="text-center">
                                     <tr>
                                         <th>No</th>
                                         <th>Keterangan</th>
                                         <th>Foto</th>
                                         <th>PDF</th>
-                                        <th class="text-center">Action</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($kurikulum as $kur)
                                         <tr>
-                                            <td>{{ $loop->iteration }}</td>
+                                            <td class="text-center">{{ $loop->iteration }}</td>
                                             <td>{{ $kur->nama }}</td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a title="lihat gambar" href="/storage/{{ $kur->photo }}"
                                                     class="btn btn-transparent" target="_blank">
                                                     <img src="/storage/{{ $kur->photo }}" alt="Foto" width="50">
                                                 </a>
                                             </td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="{{ asset('storage/' . $kur->pdf) }}" target="_blank"
                                                     class="btn btn-primary">Download
                                                     PDF</a>
