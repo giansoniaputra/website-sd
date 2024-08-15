@@ -74,8 +74,8 @@
                                     <label for="photo" class="form-label">Unggah Foto</label>
                                     <input type="file" id="photo" name="photo"
                                         class="form-control  @error('photo') is-invalid @enderror" placeholder="">
-                                        <a href="{{ asset('storage/' . $pegawai->photo) }}" target="_blank"
-                                            class="btn btn-success mt-1">Foto Sebelumnya</a>
+                                    <a href="{{ asset('storage/' . $pegawai->photo) }}" target="_blank"
+                                        class="btn btn-success mt-1">Foto Sebelumnya</a>
                                     @error('photo')
                                         <div class="invalid-feedback">
                                             <small class="text-danger">{{ $message }}</small>
@@ -87,19 +87,105 @@
                         </div>
                     </div>
                 </div> <!-- end col -->
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#type').on('change', function() {
+                var type = $(this).val();
+                if (type == 'guru') {
+                    $('#ampuan').text('Ampuan');
+                } else if (type == 'staff' || type == 'pengurus') {
+                    $('#ampuan').text('Jabatan');
+                }
+            });
+        });
+    </script>
+    @include('pegawai.modal-cropper')
+@endsection
 
-                <script>
-                    $(document).ready(function() {
-                        $('#type').on('change', function() {
-                            var type = $(this).val();
-                            if (type == 'guru') {
-                                $('#ampuan').text('Ampuan');
-                            } else if (type == 'staff' || type == 'pengurus') {
-                                $('#ampuan').text('Jabatan');
-                            }
-                        });
-                    });
-                </script>
-            @endsection
+@section('js_after')
+    <script>
+        $(document).ready(function() {
+            // ID MODAL CROPPER
+            let modal = $("#modal-cropper-pegawai")
+            // ID PHOTO YANG ADA DI MODAL
+            let image = document.getElementById('image-pegawai');
+            let cropper, reader, file
+            // #PHOTO ADALAH ID INPUtAN YANG DI UPLOAD
+            $("body").on("change", "#photo", function(e) {
+                let files = e.target.files;
+                let done = function(url) {
+                    image.src = url;
+                    modal.modal("show");
+                }
+                if (files && files.length > 0) {
+                    file = files[0];
+                    if (URL) {
+                        done(URL.createObjectURL(file));
+                    } else if (FileReader) {
+                        reader = new FileReader();
+                        reader.onload = function(e) {
+                            done(reader.result);
+                        }
+                        reader.readAsDataURL(file)
+                    }
+                }
+
+            })
+
+            modal.on('shown.bs.modal', function() {
+                cropper = new Cropper(image, {
+                    aspectRatio: 1 / 1,
+                    preview: '.preview'
+                })
+            }).on('hidden.bs.modal', function() {
+                cropper.destroy();
+                cropper = null;
+            })
+            //ID BUTTON CROPPER
+            $("#crop-photo-pegawai").on("click", function() {
+                modal.modal('hide')
+                canvas = cropper.getCroppedCanvas({
+                    width: 1000,
+                    height: 1000,
+                })
+                canvas.toBlob(function(blob) {
+                    // ID PHOTO INPUTAN
+                    let image = document.querySelector("#photo");
+                    // const imgPre = document.querySelector("#");
+                    const oFReader = new FileReader();
+                    oFReader.readAsDataURL(blob);
+                    oFReader.onload = function(oFREvent) {
+                        var file = dataURLtoFile(oFREvent.target.result, "photo-pegawai.png");
+                        let container = new DataTransfer();
+                        container.items.add(file);
+                        image.files = container.files;
+                        var newfile = image.files[0];
+
+                    }
+                })
+            })
+
+            function dataURLtoFile(dataurl, filename) {
+
+                var arr = dataurl.split(','),
+                    mime = arr[0].match(/:(.*?);/)[1],
+                    bstr = atob(arr[1]),
+                    n = bstr.length,
+                    u8arr = new Uint8Array(n);
+
+                while (n--) {
+                    u8arr[n] = bstr.charCodeAt(n);
+                }
+
+                return new File([u8arr], filename, {
+                    type: mime
+                });
+            }
+        });
+    </script>
+@endsection

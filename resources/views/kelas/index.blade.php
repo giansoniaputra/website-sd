@@ -52,52 +52,54 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Tahun Ajaran</th>
-                                        <th>Kelas</th>
-                                        <th>Nama Kelas</th>
-                                        <th>Jumlah Laki-Laki</th>
-                                        <th>Jumlah Perempuan</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($kelas as $kelas)
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered">
+                                    <thead>
                                         <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>
-                                                @foreach ($tahunAjaran as $tahun)
-                                                    @if ($kelas->tahun_ajaran_uuid == $tahun->uuid)
-                                                        {{ $tahun->tahun_awal }}/{{ $tahun->tahun_akhir }}
-                                                    @endif
-                                                @endforeach
-                                            </td>
-                                            <td>{{ $kelas->kelas }}</td>
-                                            <td>{{ $kelas->nama_kelas }}</td>
-                                            <td>{{ $kelas->jumlah_lk }}</td>
-                                            <td>{{ $kelas->jumlah_pr }}</td>
-                                            <td class="text-center">
-                                                <a title="tambah siswa" href="/siswa?kelas_uuid={{ $kelas->uuid }}"
-                                                    class="btn btn-primary"><i class="bi bi-person-fill-add"></i></a>
-                                                <a title="edit data" href="/kelas/{{ $kelas->uuid }}/edit"
-                                                    class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
-                                                <form action="/kelas/{{ $kelas->uuid }}" method="POST"
-                                                    style="display:inline">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger text-light"
-                                                        onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i
-                                                            class="mdi mdi-delete-forever"></i> </button>
-                                                    {{-- <a title="delete data" class="btn btn-warning"><i class="mdi-delete-forever"></i></a> --}}
-                                                </form>
-                                            </td>
+                                            <th>No</th>
+                                            <th>Tahun Ajaran</th>
+                                            <th>Kelas</th>
+                                            <th>Nama Kelas</th>
+                                            <th>Jumlah Laki-Laki</th>
+                                            <th>Jumlah Perempuan</th>
+                                            <th>Aksi</th>
                                         </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($kelas as $kelas)
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>
+                                                    @foreach ($tahunAjaran as $tahun)
+                                                        @if ($kelas->tahun_ajaran_uuid == $tahun->uuid)
+                                                            {{ $tahun->tahun_awal }}/{{ $tahun->tahun_akhir }}
+                                                        @endif
+                                                    @endforeach
+                                                </td>
+                                                <td>{{ $kelas->kelas }}</td>
+                                                <td>{{ $kelas->nama_kelas }}</td>
+                                                <td>{{ $kelas->jumlah_lk }}</td>
+                                                <td>{{ $kelas->jumlah_pr }}</td>
+                                                <td class="text-center">
+                                                    <a title="tambah siswa" href="/siswa?kelas_uuid={{ $kelas->uuid }}"
+                                                        class="btn btn-primary"><i class="bi bi-person-fill-add"></i></a>
+                                                    <a title="edit data" href="/kelas/{{ $kelas->uuid }}/edit"
+                                                        class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
+                                                    <form action="/kelas/{{ $kelas->uuid }}" method="POST"
+                                                        style="display:inline">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger text-light"
+                                                            onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i
+                                                                class="mdi mdi-delete-forever"></i> </button>
+                                                        {{-- <a title="delete data" class="btn btn-warning"><i class="mdi-delete-forever"></i></a> --}}
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
