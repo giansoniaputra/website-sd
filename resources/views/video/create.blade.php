@@ -4,14 +4,14 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="header-title">Tambah Data Guru / Staff</h4>
+                    <h4 class="header-title">Tambah Video</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-6">
                             <form action="/video" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <label for="sampul" class="form-label">Unggah Sampul</label>
                                     <input type="file" id="sampul" name="sampul"
                                         class="form-control  @error('sampul') is-invalid @enderror" placeholder="">
@@ -20,7 +20,7 @@
                                             <small class="text-danger">{{ $message }}</small>
                                         </div>
                                     @enderror
-                                </div>
+                                </div> --}}
                                 {{-- <div class="mb-3">
                                     <label for="link" class="form-label">Link</label>
                                     <input id="link" type="hidden" name="link">
@@ -38,7 +38,7 @@
                                         </div>
                                     @enderror
                                 </div>
-                                <button class="btn btn-primary">SUBMIT</button>
+                                <button class="btn btn-primary">SIMPAN</button>
                             </form>
                         </div>
                     </div>

@@ -2,7 +2,7 @@
 @section('container')
     <div class="row ms-2 mb-2">
         <div class="col-sm-12">
-            <h3 class="card-title">Data Pegawai</h3>
+            <h2>Data Pegawai</h2>
             <a href="/pegawai/create" class="btn btn-primary mt-1">Tambah Data Pegawai</a>
         </div>
     </div>
@@ -14,164 +14,168 @@
                         <h4>Data Guru</h4>
                     </div>
                     <div class="card-body">
-                        <table id="table-user" class="table table-striped dt-responsive nowrap w-100">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Nama</th>
-                                    {{-- <th>Status</th> --}}
-                                    {{-- <th>Jabatan</th>
-                                    <th>Pendidikan</th> --}}
-                                    <th>Ampuan</th>
-                                    <th>Foto</th>
-                                    <th class="text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($teachers as $pegawai)
+                        <div class="table-responsive">
+                            <table id="table-user" class="table table-striped table-bordered">
+                                <thead class="text-center">
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $pegawai->nama }}</td>
-                                        {{-- <td>{{ $pegawai->status }}</td> --}}
-                                        {{-- <td>{{ $pegawai->jabatan }}</td>
-                                        <td>{{ $pegawai->pendidikan }}</td> --}}
-                                        <td>{{ $pegawai->ampuan }}</td>
-                                        <td> <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
-                                                class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a>
-                                        </td>
-                                        <td class="text-center">
-                                            {{-- <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
-                                                class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a> --}}
-                                            <a title="edit data" href="/pegawai/{{ $pegawai->uuid }}/edit"
-                                                class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
-                                            <form action="/pegawai/{{ $pegawai->uuid }}" method="POST"
-                                                style="display:inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger text-light"
-                                                    onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i
-                                                        class="mdi mdi-delete-forever"></i> </button>
-                                                {{-- <a title="delete data" class="btn btn-warning"><i class="mdi-delete-forever"></i></a> --}}
-                                            </form>
-                                        </td>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        {{-- <th>Status</th> --}}
+                                        {{-- <th>Jabatan</th>
+                                    <th>Pendidikan</th> --}}
+                                        <th>Ampuan</th>
+                                        <th>Foto</th>
+                                        <th class="text-center">Action</th>
                                     </tr>
-                                @endforeach
-
-                            </tbody>
-                        </table>
-
-                    </div> <!-- end card body-->
-
-                </div> <!-- end card -->
+                                </thead>
+                                <tbody>
+                                    @foreach ($teachers as $pegawai)
+                                        <tr class="text-center">
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $pegawai->nama }}</td>
+                                            {{-- <td>{{ $pegawai->status }}</td> --}}
+                                            {{-- <td>{{ $pegawai->jabatan }}</td>
+                                        <td>{{ $pegawai->pendidikan }}</td> --}}
+                                            <td>{{ $pegawai->ampuan }}</td>
+                                            <td> <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
+                                                    class="btn btn-primary" target="_blank"><i
+                                                        class="bi bi-card-image"></i></a>
+                                            </td>
+                                            <td class="text-center">
+                                                {{-- <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
+                                                class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a> --}}
+                                                <a title="edit data" href="/pegawai/{{ $pegawai->uuid }}/edit"
+                                                    class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
+                                                <form action="/pegawai/{{ $pegawai->uuid }}" method="POST"
+                                                    style="display:inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger text-light"
+                                                        onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i
+                                                            class="mdi mdi-delete-forever"></i> </button>
+                                                    {{-- <a title="delete data" class="btn btn-warning"><i class="mdi-delete-forever"></i></a> --}}
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </section>
+
             <section>
                 <div class="card">
                     <div class="card-header">
                         <h4>Data Staf</h4>
                     </div>
                     <div class="card-body">
-                        <table id="table-staffs" class="table table-striped dt-responsive nowrap w-100">
-                            <thead class="text-center">
-                                <tr>
-                                    <th>No</th>
-                                    <th>Nama</th>
-                                    {{-- <th>Status</th> --}}
-                                    <th>Jabatan</th>
-                                    {{-- <th>Pendidikan</th>
-                                    <th>Ampuan</th> --}}
-                                    <th>Foto</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($staffs as $pegawai)
+                        <div class="table-responsive">
+                            <table id="table-staffs" class="table table-striped table-bordered">
+                                <thead class="text-center">
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $pegawai->nama }}</td>
-                                        {{-- <td>{{ $pegawai->status }}</td> --}}
-                                        {{-- <td>{{ $pegawai->jabatan }}</td>
-                                        <td>{{ $pegawai->pendidikan }}</td> --}}
-                                        <td>{{ $pegawai->ampuan }}</td>
-                                        <td> <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
-                                                class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a>
-                                        </td>
-                                        <td class="text-center">
-                                            {{-- <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
-                                                class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a> --}}
-                                            <a title="edit data" href="/pegawai/{{ $pegawai->uuid }}/edit"
-                                                class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
-                                            <form action="/pegawai/{{ $pegawai->uuid }}" method="POST"
-                                                style="display:inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger text-light"
-                                                    onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i
-                                                        class="mdi mdi-delete-forever"></i> </button>
-                                                {{-- <a title="delete data" class="btn btn-warning"><i class="mdi-delete-forever"></i></a> --}}
-                                            </form>
-                                        </td>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        {{-- <th>Status</th> --}}
+                                        <th>Jabatan</th>
+                                        {{-- <th>Pendidikan</th>
+                                    <th>Ampuan</th> --}}
+                                        <th>Foto</th>
+                                        <th>Action</th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-
-                        </table>
-
+                                </thead>
+                                <tbody>
+                                    @foreach ($staffs as $pegawai)
+                                        <tr class="text-center">
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $pegawai->nama }}</td>
+                                            {{-- <td>{{ $pegawai->status }}</td> --}}
+                                            {{-- <td>{{ $pegawai->jabatan }}</td>
+                                        <td>{{ $pegawai->pendidikan }}</td> --}}
+                                            <td>{{ $pegawai->ampuan }}</td>
+                                            <td> <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
+                                                    class="btn btn-primary" target="_blank"><i
+                                                        class="bi bi-card-image"></i></a>
+                                            </td>
+                                            <td class="text-center">
+                                                {{-- <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
+                                                class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a> --}}
+                                                <a title="edit data" href="/pegawai/{{ $pegawai->uuid }}/edit"
+                                                    class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
+                                                <form action="/pegawai/{{ $pegawai->uuid }}" method="POST"
+                                                    style="display:inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger text-light"
+                                                        onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i
+                                                            class="mdi mdi-delete-forever"></i> </button>
+                                                    {{-- <a title="delete data" class="btn btn-warning"><i class="mdi-delete-forever"></i></a> --}}
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div> <!-- end card body-->
-
                 </div> <!-- end card -->
             </section>
+
             <section>
                 <div class="card">
                     <div class="card-header">
                         <h4>Data Pengurus Yayasan</h4>
                     </div>
                     <div class="card-body">
-                        <table id="table-pengurus" class="table table-striped dt-responsive nowrap w-100">
-                            <thead class="text-center">
-                                <tr>
-                                    <th>No</th>
-                                    <th>Nama</th>
-                                    {{-- <th>Status</th> --}}
-                                    <th>Jabatan</th>
-                                    {{-- <th>Pendidikan</th>
-                                    <th>Ampuan</th> --}}
-                                    <th>Foto</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($pengurus as $pegawai)
+                        <div class="table-responsive">
+                            <table id="table-pengurus" class="table table-striped table-bordered">
+                                <thead class="text-center">
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $pegawai->nama }}</td>
-                                        {{-- <td>{{ $pegawai->status }}</td> --}}
-                                        {{-- <td>{{ $pegawai->jabatan }}</td>
-                                        <td>{{ $pegawai->pendidikan }}</td> --}}
-                                        <td>{{ $pegawai->ampuan }}</td>
-                                        <td> <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
-                                                class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a>
-                                        </td>
-                                        <td class="text-center">
-                                            {{-- <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
-                                                class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a> --}}
-                                            <a title="edit data" href="/pegawai/{{ $pegawai->uuid }}/edit"
-                                                class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
-                                            <form action="/pegawai/{{ $pegawai->uuid }}" method="POST"
-                                                style="display:inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger text-light"
-                                                    onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i
-                                                        class="mdi mdi-delete-forever"></i> </button>
-                                                {{-- <a title="delete data" class="btn btn-warning"><i class="mdi-delete-forever"></i></a> --}}
-                                            </form>
-                                        </td>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        {{-- <th>Status</th> --}}
+                                        <th>Jabatan</th>
+                                        {{-- <th>Pendidikan</th>
+                                    <th>Ampuan</th> --}}
+                                        <th>Foto</th>
+                                        <th>Action</th>
                                     </tr>
-                                @endforeach
-                            </tbody>
+                                </thead>
+                                <tbody>
+                                    @foreach ($pengurus as $pegawai)
+                                        <tr class="text-center">
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $pegawai->nama }}</td>
+                                            {{-- <td>{{ $pegawai->status }}</td> --}}
+                                            {{-- <td>{{ $pegawai->jabatan }}</td>
+                                        <td>{{ $pegawai->pendidikan }}</td> --}}
+                                            <td>{{ $pegawai->ampuan }}</td>
+                                            <td> <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
+                                                    class="btn btn-primary" target="_blank"><i
+                                                        class="bi bi-card-image"></i></a>
+                                            </td>
+                                            <td class="text-center">
+                                                {{-- <a title="lihat gambar" href="/storage/{{ $pegawai->photo }}"
+                                                class="btn btn-primary" target="_blank"><i class="bi bi-card-image"></i></a> --}}
+                                                <a title="edit data" href="/pegawai/{{ $pegawai->uuid }}/edit"
+                                                    class="btn btn-warning"><i class="ri-edit-2-line"></i></a>
+                                                <form action="/pegawai/{{ $pegawai->uuid }}" method="POST"
+                                                    style="display:inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger text-light"
+                                                        onClick="return confirm('Apakah Kamu Yakin Akan Menghapus Data Ini ?')"><i
+                                                            class="mdi mdi-delete-forever"></i> </button>
+                                                    {{-- <a title="delete data" class="btn btn-warning"><i class="mdi-delete-forever"></i></a> --}}
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
 
-                        </table>
-
+                            </table>
+                        </div>
                     </div> <!-- end card body-->
 
                 </div> <!-- end card -->

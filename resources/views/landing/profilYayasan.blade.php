@@ -1,6 +1,6 @@
 @extends('landing.layoutLanding.app')
 
-@section('title', 'Profil Sekolah Page')
+@section('title', 'Profil Yayasan')
 
 @section('content')
 <!-- Start Hero ============================================= -->
@@ -38,13 +38,13 @@
                         Visi
                     </h2>
                     <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
+                        {!!$visi!!}
                     </p>
                     <h2>
                         Misi
                     </h2>
                     <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
+                        {!!$misi!!}
                     </p>
                     {{-- <a href="#" class="theme-btn">Lebih Lanjut</a> --}}
                 </div>
@@ -82,9 +82,9 @@
 
 <!-- Start Pengurus
 		============================================= -->
-<div class="rel-project de-pb">
+<div class="rel-project de-pb" id="pengurus">
     <div class="container">
-        <h2 class="text-center mb-40 mt-40">Guru & Staff</h2>
+        <h2 class="text-center mb-40 mt-40">Pengurus Yayasan</h2>
         <div class="rel-wpr grid-4">
             <div class="rel-box">
                 <div class="rel-img">

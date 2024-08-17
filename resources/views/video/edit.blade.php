@@ -12,7 +12,7 @@
                             <form action="/video/{{ $video->uuid }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <label for="sampul" class="form-label">Unggah Sampul Video</label>
                                     <input type="file" id="sampul" name="sampul"
                                         class="form-control mb-3  @error('sampul') is-invalid @enderror" placeholder="">
@@ -27,7 +27,7 @@
                                             <small class="text-danger">{{ $message }}</small>
                                         </div>
                                     @enderror
-                                </div>
+                                </div> --}}
 
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Link</label>
@@ -42,7 +42,7 @@
                                 </div>
 
 
-                                <button class="btn btn-primary">UPDATE</button>
+                                <button class="btn btn-primary">PERBARUI</button>
                             </form>
                         </div>
                     </div>

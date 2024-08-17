@@ -10,7 +10,7 @@
                     <a href="/siswa/create?kelas_uuid={{ $kelas_uuid }}" class="btn btn-primary mb-3">Tambah Data Siswa</a>
                     <div class="row">
                         <div class="col-lg-12">
-                            <table id="table-user" class="table table-striped dt-responsive nowrap w-100">
+                            <table id="table-user" class="table table-striped table-bordered table-responsive">
                                 <thead>
                                     <tr>
                                         <th>No</th>

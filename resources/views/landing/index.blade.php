@@ -1,6 +1,6 @@
 @extends('landing.layoutLanding.app')
 
-@section('title', 'Home Page')
+@section('title', 'Halaman Utama')
 
 @section('content')
 <!-- Start Hero ============================================= -->
@@ -129,7 +129,7 @@
 <!-- Start Blog
     ============================================= -->
 <div class="blog-area posi-rel de-padding">
-    <div class="hero-animation">
+    {{-- <div class="hero-animation">
         <img src="/assets2/img/animation/ani-1.png" alt="thumb">
         <img src="/assets2/img/animation/ani-2.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
@@ -138,7 +138,7 @@
         <img src="/assets2/img/animation/ani-6.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-    </div>
+    </div> --}}
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2">
@@ -201,7 +201,7 @@
 <!-- Start Blog
     ============================================= -->
 <div class="blog-area posi-rel de-padding">
-    <div class="hero-animation">
+    {{-- <div class="hero-animation">
         <img src="/assets2/img/animation/ani-1.png" alt="thumb">
         <img src="/assets2/img/animation/ani-2.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
@@ -210,7 +210,7 @@
         <img src="/assets2/img/animation/ani-6.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-    </div>
+    </div> --}}
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2">
@@ -273,13 +273,13 @@
 <!-- Start work
     ============================================= -->
 <div id="portfolio" class="portfolio-area posi-rel de-padding">
-    <div class="portfolio-animation">
+    {{-- <div class="portfolio-animation">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
         <img src="/assets2/img/animation/ani-4.png" alt="thumb">
         <img src="/assets2/img/animation/ani-5.png" alt="thumb">
         <img src="/assets2/img/animation/ani-6.png" alt="thumb">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-    </div>
+    </div> --}}
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2">
@@ -291,14 +291,14 @@
         <div class="portfolio-items-area">
             <div class="row">
                 <div class="col-xl-12 portfolio-content">
-                    <div class="mix-item-menu active-theme text-center">
+                    {{-- <div class="mix-item-menu active-theme text-center">
                         <button class="active" data-filter="*">All</button>
                         <button data-filter=".kategori1" class="">Kategori 1</button>
                         <button data-filter=".kategori2" class="">Kategori 2</button>
                         <button data-filter=".kategori3" class="">Kategori 3 </button>
                         <button data-filter=".kategori4" class="">Kategori 4</button>
                         <button data-filter=".kategori5" class="">Kategori 5</button>
-                    </div>
+                    </div> --}}
                     <!-- End Mixitup Nav-->
                     <div class="magnific-mix-gallery masonary">
                         <div id="portfolio-grid" class="portfolio-items">
