@@ -35,11 +35,13 @@ class CarouselController extends Controller
     {
         $rules = [
             'photo' => 'required|file|image|max:2048',
+            'type' => 'required'
         ];
         $pesan = [
             'photo.required' => 'Photo tidak boleh kosong',
             'photo.image' => 'Photo tidak valid',
             'photo.max' => 'Maximal ukuran 2MB',
+            'type.required' => 'Type tidak boleh kosong',
         ];
         $validator = Validator::make($request->all(), $rules, $pesan);
         if ($validator->fails()) {
