@@ -27,21 +27,21 @@
         <ul class="side-nav">
             <li class="side-nav-title">Main</li>
             <li class="side-nav-item">
-                <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarHome" aria-expanded="false" aria-controls="sidebarPages"
-                        class="side-nav-link">
-                        <i class="mdi mdi-home"></i>
-                        <span> Home </span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <div class="collapse" id="sidebarHome">
-                        <ul class="side-nav-second-level">
-                            <li>
-                                <a href="/carousel">Input Foto Slide</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarHome" aria-expanded="false" aria-controls="sidebarPages"
+                    class="side-nav-link">
+                    <i class="mdi mdi-home"></i>
+                    <span> Home </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarHome">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="/carousel">Input Foto Banner</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarYayasan" aria-expanded="false" aria-controls="sidebarPages"
                     class="side-nav-link">

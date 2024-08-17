@@ -454,6 +454,7 @@
             }
         })
     </script>
+
     <script>
         $(document).ready(function() {
             $("#table-pengurus").DataTable()
@@ -466,6 +467,110 @@
             }
         })
     </script>
+
+<script>
+    $(document).ready(function() {
+        $("#table-foto-yayasan").DataTable()
+        //Flash Message
+        const flashData = $('#success-update').data('flash');
+        if (flashData) {
+            Swal.fire(
+                'Good job!', flashData, 'success'
+            )
+        }
+    })
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#table-foto-sekolah").DataTable()
+        //Flash Message
+        const flashData = $('#success-update').data('flash');
+        if (flashData) {
+            Swal.fire(
+                'Good job!', flashData, 'success'
+            )
+        }
+    })
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#table-foto-wakasek").DataTable()
+        //Flash Message
+        const flashData = $('#success-update').data('flash');
+        if (flashData) {
+            Swal.fire(
+                'Good job!', flashData, 'success'
+            )
+        }
+    })
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#table-foto-guru").DataTable()
+        //Flash Message
+        const flashData = $('#success-update').data('flash');
+        if (flashData) {
+            Swal.fire(
+                'Good job!', flashData, 'success'
+            )
+        }
+    })
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#table-foto-ppdb").DataTable()
+        //Flash Message
+        const flashData = $('#success-update').data('flash');
+        if (flashData) {
+            Swal.fire(
+                'Good job!', flashData, 'success'
+            )
+        }
+    })
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#table-foto-layanan").DataTable()
+        //Flash Message
+        const flashData = $('#success-update').data('flash');
+        if (flashData) {
+            Swal.fire(
+                'Good job!', flashData, 'success'
+            )
+        }
+    })
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#table-foto-berita").DataTable()
+        //Flash Message
+        const flashData = $('#success-update').data('flash');
+        if (flashData) {
+            Swal.fire(
+                'Good job!', flashData, 'success'
+            )
+        }
+    })
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#table-foto-galeri").DataTable()
+        //Flash Message
+        const flashData = $('#success-update').data('flash');
+        if (flashData) {
+            Swal.fire(
+                'Good job!', flashData, 'success'
+            )
+        }
+    })
+</script>
 
     <!-- App js -->
     <script src="/assets/js/app.min.js"></script>

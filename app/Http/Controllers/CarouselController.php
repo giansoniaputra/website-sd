@@ -16,7 +16,15 @@ class CarouselController extends Controller
     public function index()
     {
         return view('carousel.index', [
-            'carousels' => Carousel::latest()->paginate(10)
+            'carousels_home' => Carousel::where('type', 'home')->latest()->get(),
+            'carousels_yayasan' => Carousel::where('type', 'yayasan')->latest()->get(),
+            'carousels_sekolah' => Carousel::where('type', 'sekolah')->latest()->get(),
+            'carousels_wakasek' => Carousel::where('type', 'wakasek')->latest()->get(),
+            'carousels_guru' => Carousel::where('type', 'guru')->latest()->get(),
+            'carousels_ppdb' => Carousel::where('type', 'ppdb')->latest()->get(),
+            'carousels_layanan' => Carousel::where('type', 'layanan_publik')->latest()->get(),
+            'carousels_berita' => Carousel::where('type', 'berita')->latest()->get(),
+            'carousels_galeri' => Carousel::where('type', 'galeri')->latest()->get()
         ]);
     }
 
