@@ -12,6 +12,27 @@
                             <form action="/carousel" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
+                                    <select id="type" class="form-control @error('type') is-invalid @enderror"
+                                        name="type" required>
+                                        <option value="">Pilih Type</option>
+                                        <option value="home">Home</option>
+                                        <option value="yayasan">Yayasan</option>
+                                        <option value="sekolah">Sekolah</option>
+                                        <option value="wakasek">Wakasek</option>
+                                        <option value="guru">Guru</option>
+                                        <option value="ppdb">PPDB</option>
+                                        <option value="layanan_publik">Layanan Publik</option>
+                                        <option value="berita">Berita</option>
+                                        <option value="galeri">Galeri</option>
+                                    </select>
+                                    @error('type')
+                                        <div class="invalid-feedback">
+                                            <small class="text-danger">{{ $message }}</small>
+                                        </div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
                                     <label for="photo" class="form-label">Unggah Foto</label>
                                     <input type="file" id="photo" name="photo"
                                         class="form-control  @error('photo') is-invalid @enderror" placeholder="">
