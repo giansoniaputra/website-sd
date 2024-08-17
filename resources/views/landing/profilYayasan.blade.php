@@ -14,10 +14,10 @@
                         <h2 class="text-white">
                             SD-IT<span>AL MUKRON</span>
                         </h2>
-                        <p class="text-white">
+                        {{-- <p class="text-white">
                             Chap fantastic skive off chancer knees up starkers easy
                             David bleeding tomfoolery chimney.!
-                        </p>
+                        </p> --}}
                     </div>
                 </div>
             </div>

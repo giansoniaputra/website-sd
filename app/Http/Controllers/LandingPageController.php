@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use App\Models\Sarana;
 use App\Models\Profile;
+use App\Models\Prestasi;
 use App\Models\TahunAjaran;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class LandingPageController extends Controller
 {
@@ -42,7 +45,8 @@ class LandingPageController extends Controller
     {
         $data = [
             'sarana' => Sarana::all(),
-            'tahun_ajaran' => TahunAjaran::orderBy('id', 'desc')->get()
+            'tahun_ajaran' => TahunAjaran::orderBy('id', 'desc')->get(),
+            'prestasi' => Prestasi::latest()->paginate(5),
         ];
         return view('landing.wakasek', $data);
     }
@@ -75,5 +79,11 @@ class LandingPageController extends Controller
     public function galeri()
     {
         return view('landing.galeri');
+    }
+
+    public function renderSiswa(Request $request){
+        $siswa=Siswa::where('kelas_uuid', $request->uuid)->orderBy('nama_siswa')->get();
+        $view=View::make('landing.partial.renderSiswa',['siswa'=>$siswa])->render();
+        return response()->json(['view' => $view ]);
     }
 }

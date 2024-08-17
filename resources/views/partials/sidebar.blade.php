@@ -2,7 +2,7 @@
 <div class="leftside-menu">
 
     <!-- Brand Logo Light -->
-    <a href="#" class="logo logo-light">
+    <a href="#" class="logo logo-light" style="">
         <span class="logo-lg">
             <img src="/assets/images/logo.png" alt="logo">
         </span>

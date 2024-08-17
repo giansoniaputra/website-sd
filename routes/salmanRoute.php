@@ -13,3 +13,4 @@ Route::get('/landing/ppdb', [LandingPageController::class, 'ppdb']);
 Route::get('/landing/layanan', [LandingPageController::class, 'layanan']);
 Route::get('/landing/berita', [LandingPageController::class, 'berita']);
 Route::get('/landing/galeri', [LandingPageController::class, 'galeri']);
+Route::get('/renderSiswa', [LandingPageController::class, 'renderSiswa']);

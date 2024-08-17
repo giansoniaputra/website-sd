@@ -25,8 +25,7 @@
                                         SD-IT <br> <span>AL MUKRON</span>
                                     </h2>
                                     <p class="text-white">
-                                        Chap fantastic skive off chancer knees up starkers easy
-                                        David bleeding tomfoolery chimney.!
+                                        Generasi Rabbani Iman Ilmu Amal Akhlaq
                                     </p>
                                     <div class="hro-btn">
                                         <a href="contact.html" class="theme-btn text-white">Lebih Lanjut</a>
@@ -48,8 +47,7 @@
                                         SD-IT <br> <span>AL MUKRON</span>
                                     </h2>
                                     <p class="text-white">
-                                        Chap fantastic skive off chancer knees up starkers easy
-                                        David bleeding tomfoolery chimney.!
+                                        Generasi Rabbani Iman Ilmu Amal Akhlaq
                                     </p>
                                     <div class="hro-btn">
                                         <a href="contact.html" class="theme-btn text-white">Lebih Lanjut</a>
@@ -71,8 +69,7 @@
                                         SD-IT <br> <span>AL MUKRON</span>
                                     </h2>
                                     <p class="text-white">
-                                        Chap fantastic skive off chancer knees up starkers easy
-                                        David bleeding tomfoolery chimney.!
+                                        Generasi Rabbani Iman Ilmu Amal Akhlaq
                                     </p>
                                     <div class="hro-btn">
                                         <a href="contact.html" class="theme-btn text-white">Lebih Lanjut</a>

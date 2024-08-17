@@ -122,5 +122,23 @@
     <script src="/assets2/js/bsnav.min.js"></script>
     <script src="/assets2/js/jquery.easypiechart.js"></script>
     <script src="/assets2/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("body").on("click", "#buttonRenderSiswa" ,function(){
+                let uuid=$(this).data('uuid')
+                let nama_kelas=$(this).data('namakelas')
+                $("#nama_kelasSpan").html(nama_kelas)
+                $.ajax({
+                data: {uuid : uuid },
+                url: "/renderSiswa",
+                type: "GET",
+                dataType: 'json',
+                success: function (response) {
+                    $("#renderSiswa").html(response.view)
+                }
+                });
+            })
+        })
+    </script>
 </body>
 </html>
