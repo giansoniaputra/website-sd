@@ -3,211 +3,146 @@
 @section('title', 'Galeri')
 
 @section('content')
-<!-- Start Hero ============================================= -->
-<div id="home" class="hero-section">
-    <div class="hero-single bg" style="background-image: url('/assets2/img/header/1280 X 720.png'); background-size: cover; background-position: center;">
-        <div class="container">
-            <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
-                <div class="col-xl-6 text-center">
-                    <div class="hero-content">
-                        <span class="hero-p1 hero-sm d-block text-white">Galeri</span>
-                        <h2 class="text-white">
-                            SD-IT<span>AL MUKRON</span>
-                        </h2>
-                        {{-- <p class="text-white">
+    <!-- Start Hero ============================================= -->
+    <div id="home" class="hero-section">
+        <div class="hero-single bg"
+            style="background-image: url('/assets2/img/header/1280 X 720.png'); background-size: cover; background-position: center;">
+            <div class="container">
+                <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+                    <div class="col-xl-6 text-center">
+                        <div class="hero-content">
+                            <span class="hero-p1 hero-sm d-block text-white">Galeri</span>
+                            <h2 class="text-white">
+                                SD-IT<span>AL MUKRON</span>
+                            </h2>
+                            {{-- <p class="text-white">
                             Chap fantastic skive off chancer knees up starkers easy
                             David bleeding tomfoolery chimney.!
                         </p> --}}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Hero -->
-
-<!-- Start Video
-============================================= -->
-<div class="serv-2-area de-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 offset-xl-2">
-                <div class="site-title text-center">
-                    <h2>Video Kami</h2>
-                </div>
-            </div>
-        </div>
-        <div class="serv-wrapper">
-            <div class="row">
-                <!-- Video 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="video-box">
-                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <!-- Video 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="video-box">
-                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <!-- Video 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="video-box">
-                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-            <!-- Additional rows for more videos -->
-            <div class="row">
-                <!-- Video 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="video-box">
-                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <!-- Video 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="video-box">
-                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID_5" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <!-- Video 6 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="video-box">
-                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID_6" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Video -->
-
-
-<!-- Start Foto
-		============================================= -->
-<div id="portfolio" class="portfolio-area posi-rel de-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 offset-xl-2">
-                <div class="site-title text-center">
-                    <h2>Foto Kami</h2>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-items-area">
-            <div class="row">
-                <div class="col-xl-12 portfolio-content">
-                    <div class="mix-item-menu active-theme text-center">
-                        <button class="active" data-filter="*">All</button>
-                        <button data-filter=".development" class="">Marketing</button>
-                        <button data-filter=".design" class="">Digital</button>
-                        <button data-filter=".photography" class="">Creative </button>
-                        <button data-filter=".branding" class="">Web Design</button>
-                        <button data-filter=".video" class="">Photoshop</button>
-                    </div>
-                    <!-- End Mixitup Nav-->
-                    <div class="magnific-mix-gallery masonary">
-                        <div id="portfolio-grid" class="portfolio-items">
-                            <div class="pf-item video branding photography">
-                                <div class="course-box">
-                                    <div class="course-pic">
-                                        <img src="/assets2/img/portfolio/800x600.png" class="course-img" alt="thumb">
-                                        <div class="port-overlay">
-                                            <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            <a href="project-single.html" class="port-link">
-                                                <i class="ti ti-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pf-item video photography development">
-                                <div class="course-box">
-                                    <div class="course-pic">
-                                        <img src="/assets2/img/portfolio/800x600.png" class="course-img" alt="thumb">
-                                        <div class="port-overlay">
-                                            <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            <a href="project-single.html" class="port-link">
-                                                <i class="ti ti-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pf-item design branding">
-                                <div class="course-box">
-                                    <div class="course-pic">
-                                        <img src="/assets2/img/portfolio/800x600.png" class="course-img" alt="thumb">
-                                        <div class="port-overlay">
-                                            <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            <a href="project-single.html" class="port-link">
-                                                <i class="ti ti-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pf-item development design photography">
-                                <div class="course-box">
-                                    <div class="course-pic">
-                                        <img src="/assets2/img/portfolio/800x600.png" class="course-img" alt="thumb">
-                                        <div class="port-overlay">
-                                            <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            <a href="project-single.html" class="port-link">
-                                                <i class="ti ti-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pf-item development photography">
-                                <div class="course-box">
-                                    <div class="course-pic">
-                                        <img src="/assets2/img/portfolio/800x600.png" class="course-img" alt="thumb">
-                                        <div class="port-overlay">
-                                            <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            <a href="project-single.html" class="port-link">
-                                                <i class="ti ti-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pf-item design photography">
-                                <div class="course-box">
-                                    <div class="course-pic">
-                                        <img src="/assets2/img/portfolio/800x600.png" class="course-img" alt="thumb">
-                                        <div class="port-overlay">
-                                            <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            <a href="project-single.html" class="port-link">
-                                                <i class="ti ti-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End Foto -->
+    <!-- End Hero -->
 
+    <!-- Start Video -->
+    <div class="serv-2-area de-padding">
+        <div class="container" id="galeriVideo">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                    <div class="site-title text-center">
+                        <h2>Video Kami</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="serv-wrapper">
+                <div class="row">
+                    <!-- Video 1 -->
+                    <div class="rel-wpr grid-4">
+                        @foreach ($videos as $row)
+                            <div class="video-box">
+                                <div>
+                                    {!! str_replace(['width="560"', 'height="315"'], ['width="100%"', 'height="250"'], $row->link) !!}
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <style>
+                    #paginate nav .pagination {
+                        display: flex;
+                    }
 
+                    #paginate nav li {
+                        background-color: white;
+                    }
+
+                    #paginate nav .page-item.active .page-link {
+                        background-color: #DC810F;
+                        border-color: #DC810F;
+                        color: white;
+                    }
+
+                    #paginate nav .page-link {
+                        color: #DC810F;
+                    }
+                </style>
+                <div class="d-flex justify-content-center" id="paginate">
+                    {{ $videos->links() }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Video -->
+
+    <script>
+        let paginate = document.querySelector("#paginate")
+        paginate.addEventListener("click", function(event) {
+            if (event.target.getAttribute("class") == "page-link") {
+                event.preventDefault()
+                let href = event.target.getAttribute("href")
+                if (href != null) {
+                    document.location.href = href + '#galeriVideo'
+                }
+
+            }
+        })
+    </script>
+
+    <!-- Start Foto -->
+    <div class="rel-project de-pb" id="galeriPhoto">
+        <div class="container">
+            <h2 class="text-center mb-40 mt-40">Foto Kami</h2>
+            <div class="rel-wpr grid-4">
+                @foreach ($galleries as $row)
+                    <div class="rel-box">
+                        <div class="rel-img">
+                            <a title="lihat gambar" href="/storage/{{ $row->photo }}" class="btn btn-transparent"
+                                target="_blank">
+                                <img src="/storage/{{ $row->photo }}" alt="Foto" width="100%">
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <style>
+                #paginate2 nav .pagination {
+                    display: flex;
+                }
+
+                #paginate2 nav li {
+                    background-color: white;
+                }
+
+                #paginate2 nav .page-item.active .page-link {
+                    background-color: #DC810F;
+                    border-color: #DC810F;
+                    color: white;
+                }
+
+                #paginate2 nav .page-link {
+                    color: #DC810F;
+                }
+            </style>
+            <div class="d-flex justify-content-center" id="paginate2">
+                {{ $galleries->links() }} <!-- Menampilkan links pagination -->
+            </div>
+        </div>
+    </div>
+    <!-- End Foto -->
+    <script>
+        let paginate2 = document.querySelector("#paginate2")
+        paginate2.addEventListener("click", function(event) {
+            if (event.target.getAttribute("class") == "page-link") {
+                event.preventDefault()
+                let href = event.target.getAttribute("href")
+                if (href != null) {
+                    document.location.href = href + '#galeriPhoto'
+                }
+
+            }
+        })
+    </script>
 @endsection

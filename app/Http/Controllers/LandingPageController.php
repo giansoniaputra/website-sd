@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Siswa;
+use App\Models\Video;
 use App\Models\Sarana;
+use App\Models\Gallery;
 use App\Models\Pegawai;
 use App\Models\Profile;
 use App\Models\Prestasi;
@@ -41,21 +43,6 @@ class LandingPageController extends Controller
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
     public function profilSekolah()
     {
-        $data = [];
-        $cek = Profile::first();
-        if ($cek) {
-            $data['visiSekolah'] = $cek->visi;
-            $data['misi'] = $cek->misi;
-            $data['tujuan'] = $cek->tujuan;
-            $data['strategi'] = $cek->strategi;
-            $data['sejarah'] = $cek->sejarah;
-        } else {
-            $data['visi'] = 'belum ada visi';
-            $data['misi'] = 'belum ada misi';
-            $data['tujuan'] = 'belum ada tujuan';
-            $data['strategi'] = 'belum ada strategi';
-            $data['sejarah'] = 'belum ada sejarah';
-        }
         return view('landing.profilSekolah');
     }
 
@@ -117,7 +104,14 @@ class LandingPageController extends Controller
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
     public function galeri()
     {
-        return view('landing.galeri');
+        $data = [
+
+            'galleries' => Gallery::latest()->paginate(12, ['*'], 'galleries'),
+            'videos' => Video::latest()->paginate(4, ['*'], 'videos')
+            // 'tahun_ajaran' => TahunAjaran::orderBy('id', 'desc')->get(),
+            // 'prestasi' => Prestasi::latest()->paginate(5),
+        ];
+        return view('landing.galeri', $data);
     }
 
     public function renderSiswa(Request $request)
