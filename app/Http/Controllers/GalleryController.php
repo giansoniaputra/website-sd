@@ -20,7 +20,7 @@ class GalleryController extends Controller
 
         return view('gallery.index', [
             'pageTitle' => $pageTitle,
-            'galleries' => Gallery::latest()->paginate(10)
+            'galleries' => Gallery::all()
         ]);
     }
 
