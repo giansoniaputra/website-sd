@@ -15,8 +15,10 @@ class KelasController extends Controller
      */
     public function index(Request $request)
     {
+        $pageTitle = 'List Kelas';
         $kelas = Kelas::getKelas($request->filter_tahun, $request->filter_kelas);
         return view('kelas.index', [
+            'pageTitle' => $pageTitle,
             'kelas' => $kelas,
             'tahunAjaran' => TahunAjaran::all()
         ]);
@@ -27,7 +29,11 @@ class KelasController extends Controller
      */
     public function create()
     {
-        return view('kelas.create', ['tahunAjaran' => TahunAjaran::all()]);
+        $pageTitle = 'Tambah Kelas';
+        return view('kelas.create', [
+            'pageTitle' => $pageTitle,
+            'tahunAjaran' => TahunAjaran::all()
+        ]);
     }
 
     /**
@@ -73,7 +79,12 @@ class KelasController extends Controller
      */
     public function edit(Kelas $kela)
     {
-        return view('kelas.edit', ['kelas' => $kela, 'tahunAjaran' => TahunAjaran::all()]);
+        $pageTitle = 'Edit Kelas';
+        return view('kelas.edit', [
+            'pageTitle' => $pageTitle,
+            'kelas' => $kela,
+            'tahunAjaran' => TahunAjaran::all()
+        ]);
     }
 
     /**

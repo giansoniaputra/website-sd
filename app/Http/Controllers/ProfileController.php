@@ -15,63 +15,63 @@ class ProfileController extends Controller
      */
     public function index_yayasan()
     {
+        $pageTitle = 'Profil Yayasan';  // Menentukan judul halaman untuk profil yayasan
         $data = Profile::where('type', 'yayasan')->first();
-        if ($data) {
-            return view('profil.yayasan.index', ['data' =>  $data]);
-        } else {
-            return view('profil.yayasan.index');
-        }
+        return view('profil.yayasan.index', [
+            'data' => $data,
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     public function index_sekolah()
     {
+        $pageTitle = 'Profil Sekolah';  // Menentukan judul halaman untuk profil sekolah
         $data = Profile::where('type', 'sekolah')->first();
-        if ($data) {
-            return view('profil.sekolah.index', ['data' =>  $data]);
-        } else {
-            return view('profil.sekolah.index');
-        }
+        return view('profil.sekolah.index', [
+            'data' => $data,
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     public function index_pengurus()
     {
+        $pageTitle = 'Profil Pengurus';  // Menentukan judul halaman untuk profil pengurus
         $data = Profile::where('type', 'pengurus')->first();
-        if ($data) {
-            return view('profil.pengurus.index', ['data' =>  $data]);
-        } else {
-            return view('profil.pengurus.index');
-        }
+        return view('profil.pengurus.index', [
+            'data' => $data,
+            'pageTitle' => $pageTitle
+        ]);
     }
     /**
      * Show the form for creating a new resource.
      */
     public function create_yayasan()
     {
+        $pageTitle = 'Tambah/Perbarui Profil Yayasan';  // Menentukan judul halaman untuk form tambah atau perbarui profil yayasan
         $cekData = Profile::where("type", "yayasan")->first();
-        if (!$cekData) {
-            return view('profil.yayasan.create');
-        } else {
-            return view('profil.yayasan.create', ['data' => $cekData]);
-        }
+        return view('profil.yayasan.create', [
+            'data' => $cekData,
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     public function create_sekolah()
     {
+        $pageTitle = 'Tambah/Perbarui Profil Sekolah';  // Menentukan judul halaman untuk form tambah atau perbarui profil sekolah
         $cekData = Profile::where("type", "sekolah")->first();
-        if (!$cekData) {
-            return view('profil.sekolah.create');
-        } else {
-            return view('profil.sekolah.create', ['data' => $cekData]);
-        }
+        return view('profil.sekolah.create', [
+            'data' => $cekData,
+            'pageTitle' => $pageTitle
+        ]);
     }
     public function create_pengurus()
     {
+        $pageTitle = 'Tambah/Perbarui Profil Pengurus';  // Menentukan judul halaman untuk form tambah atau perbarui profil pengurus
         $cekData = Profile::where("type", "pengurus")->first();
-        if (!$cekData) {
-            return view('profil.pengurus.create');
-        } else {
-            return view('profil.pengurus.create', ['data' => $cekData]);
-        }
+        return view('profil.pengurus.create', [
+            'data' => $cekData,
+            'pageTitle' => $pageTitle
+        ]);
     }
     /**
      * Store a newly created resource in storage.

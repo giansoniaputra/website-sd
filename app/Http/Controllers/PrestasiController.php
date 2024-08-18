@@ -14,7 +14,11 @@ class PrestasiController extends Controller
      */
     public function index()
     {
-        return view('prestasi.index', ['prestasi' => Prestasi::all()]);
+        $pageTitle = 'Daftar Prestasi';  // Menentukan judul halaman untuk daftar prestasi
+        return view('prestasi.index', [
+            'prestasi' => Prestasi::all(),
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -22,8 +26,10 @@ class PrestasiController extends Controller
      */
     public function create()
     {
-        //
-        return view('prestasi.create');
+        $pageTitle = 'Tambah Prestasi';  // Menentukan judul halaman untuk form tambah prestasi
+        return view('prestasi.create', [
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -59,7 +65,11 @@ class PrestasiController extends Controller
      */
     public function show(Prestasi $prestasi)
     {
-        //
+        $pageTitle = 'Detail Prestasi';  // Menentukan judul halaman untuk detail prestasi
+        return view('prestasi.show', [
+            'prestasi' => $prestasi,
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -67,8 +77,10 @@ class PrestasiController extends Controller
      */
     public function edit(Prestasi $prestasi)
     {
+        $pageTitle = 'Edit Prestasi';  // Menentukan judul halaman untuk form edit prestasi
         return view('prestasi.edit', [
             'prestasi' => $prestasi,
+            'pageTitle' => $pageTitle
         ]);
     }
 

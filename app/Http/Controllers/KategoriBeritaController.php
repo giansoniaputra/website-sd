@@ -14,7 +14,11 @@ class KategoriBeritaController extends Controller
      */
     public function index()
     {
-        return view('kategori.index', ['kategori' => KategoriBerita::all()]);
+        $pageTitle = 'List Kategori Berita';
+        return view('kategori.index', [
+            'pageTitle' => $pageTitle,
+            'kategori' => KategoriBerita::all()
+        ]);
     }
 
     /**
@@ -22,7 +26,10 @@ class KategoriBeritaController extends Controller
      */
     public function create()
     {
-        return view('kategori.create');
+        $pageTitle = 'Tambah Kategori Berita';
+        return view('kategori.create', [
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -60,7 +67,11 @@ class KategoriBeritaController extends Controller
      */
     public function edit(KategoriBerita $kategori)
     {
-        return view('kategori.edit', ['kategori' => $kategori]);
+        $pageTitle = 'Edit Kategori Berita';
+        return view('kategori.edit', [
+            'pageTitle' => $pageTitle,
+            'kategori' => $kategori
+        ]);
     }
 
     /**

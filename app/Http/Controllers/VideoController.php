@@ -15,7 +15,16 @@ class VideoController extends Controller
      */
     public function index()
     {
-        return view('video.index', ['videos' => Video::all()]);
+        // Title for the index page
+        $pageTitle = 'Video List';
+
+        // Menggunakan paginate() untuk paginasi, 10 item per halaman
+        $videos = Video::paginate(10);
+
+        return view('video.index', [
+            'pageTitle' => $pageTitle,
+            'videos' => $videos
+        ]);
     }
 
     /**
@@ -23,9 +32,10 @@ class VideoController extends Controller
      */
     public function create()
     {
-        //
-        return view('video.create');
+        $pageTitle = 'Tambah Video Baru';  // Menentukan judul halaman untuk form tambah video
+        return view('video.create', compact('pageTitle'));
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -68,8 +78,10 @@ class VideoController extends Controller
      */
     public function edit(Video $video)
     {
-        return view('video.edit', ['video' => $video]);
+        $pageTitle = 'Edit Video';  // Menentukan judul halaman untuk form edit video
+        return view('video.edit', compact('pageTitle', 'video'));
     }
+
 
     /**
      * Update the specified resource in storage.

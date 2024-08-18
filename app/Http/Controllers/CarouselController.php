@@ -15,7 +15,11 @@ class CarouselController extends Controller
      */
     public function index()
     {
+        // Title for the index page
+        $pageTitle = 'Carousel List';
+
         return view('carousel.index', [
+            'pageTitle' => $pageTitle,
             'carousels_home' => Carousel::where('type', 'home')->latest()->get(),
             'carousels_yayasan' => Carousel::where('type', 'yayasan')->latest()->get(),
             'carousels_sekolah' => Carousel::where('type', 'sekolah')->latest()->get(),
@@ -33,7 +37,10 @@ class CarouselController extends Controller
      */
     public function create()
     {
-        return view('carousel.create');
+        // Title for the create page
+        $pageTitle = 'Buat Carousel Baru';
+
+        return view('carousel.create', compact('pageTitle'));
     }
 
     /**

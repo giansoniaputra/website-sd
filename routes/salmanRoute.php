@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\LandingPageController;
 
 // ROUTE UNTUK HALAMAN LANDING PAGE
@@ -14,3 +15,6 @@ Route::get('/landing/layanan', [LandingPageController::class, 'layanan']);
 Route::get('/landing/berita', [LandingPageController::class, 'berita']);
 Route::get('/landing/galeri', [LandingPageController::class, 'galeri']);
 Route::get('/renderSiswa', [LandingPageController::class, 'renderSiswa']);
+
+// Tambahkan route untuk halaman detail berita
+Route::get('/news/{slug}', [PostController::class, 'show'])->name('news.show');

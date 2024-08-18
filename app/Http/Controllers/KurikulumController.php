@@ -15,7 +15,11 @@ class KurikulumController extends Controller
      */
     public function index()
     {
-        return view('kurikulum.index', ['kurikulum' => Kurikulum::all()]);
+        $pageTitle = 'List Kurikulum';
+        return view('kurikulum.index', [
+            'pageTitle' => $pageTitle,
+            'kurikulum' => Kurikulum::all()
+        ]);
     }
 
     /**
@@ -23,8 +27,10 @@ class KurikulumController extends Controller
      */
     public function create()
     {
-        //
-        return view('kurikulum.create');
+        $pageTitle = 'Tambah Kurikulum';
+        return view('kurikulum.create', [
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -72,7 +78,11 @@ class KurikulumController extends Controller
      */
     public function edit(Kurikulum $kurikulum)
     {
-        return view('kurikulum.edit', ['kurikulum' => $kurikulum]);
+        $pageTitle = 'Edit Kurikulum';
+        return view('kurikulum.edit', [
+            'pageTitle' => $pageTitle,
+            'kurikulum' => $kurikulum
+        ]);
     }
 
     /**

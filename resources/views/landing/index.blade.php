@@ -1,3 +1,4 @@
+
 @extends('landing.layoutLanding.app')
 
 @section('title', 'Halaman Utama')
@@ -28,7 +29,7 @@
                                         Generasi Rabbani Iman Ilmu Amal Akhlaq
                                     </p>
                                     <div class="hro-btn">
-                                        <a href="contact.html" class="theme-btn text-white">Lebih Lanjut</a>
+                                        <a href="#" class="theme-btn text-white">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +51,7 @@
                                         Generasi Rabbani Iman Ilmu Amal Akhlaq
                                     </p>
                                     <div class="hro-btn">
-                                        <a href="contact.html" class="theme-btn text-white">Lebih Lanjut</a>
+                                        <a href="#" class="theme-btn text-white">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +73,7 @@
                                         Generasi Rabbani Iman Ilmu Amal Akhlaq
                                     </p>
                                     <div class="hro-btn">
-                                        <a href="contact.html" class="theme-btn text-white">Lebih Lanjut</a>
+                                        <a href="#" class="theme-btn text-white">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -96,24 +97,26 @@
 
 
 
-<!-- Start About
-    ============================================= -->
+<!-- Start About -->
 <div class="about-2 de-padding">
     <div class="container">
         <div class="about-2-wrapper grid-2">
             <div class="about-2-left">
                 <div class="about-2-pic">
-                    <img src="/assets2/img/about/470x670.png" alt="thumb">
+                    @if($photo)
+                        <img src="{{ asset('storage/' . $photo) }}" alt="Gambar Kepala Sekolah"> <!-- Menampilkan gambar dari storage -->
+                    @else
+                        <img src="/assets2/img/about/470x670.png" alt="Gambar Default"> <!-- Menampilkan gambar default jika tidak ada -->
+                    @endif
                 </div>
             </div>
+            
             <div class="about-2-right">
                 <div class="about-2-right-content">
                     <span class="hero-p1">Tentang Sekolah</span>
-                    <h2>
-                        Kepala Sekolah
-                    </h2>
+                    <h2>Kepala Sekolah</h2>
                     <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
+                        {!! $sambutan !!}
                     </p>
                     <a href="#" class="theme-btn">Lebih Lanjut</a>
                 </div>
@@ -121,79 +124,43 @@
         </div>
     </div>
 </div>
-<!-- End About-->
+<!-- End About -->
+
 
 <!-- Start Blog
     ============================================= -->
-<div class="blog-area posi-rel de-padding">
-    {{-- <div class="hero-animation">
-        <img src="/assets2/img/animation/ani-1.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-2.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-4.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-5.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-6.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-    </div> --}}
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 offset-xl-2">
-                <div class="site-title text-center">
-                    <h2>Berita Kita</h2>
+    <div class="blog-area posi-rel de-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                    <div class="site-title text-center">
+                        <h2>Berita Kita</h2>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="blog-wrapper grid-3">
-            <div class="blog-box">
-                <div class="blog-pic">
-                    <img src="/assets2/img/blog/370x280.png" alt="thumb">
+            <div class="blog-wrapper grid-3">
+                @foreach($posts as $post)
+                <div class="blog-box">
+                    <div class="blog-pic">
+                        <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}">
+                    </div>
+                    <div class="blog-content">
+                        <a href="{{ url('news/'.$post->slug) }}">
+                            <h5>{{ $post->title }}</h5>
+                        </a>
+                        <span>{{ $post->created_at->format('d F, Y') }}</span>
+                        <p>
+                            {{ $post->excerpt }}
+                        </p>
+                        <a href="{{ url('news/'.$post->slug) }}">Read More</a>
+                    </div>
                 </div>
-                <div class="blog-content">
-                    <a href="single.html">
-                        <h5>Maboriosam in a Nescing</h5>
-                    </a>
-                    <span>22 July, 2020. Monday</span>
-                    <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be elite.
-                    </p>
-                    <a href="single.html">Read More</a>
-                </div>
-            </div>
-            <div class="blog-box">
-                <div class="blog-pic">
-                    <img src="/assets2/img/blog/370x280.png" alt="thumb">
-                </div>
-                <div class="blog-content">
-                    <a href="single.html">
-                        <h5>Maboriosam in a Nescing</h5>
-                    </a>
-                    <span>22 July, 2020. Monday</span>
-                    <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be elite.
-                    </p>
-                    <a href="single.html">Read More</a>
-                </div>
-            </div>
-            <div class="blog-box">
-                <div class="blog-pic">
-                    <img src="/assets2/img/blog/370x280.png" alt="thumb">
-                </div>
-                <div class="blog-content">
-                    <a href="single.html">
-                        <h5>Maboriosam in a Nescing</h5>
-                    </a>
-                    <span>22 July, 2020. Monday</span>
-                    <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be elite.
-                    </p>
-                    <a href="single.html">Read More</a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
-</div>
-<!-- End Blog -->
+    <!-- End Blog -->
+    
 
 <!-- Start Blog
     ============================================= -->
@@ -307,7 +274,7 @@
                                             <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
                                                 <i class="ti ti-search"></i>
                                             </a>
-                                            <a href="project-single.html" class="port-link">
+                                            <a href="/landing/galeri" class="port-link">
                                                 <i class="ti ti-link"></i>
                                             </a>
                                         </div>
@@ -322,7 +289,7 @@
                                             <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
                                                 <i class="ti ti-search"></i>
                                             </a>
-                                            <a href="project-single.html" class="port-link">
+                                            <a href="/landing/galeri" class="port-link">
                                                 <i class="ti ti-link"></i>
                                             </a>
                                         </div>
@@ -337,7 +304,7 @@
                                             <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
                                                 <i class="ti ti-search"></i>
                                             </a>
-                                            <a href="project-single.html" class="port-link">
+                                            <a href="/landing/galeri" class="port-link">
                                                 <i class="ti ti-link"></i>
                                             </a>
                                         </div>
@@ -352,7 +319,7 @@
                                             <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
                                                 <i class="ti ti-search"></i>
                                             </a>
-                                            <a href="project-single.html" class="port-link">
+                                            <a href="/landing/galeri" class="port-link">
                                                 <i class="ti ti-link"></i>
                                             </a>
                                         </div>
@@ -367,7 +334,7 @@
                                             <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
                                                 <i class="ti ti-search"></i>
                                             </a>
-                                            <a href="project-single.html" class="port-link">
+                                            <a href="/landing/galeri" class="port-link">
                                                 <i class="ti ti-link"></i>
                                             </a>
                                         </div>
@@ -382,7 +349,7 @@
                                             <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
                                                 <i class="ti ti-search"></i>
                                             </a>
-                                            <a href="project-single.html" class="port-link">
+                                            <a href="/landing/galeri" class="port-link">
                                                 <i class="ti ti-link"></i>
                                             </a>
                                         </div>

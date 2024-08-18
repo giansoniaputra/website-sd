@@ -15,7 +15,8 @@ class SaranaController extends Controller
      */
     public function index()
     {
-        return view('sarana.index', ['saranas' => Sarana::all()]);
+        $pageTitle = 'Daftar Sarana dan Prasarana';  // Judul halaman untuk daftar sarana
+        return view('sarana.index', ['saranas' => Sarana::all(), 'pageTitle' => $pageTitle]);
     }
 
     /**
@@ -23,7 +24,8 @@ class SaranaController extends Controller
      */
     public function create()
     {
-        return view('sarana.create');
+        $pageTitle = 'Tambah Sarana dan Prasarana';
+        return view('sarana.create', ['pageTitle' => $pageTitle]);
     }
 
     /**
@@ -65,7 +67,8 @@ class SaranaController extends Controller
      */
     public function edit(Sarana $sarana)
     {
-        return view('sarana.edit', ['sarana' => $sarana]);
+        $pageTitle = 'Edit Sarana dan Prasarana';
+        return view('sarana.edit', ['sarana' => $sarana, 'pageTitle' => $pageTitle]);
     }
 
     /**

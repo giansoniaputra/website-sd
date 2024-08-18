@@ -14,7 +14,15 @@ class TahunAjaranController extends Controller
      */
     public function index()
     {
-        return view('tahun-ajaran.index',['tahunAjarans'=> TahunAjaran::all()]);
+        $pageTitle = 'Daftar Tahun Ajaran';  // Menentukan judul halaman untuk daftar tahun ajaran
+
+        // Menggunakan paginate() untuk paginasi, bisa disesuaikan jumlah per halaman
+        $tahunAjarans = TahunAjaran::paginate(10);
+
+        return view('tahun-ajaran.index', [
+            'tahunAjarans' => $tahunAjarans,
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -22,8 +30,10 @@ class TahunAjaranController extends Controller
      */
     public function create()
     {
-        //
-        return view('tahun-ajaran.create');
+        $pageTitle = 'Tambah Tahun Ajaran';  // Menentukan judul halaman untuk form tambah tahun ajaran
+        return view('tahun-ajaran.create', [
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -63,7 +73,11 @@ class TahunAjaranController extends Controller
      */
     public function edit(TahunAjaran $tahunAjaran)
     {
-        return view('tahun-ajaran.edit', ['tahun_ajaran' => $tahunAjaran]);
+        $pageTitle = 'Edit Tahun Ajaran';  // Menentukan judul halaman untuk form edit tahun ajaran
+        return view('tahun-ajaran.edit', [
+            'tahun_ajaran' => $tahunAjaran,
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
