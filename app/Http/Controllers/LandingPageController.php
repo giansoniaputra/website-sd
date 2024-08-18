@@ -22,6 +22,21 @@ class LandingPageController extends Controller
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
     public function profilSekolah()
     {
+        $data = [];
+        $cek = Profile::first();
+        if ($cek) {
+            $data['visiSekolah'] = $cek->visi;
+            $data['misi'] = $cek->misi;
+            $data['tujuan'] = $cek->tujuan;
+            $data['strategi'] = $cek->strategi;
+            $data['sejarah'] = $cek->sejarah;
+        } else {
+            $data['visi'] = 'belum ada visi';
+            $data['misi'] = 'belum ada misi';
+            $data['tujuan'] = 'belum ada tujuan';
+            $data['strategi'] = 'belum ada strategi';
+            $data['sejarah'] = 'belum ada sejarah';
+        }
         return view('landing.profilSekolah');
     }
 
@@ -30,12 +45,14 @@ class LandingPageController extends Controller
     {
         $data = [];
         $cek = Profile::first();
-        if($cek) {
+        if ($cek) {
             $data['visi'] = $cek->visi;
             $data['misi'] = $cek->misi;
+            $data['sejarah'] = $cek->sejarah;
         } else {
             $data['visi'] = 'belum ada visi';
             $data['misi'] = 'belum ada misi';
+            $data['sejarah'] = 'belum ada sejarah';
         }
         return view('landing.profilYayasan', $data);
     }
@@ -81,9 +98,10 @@ class LandingPageController extends Controller
         return view('landing.galeri');
     }
 
-    public function renderSiswa(Request $request){
-        $siswa=Siswa::where('kelas_uuid', $request->uuid)->orderBy('nama_siswa')->get();
-        $view=View::make('landing.partial.renderSiswa',['siswa'=>$siswa])->render();
-        return response()->json(['view' => $view ]);
+    public function renderSiswa(Request $request)
+    {
+        $siswa = Siswa::where('kelas_uuid', $request->uuid)->orderBy('nama_siswa')->get();
+        $view = View::make('landing.partial.renderSiswa', ['siswa' => $siswa])->render();
+        return response()->json(['view' => $view]);
     }
 }
