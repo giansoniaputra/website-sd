@@ -144,7 +144,7 @@
 
             modal.on('shown.bs.modal', function() {
                 cropper = new Cropper(image, {
-                    aspectRatio: 1 / 1,
+                    aspectRatio: 7 / 4,
                     preview: '.preview'
                 })
             }).on('hidden.bs.modal', function() {
