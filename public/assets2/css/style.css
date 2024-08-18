@@ -3843,141 +3843,16 @@ header.header.single-head .navbar.in {
     border-right: none;
 }
 
-/* .info-table-custom {
+.blog-single-pic {
+    width: 100%; /* Sesuaikan dengan kebutuhan */
+    height: auto; /* Agar tinggi mengikuti rasio gambar */
+    overflow: hidden; /* Untuk menghindari gambar melampaui kontainer */
+}
+
+.blog-single-pic img {
     width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 1em;
-    font-family: "Arial", sans-serif;
-    background-color: #fffbcc;
-    border: 1px solid #ddd;
+    height: auto; /* Menjaga rasio gambar */
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+    object-fit: cover; /* Memastikan gambar mengisi kontainer tanpa merusak rasio aspek */
 }
 
-.info-table-custom th,
-.info-table-custom td {
-    padding: 12px 15px;
-    text-align: left;
-    border: 1px solid #ddd;
-    vertical-align: top;
-}
-
-.info-table-custom th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-    width: 30%;
-}
-
-.info-table-custom td {
-    background-color: #fff;
-}
-
-.info-table-custom ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-.info-table-custom ul li {
-    padding: 5px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.info-table-custom ul li:last-child {
-    border-bottom: none;
-}
-
-.struktur-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 1em;
-    font-family: "Arial", sans-serif;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-}
-
-.struktur-table thead {
-    background-color: #f4f4f4;
-    color: #333;
-    font-weight: bold;
-    text-align: left;
-}
-
-.struktur-table th,
-.struktur-table td {
-    padding: 12px 15px;
-    text-align: left;
-    border: 1px solid #ddd;
-    vertical-align: middle;
-}
-
-.struktur-table th {
-    width: auto;
-    text-align: center;
-    font-weight: bold;
-}
-
-.struktur-table tbody tr {
-    background-color: #fff;
-}
-
-.struktur-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.struktur-table tbody tr:hover {
-    background-color: #e0e0e0;
-}
-
-.text-center {
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.kepala-madrasah-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 1em;
-    font-family: "Arial", sans-serif;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-}
-
-.kepala-madrasah-table thead {
-    background-color: #f4f4f4;
-    color: #333;
-    font-weight: bold;
-}
-
-.kepala-madrasah-table th,
-.kepala-madrasah-table td {
-    padding: 12px 15px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-.kepala-madrasah-table th {
-    text-align: center;
-}
-
-.kepala-madrasah-table tbody tr {
-    background-color: #fff;
-}
-
-.kepala-madrasah-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.kepala-madrasah-table tbody tr:hover {
-    background-color: #e0e0e0;
-}
-
-.text-center {
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #333;
-} */

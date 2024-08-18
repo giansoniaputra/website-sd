@@ -129,37 +129,38 @@
 
 <!-- Start Blog
     ============================================= -->
-    <div class="blog-area posi-rel de-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2">
-                    <div class="site-title text-center">
-                        <h2>Berita Kita</h2>
-                    </div>
+<div class="blog-area posi-rel de-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2">
+                <div class="site-title text-center">
+                    <h2>Berita Kita</h2>
                 </div>
-            </div>
-            <div class="blog-wrapper grid-3">
-                @foreach($posts as $post)
-                <div class="blog-box">
-                    <div class="blog-pic">
-                        <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}">
-                    </div>
-                    <div class="blog-content">
-                        <a href="{{ url('news/'.$post->slug) }}">
-                            <h5>{{ $post->title }}</h5>
-                        </a>
-                        <span>{{ $post->created_at->format('d F, Y') }}</span>
-                        <p>
-                            {{ $post->excerpt }}
-                        </p>
-                        <a href="{{ url('news/'.$post->slug) }}">Read More</a>
-                    </div>
-                </div>
-                @endforeach
             </div>
         </div>
+        <div class="blog-wrapper grid-3">
+            @foreach($posts as $post)
+            <div class="blog-box">
+                <div class="blog-pic">
+                    <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}">
+                </div>
+                <div class="blog-content">
+                    <a href="{{ url('detailBerita/'.$post->slug) }}">
+                        <h5>{{ $post->title }}</h5>
+                    </a>
+                    <span>{{ $post->created_at->format('d F, Y') }}</span>
+                    <p>
+                        {{ $post->excerpt }}
+                    </p>
+                    <a href="{{ url('detailBerita/'.$post->slug) }}">Read More</a>
+                </div>
+            </div>
+            @endforeach
+        </div>
     </div>
-    <!-- End Blog -->
+</div>
+<!-- End Blog -->
+
     
 
 <!-- Start Blog
