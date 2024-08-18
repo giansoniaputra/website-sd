@@ -41,6 +41,21 @@ class LandingPageController extends Controller
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
     public function profilSekolah()
     {
+        $data = [];
+        $cek = Profile::first();
+        if ($cek) {
+            $data['visiSekolah'] = $cek->visi;
+            $data['misi'] = $cek->misi;
+            $data['tujuan'] = $cek->tujuan;
+            $data['strategi'] = $cek->strategi;
+            $data['sejarah'] = $cek->sejarah;
+        } else {
+            $data['visi'] = 'belum ada visi';
+            $data['misi'] = 'belum ada misi';
+            $data['tujuan'] = 'belum ada tujuan';
+            $data['strategi'] = 'belum ada strategi';
+            $data['sejarah'] = 'belum ada sejarah';
+        }
         return view('landing.profilSekolah');
     }
 
