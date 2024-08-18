@@ -31,7 +31,7 @@
     <div class="serv-2-area de-padding">
         <div class="container" id="galeriVideo">
             <div class="row">
-                <div class="col-xl-8 offset-xl-2">
+                <div class="col-lg-12 text-center">
                     <div class="site-title text-center">
                         <h2>Video Kami</h2>
                     </div>
@@ -40,14 +40,18 @@
             <div class="serv-wrapper">
                 <div class="row">
                     <!-- Video 1 -->
-                    <div class="rel-wpr grid-4">
-                        @foreach ($videos as $row)
-                            <div class="video-box">
-                                <div>
-                                    {!! str_replace(['width="560"', 'height="315"'], ['width="100%"', 'height="250"'], $row->link) !!}
+                    <div class="col-12">
+                        <div class="row">
+                            @foreach ($videos as $row)
+                                <div class="col-md-6 col-lg-3 mb-4">
+                                    <div class="video-box">
+                                        <div class="video-content">
+                                            {!! str_replace(['width="560"', 'height="315"'], ['width="100%"', 'height="250"'], $row->link) !!}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
                 </div>
                 <style>
