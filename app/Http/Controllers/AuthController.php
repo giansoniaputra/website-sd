@@ -33,7 +33,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             // JIKA LOGIN SUKSES ARAHKAN KE ROUTE /
-            return redirect()->intended('/');
+            return redirect()->intended('/profil/yayasan');
         }
 
         return back()->with('error', 'Email/Password Salah');
