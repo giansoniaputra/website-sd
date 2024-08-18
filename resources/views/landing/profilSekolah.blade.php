@@ -3,170 +3,173 @@
 @section('title', 'Profil Sekolah')
 
 @section('content')
-<!-- Start Hero ============================================= -->
-<div id="home" class="hero-section">
-    <div class="hero-single bg" style="background-image: url('/assets2/img/header/1280 X 720.png'); background-size: cover; background-position: center;">
-        <div class="container">
-            <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
-                <div class="col-xl-6 text-center">
-                    <div class="hero-content">
-                        <span class="hero-p1 hero-sm d-block text-white">Profil Sekolah</span>
-                        <h2 class="text-white">
-                            SD-IT<span>AL MUKRON</span>
-                        </h2>
-                        {{-- <p class="text-white">
+    <!-- Start Hero ============================================= -->
+    <div id="home" class="hero-section">
+        <div class="hero-single bg"
+            style="background-image: url('/assets2/img/header/1280 X 720.png'); background-size: cover; background-position: center;">
+            <div class="container">
+                <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+                    <div class="col-xl-6 text-center">
+                        <div class="hero-content">
+                            <span class="hero-p1 hero-sm d-block text-white">Profil Sekolah</span>
+                            <h2 class="text-white">
+                                SD-IT<span>AL MUKROM</span>
+                            </h2>
+                            {{-- <p class="text-white">
                             Chap fantastic skive off chancer knees up starkers easy
                             David bleeding tomfoolery chimney.!
                         </p> --}}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End Hero -->
+    <!-- End Hero -->
 
-<!-- Start About
-    ============================================= -->
-<div class="about-12 de-padding" id="visiMisi">
-    <div class="container">
-        <div class="about-12-wrapper grid-12">
-            <div class="about-12-right">
-                <div class="about-12-right-content">
-                    <span class="hero-p1">Visi Misi Sekolah</span>
-                    <h2 class="text-center">
-                        Visi
-                    </h2>
-                    <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
-                    </p>
-                    <h2>
-                        Misi
-                    </h2>
-                    <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
-                    </p>
-                    {{-- <a href="#" class="theme-btn">Lebih Lanjut</a> --}}
+    <!-- Start About
+                    ============================================= -->
+    <div class="about-12 de-padding" id="visiMisi">
+        <div class="container">
+            <div class="about-12-wrapper grid-12">
+                <div class="about-12-right">
+                    <div class="about-12-right-content">
+                        <span class="hero-p1">Visi Misi Sekolah</span>
+                        <h2 class="text-center">
+                            Visi
+                        </h2>
+                        <p>
+                            {!! $visiSekolah !!}
+                        </p>
+                        <h2>
+                            Misi
+                        </h2>
+                        <p>
+                            {!! $misi !!}
+                        </p>
+                        {{-- <a href="#" class="theme-btn">Lebih Lanjut</a> --}}
+                    </div>
                 </div>
-            </div>
-            {{-- <div class="about-2-left">
+                {{-- <div class="about-2-left">
                 <div class="about-2-pic">
                     <img src="/assets2/img/about/470x670.png" alt="thumb">
                 </div>
             </div> --}}
+            </div>
         </div>
     </div>
-</div>
-<!-- End About-->
+    <!-- End About-->
 
-<!-- Start About
-    ============================================= -->
-<div class="about-12 de-padding" id="tujuanSekolah">
-    <div class="container">
-        <div class="about-12-wrapper grid-12">
-            <div class="about-12-right">
-                <div class="about-12-right-content">
-                    <span class="hero-p1">Tujuan Sekolah</span>
-                    <h2>
-                        Tujuan
-                    </h2>
-                    <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
-                    </p>
+    <!-- Start About
+                    ============================================= -->
+    <div class="about-12 de-padding" id="tujuanSekolah">
+        <div class="container">
+            <div class="about-12-wrapper grid-12">
+                <div class="about-12-right">
+                    <div class="about-12-right-content">
+                        <span class="hero-p1">Tujuan Sekolah</span>
+                        <h2>
+                            Tujuan
+                        </h2>
+                        <p>
+                            {!! $tujuan !!}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End About-->
+    <!-- End About-->
 
-<!-- Start About
-    ============================================= -->
-<div class="about-12 de-padding" id="strategi">
-    <div class="container">
-        <div class="about-12-wrapper grid-12">
-            <div class="about-12-right">
-                <div class="about-12-right-content">
-                    <span class="hero-p1">Strategi Sekolah</span>
-                    <h2>
-                        Strategi
-                    </h2>
-                    <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
-                    </p>
+    <!-- Start About
+                    ============================================= -->
+    <div class="about-12 de-padding" id="strategi">
+        <div class="container">
+            <div class="about-12-wrapper grid-12">
+                <div class="about-12-right">
+                    <div class="about-12-right-content">
+                        <span class="hero-p1">Strategi Sekolah</span>
+                        <h2>
+                            Strategi
+                        </h2>
+                        <p>
+                            Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect
+                            bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End About-->
+    <!-- End About-->
 
-<!-- Start About
-    ============================================= -->
-<div class="about-12 de-padding" id="sejarah">
-    <div class="container">
-        <div class="about-12-wrapper grid-12">
-            <div class="about-12-right">
-                <div class="about-12-right-content">
-                    <span class="hero-p1">Sejarah</span>
-                    <h2>
-                        Sejarah
-                    </h2>
-                    <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
-                    </p>
+    <!-- Start About
+                    ============================================= -->
+    <div class="about-12 de-padding" id="sejarah">
+        <div class="container">
+            <div class="about-12-wrapper grid-12">
+                <div class="about-12-right">
+                    <div class="about-12-right-content">
+                        <span class="hero-p1">Sejarah</span>
+                        <h2>
+                            Sejarah
+                        </h2>
+                        <p>
+                            Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect
+                            bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End About-->
+    <!-- End About-->
 
-<!-- Start Informasi
-    ============================================= -->
-<div class="about-12 de-padding" id="informasiUmum">
-    <div class="container">
-        <div class="about-12-wrapper grid-12">
-            <div class="about-12-right">
-                <div class="about-12-right-content">
-                    <span class="hero-p1">Informasi</span>
-                    <h2 class="mb-3">Informasi Sekolah SD-IT Al Mukron</h2>
-                    <table class="info-table">
-                        <tbody>
-                            <tr>
-                                <th>Nama Sekolah</th>
-                                <td>Contoh Sekolah</td>
-                            </tr>
-                            <tr>
-                                <th>NPSN</th>
-                                <td>12345678</td>
-                            </tr>
-                            <tr>
-                                <th>Nomor Statistik Sekolah (NSS)</th>
-                                <td>123456789012</td>
-                            </tr>
-                            <tr>
-                                <th>Alamat</th>
-                                <td>Jl. Contoh Alamat No. 123, Kota Contoh, Provinsi Contoh</td>
-                            </tr>
-                            <tr>
-                                <th>Telepon</th>
-                                <td>(021) 12345678</td>
-                            </tr>
-                            <tr>
-                                <th>Nomor SK Operasional</th>
-                                <td>SK1234567890</td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <!-- Start Informasi
+                    ============================================= -->
+    <div class="about-12 de-padding" id="informasiUmum">
+        <div class="container">
+            <div class="about-12-wrapper grid-12">
+                <div class="about-12-right">
+                    <div class="about-12-right-content">
+                        <span class="hero-p1">Informasi</span>
+                        <h2 class="mb-3">Informasi Sekolah SD-IT Al Mukron</h2>
+                        <table class="info-table">
+                            <tbody>
+                                <tr>
+                                    <th>Nama Sekolah</th>
+                                    <td>Contoh Sekolah</td>
+                                </tr>
+                                <tr>
+                                    <th>NPSN</th>
+                                    <td>12345678</td>
+                                </tr>
+                                <tr>
+                                    <th>Nomor Statistik Sekolah (NSS)</th>
+                                    <td>123456789012</td>
+                                </tr>
+                                <tr>
+                                    <th>Alamat</th>
+                                    <td>Jl. Contoh Alamat No. 123, Kota Contoh, Provinsi Contoh</td>
+                                </tr>
+                                <tr>
+                                    <th>Telepon</th>
+                                    <td>(021) 12345678</td>
+                                </tr>
+                                <tr>
+                                    <th>Nomor SK Operasional</th>
+                                    <td>SK1234567890</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End Informasi-->
+    <!-- End Informasi-->
 
-{{-- <!-- Start Sarana & Prasarana -->
+    {{-- <!-- Start Sarana & Prasarana -->
 <div class="about-12 de-padding" id="informasiUmum">
     <div class="container">
         <div class="about-12-wrapper grid-12">
@@ -212,7 +215,7 @@
 </div>
 <!-- End Informasi --> --}}
 
-{{-- <!-- Start Struktur Sekolah -->
+    {{-- <!-- Start Struktur Sekolah -->
 <div class="about-12 de-padding" id="informasiUmum">
     <div class="container">
         <div class="about-12-wrapper grid-12">
@@ -293,7 +296,7 @@
 </div>
 <!-- End Struktur Sekolah --> --}}
 
-{{-- <!-- Start Kepala Madrasah -->
+    {{-- <!-- Start Kepala Madrasah -->
 <div class="about-12 de-padding" id="informasiUmum">
     <div class="container">
         <div class="about-12-wrapper grid-12">
@@ -354,26 +357,28 @@
 </div>
 <!-- End Kepala Madrasah --> --}}
 
-<!-- Start Google Maps
-    ============================================= -->
-<div class="map-area de-padding" id="lokasi">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 offset-xl-2">
-                <div class="site-title text-center">
-                    {{-- <span class="top-sub">Lokasi Kita</span> --}}
-                    <h2>Lokasi Kita</h2>
+    <!-- Start Google Maps
+                    ============================================= -->
+    <div class="map-area de-padding" id="lokasi">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                    <div class="site-title text-center">
+                        {{-- <span class="top-sub">Lokasi Kita</span> --}}
+                        <h2>Lokasi Kita</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <div class="map-box">
+                    <iframe width="100%" height="500"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317713.62740942194!2d106.68942902797458!3d-6.229386700639953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1c5c78ba617%3A0xa4875c2b1c2c8f8d!2sYour+School+Name!5e0!3m2!1sen!2sid!4v1598499656371!5m2!1sen!2sid"
+                        frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>
-        <div class="map-wrapper">
-            <div class="map-box">
-                <iframe width="100%" height="500" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317713.62740942194!2d106.68942902797458!3d-6.229386700639953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1c5c78ba617%3A0xa4875c2b1c2c8f8d!2sYour+School+Name!5e0!3m2!1sen!2sid!4v1598499656371!5m2!1sen!2sid" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-        </div>
     </div>
-</div>
-<!-- End Google Maps -->
+    <!-- End Google Maps -->
 
 
 @endsection
