@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Siswa;
 use App\Models\Sarana;
+use App\Models\Pegawai;
 use App\Models\Profile;
 use App\Models\Prestasi;
 use App\Models\TahunAjaran;
@@ -51,10 +52,15 @@ class LandingPageController extends Controller
         if ($cek) {
             $data['visi'] = $cek->visi;
             $data['misi'] = $cek->misi;
+            $data['sejarah'] = $cek->sejarah;
         } else {
             $data['visi'] = 'belum ada visi';
             $data['misi'] = 'belum ada misi';
+            $data['sejarah'] = 'belum ada sejarah';
         }
+
+        // Ambil data pengurus yayasan
+        $data['pengurus'] = Pegawai::all(); // Asumsikan ada model Pengurus yang sesuai
         return view('landing.profilYayasan', $data);
     }
 

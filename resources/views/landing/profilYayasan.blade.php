@@ -71,7 +71,7 @@
                         Sejarah
                     </h2>
                     <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
+                        {!!$sejarah!!}
                     </p>
                 </div>
             </div>
@@ -80,144 +80,22 @@
 </div>
 <!-- End Sejarah-->
 
-<!-- Start Pengurus
-		============================================= -->
+<!-- Start Pengurus ============================================= -->
 <div class="rel-project de-pb" id="pengurus">
     <div class="container">
         <h2 class="text-center mb-40 mt-40">Pengurus Yayasan</h2>
         <div class="rel-wpr grid-4">
+            @foreach($pengurus as $item)
             <div class="rel-box">
                 <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
+                    <img src="{{ asset('storage/' . $item->photo) }}" alt="thumb">
                 </div>
                 <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
+                    <h4 class="mb-10">{{ $item->nama }}</h4>
+                    <span><strong>Jabatan :</strong> {{ $item->jabatan }}</span>
                 </div>
             </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
-                </div>
-            </div>
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="/assets2/img/portfolio/570x570.png" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <a href="project-single.html">
-                        <h4 class="mb-10">Nama</h4>
-                    </a>
-                    <span><strong>Jabatan :</strong> Kepala Sekolah</span>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
