@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="/assets2/img/logo/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets2/img/logo/favicon.ico">
     <!-- ========== Start Stylesheet ========== -->
     <link href="/assets2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets2/css/fontawesome.min.css" rel="stylesheet" />

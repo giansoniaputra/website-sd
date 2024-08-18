@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Siswa;
 use App\Models\Sarana;
 use App\Models\Profile;
@@ -15,18 +16,24 @@ class LandingPageController extends Controller
     // Fungsi untuk menampilkan halaman landing page
     public function index()
     {
-        // Mengambil data profile sekolah dari tabel profiles
-        $profile = Profile::where('type', 'sekolah')->first(); // Pastikan menggunakan kondisi yang tepat untuk profil sekolah
+        // Mengambil data profil sekolah dari tabel profiles
+        $profile = Profile::where('type', 'sekolah')->first(); // Mengambil profil dengan tipe sekolah
 
         $data = [];
         if ($profile) {
-            $data['sambutan'] = $profile->sambutan; // Mengambil sambutan dari kolom sambutan
+            $data['sambutan'] = $profile->sambutan; // Mengambil sambutan
+            $data['photo'] = $profile->photo; // Mengambil path gambar
         } else {
-            $data['sambutan'] = 'Belum ada sambutan dari kepala sekolah.'; // Jika tidak ada data
+            $data['sambutan'] = 'Belum ada sambutan dari kepala sekolah.';
+            $data['photo'] = null; // Jika gambar tidak ada
         }
+
+        // Mengambil data berita dari database
+        $data['posts'] = Post::latest()->limit(3)->get(); // Mengambil 3 post terbaru
 
         return view('landing.index', $data); // Mengirim data ke view
     }
+
 
 
 

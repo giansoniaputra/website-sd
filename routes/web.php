@@ -127,4 +127,5 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/carousel', CarouselController::class);
     // Pelayanan Public
     Route::resource('/pelayanan-public', PelayananPublicController::class);
+    
 });

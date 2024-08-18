@@ -17,11 +17,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        $data = [
+        $pageTitle = 'Postingan Berita';  // Menentukan judul halaman untuk daftar postingan
+        return view('posts.index', [
             'posts' => Post::all(),
-            'title' => 'Postingan Berita'
-        ];
-        return view('posts.index', $data);
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -29,7 +29,11 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create', ['categories' => KategoriBerita::all(), 'title' => 'Tambah Postingan baru']);
+        $pageTitle = 'Tambah Postingan Baru';  // Menentukan judul halaman untuk form tambah postingan
+        return view('posts.create', [
+            'categories' => KategoriBerita::all(),
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -64,7 +68,11 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('posts.show', ['posts' => $post, 'title' => 'Detail Berita']);
+        $pageTitle = 'Detail Postingan';  // Menentukan judul halaman untuk detail postingan
+        return view('posts.show', [
+            'posts' => $post,
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -72,12 +80,12 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        $data = [
+        $pageTitle = 'Edit Postingan Berita';  // Menentukan judul halaman untuk form edit postingan
+        return view('posts.edit', [
             'post' => $post,
             'categories' => KategoriBerita::all(),
-            'title' => 'Edit Postingan Berita'
-        ];
-        return view('posts.edit', $data);
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
