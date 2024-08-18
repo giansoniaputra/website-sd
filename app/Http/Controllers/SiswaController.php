@@ -17,7 +17,8 @@ class SiswaController extends Controller
         $siswa = Siswa::getDataSiswa($request->kelas_uuid);
         return view('siswa.index', [
             'siswas' => $siswa,
-            'kelas_uuid' => $request->kelas_uuid
+            'kelas_uuid' => $request->kelas_uuid,
+            'pageTitle' => 'Daftar Siswa'
         ]);
     }
 
@@ -27,7 +28,8 @@ class SiswaController extends Controller
     public function create(Request $request)
     {
         return view('siswa.create', [
-            'kelas_uuid' => $request->kelas_uuid
+            'kelas_uuid' => $request->kelas_uuid,
+            'pageTitle' => 'Tambah Siswa'
         ]);
     }
 
@@ -73,6 +75,7 @@ class SiswaController extends Controller
         return view('siswa.edit', [
             'kelas_uuid' => $request->kelas_uuid,
             'siswa' => $siswa,
+            'pageTitle' => 'Edit Siswa'
         ]);
     }
 

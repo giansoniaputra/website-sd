@@ -14,7 +14,11 @@ class PPDBController extends Controller
      */
     public function index()
     {
-        return view('ppdb.index', ['ppdbs' => PPDB::all()]);
+        $pageTitle = 'Daftar Kegiatan PPDB';
+        return view('ppdb.index', [
+            'pageTitle' => $pageTitle,
+            'ppdbs' => PPDB::all()
+        ]);
     }
 
     /**
@@ -22,7 +26,8 @@ class PPDBController extends Controller
      */
     public function create()
     {
-        return view('ppdb.create');
+        $pageTitle = 'Tambah Kegiatan PPDB';
+        return view('ppdb.create', ['pageTitle' => $pageTitle]);
     }
 
     /**
@@ -62,7 +67,11 @@ class PPDBController extends Controller
      */
     public function edit(PPDB $ppdb)
     {
-        return view('ppdb.edit', ['ppdb' => $ppdb]);
+        $pageTitle = 'Edit Kegiatan PPDB';
+        return view('ppdb.edit', [
+            'pageTitle' => $pageTitle,
+            'ppdb' => $ppdb
+        ]);
     }
 
     /**

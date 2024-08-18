@@ -15,7 +15,11 @@ class SampulPpdbController extends Controller
      */
     public function index()
     {
-        return view('sampul-ppdb.index', ['sampuls' => SampulPpdb::all()]);
+        $pageTitle = 'Daftar Sampul PPDB';  // Menentukan judul halaman untuk daftar sampul
+        return view('sampul-ppdb.index', [
+            'sampuls' => SampulPpdb::all(),
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -23,13 +27,12 @@ class SampulPpdbController extends Controller
      */
     public function create()
     {
-        //
+        $pageTitle = 'Tambah Sampul PPDB';  // Menentukan judul halaman untuk form tambah sampul
         $cek = SampulPpdb::first();
-        if ($cek) {
-            return view('sampul-ppdb.create', ['sampul' => $cek]);
-        } else {
-            return view('sampul-ppdb.create');
-        }
+        return view('sampul-ppdb.create', [
+            'sampul' => $cek,
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**

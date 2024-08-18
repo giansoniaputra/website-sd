@@ -96,8 +96,7 @@
 
 
 
-<!-- Start About
-    ============================================= -->
+<!-- Start About -->
 <div class="about-2 de-padding">
     <div class="container">
         <div class="about-2-wrapper grid-2">
@@ -109,11 +108,9 @@
             <div class="about-2-right">
                 <div class="about-2-right-content">
                     <span class="hero-p1">Tentang Sekolah</span>
-                    <h2>
-                        Kepala Sekolah
-                    </h2>
+                    <h2>Kepala Sekolah</h2>
                     <p>
-                        Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
+                        {!! $sambutan !!}
                     </p>
                     <a href="#" class="theme-btn">Lebih Lanjut</a>
                 </div>
@@ -121,21 +118,12 @@
         </div>
     </div>
 </div>
-<!-- End About-->
+<!-- End About -->
+
 
 <!-- Start Blog
     ============================================= -->
 <div class="blog-area posi-rel de-padding">
-    {{-- <div class="hero-animation">
-        <img src="/assets2/img/animation/ani-1.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-2.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-4.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-5.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-6.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-        <img src="/assets2/img/animation/ani-3.png" alt="thumb">
-    </div> --}}
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2">

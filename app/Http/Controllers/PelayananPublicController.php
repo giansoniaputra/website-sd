@@ -15,7 +15,11 @@ class PelayananPublicController extends Controller
      */
     public function index()
     {
-        return view('pelayanan.index', ['Pelayanans' => PelayananPublic::all()]);
+        $pageTitle = 'Daftar Pelayanan Publik';
+        return view('pelayanan.index', [
+            'pageTitle' => $pageTitle,
+            'Pelayanans' => PelayananPublic::all()
+        ]);
     }
 
     /**
@@ -23,7 +27,10 @@ class PelayananPublicController extends Controller
      */
     public function create()
     {
-        return view('pelayanan.create');
+        $pageTitle = 'Tambah Pelayanan Publik';
+        return view('pelayanan.create', [
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -65,7 +72,11 @@ class PelayananPublicController extends Controller
      */
     public function edit(PelayananPublic $pelayanan_public)
     {
-        return view('pelayanan.edit', ['pelayanan' => $pelayanan_public]);
+        $pageTitle = 'Edit Pelayanan Publik';
+        return view('pelayanan.edit', [
+            'pageTitle' => $pageTitle,
+            'pelayanan' => $pelayanan_public
+        ]);
     }
 
     /**

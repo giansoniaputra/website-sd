@@ -15,7 +15,9 @@ class PegawaiController extends Controller
      */
     public function index()
     {
+        $pageTitle = 'List Pegawai';
         return view('pegawai.index', [
+            'pageTitle' => $pageTitle,
             'teachers' => Pegawai::where('type', 'guru')->get(),
             'staffs' => Pegawai::where('type', 'staff')->get(),
             'pengurus' => Pegawai::where('type', 'pengurus')->get(),
@@ -27,7 +29,10 @@ class PegawaiController extends Controller
      */
     public function create()
     {
-        return view('pegawai.create');
+        $pageTitle = 'Tambah Pegawai';
+        return view('pegawai.create', [
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -78,7 +83,11 @@ class PegawaiController extends Controller
      */
     public function edit(Pegawai $pegawai)
     {
-        return view('pegawai.edit', ['pegawai' => $pegawai]);
+        $pageTitle = 'Edit Pegawai';
+        return view('pegawai.edit', [
+            'pageTitle' => $pageTitle,
+            'pegawai' => $pegawai
+        ]);
     }
 
     /**

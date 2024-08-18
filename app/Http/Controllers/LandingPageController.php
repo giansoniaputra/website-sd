@@ -15,9 +15,20 @@ class LandingPageController extends Controller
     // Fungsi untuk menampilkan halaman landing page
     public function index()
     {
+        // Mengambil data profile sekolah dari tabel profiles
+        $profile = Profile::where('type', 'sekolah')->first(); // Pastikan menggunakan kondisi yang tepat untuk profil sekolah
+
         $data = [];
-        return view('landing.index', $data);
+        if ($profile) {
+            $data['sambutan'] = $profile->sambutan; // Mengambil sambutan dari kolom sambutan
+        } else {
+            $data['sambutan'] = 'Belum ada sambutan dari kepala sekolah.'; // Jika tidak ada data
+        }
+
+        return view('landing.index', $data); // Mengirim data ke view
     }
+
+
 
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
     public function profilSekolah()
@@ -30,7 +41,7 @@ class LandingPageController extends Controller
     {
         $data = [];
         $cek = Profile::first();
-        if($cek) {
+        if ($cek) {
             $data['visi'] = $cek->visi;
             $data['misi'] = $cek->misi;
         } else {
@@ -81,9 +92,10 @@ class LandingPageController extends Controller
         return view('landing.galeri');
     }
 
-    public function renderSiswa(Request $request){
-        $siswa=Siswa::where('kelas_uuid', $request->uuid)->orderBy('nama_siswa')->get();
-        $view=View::make('landing.partial.renderSiswa',['siswa'=>$siswa])->render();
-        return response()->json(['view' => $view ]);
+    public function renderSiswa(Request $request)
+    {
+        $siswa = Siswa::where('kelas_uuid', $request->uuid)->orderBy('nama_siswa')->get();
+        $view = View::make('landing.partial.renderSiswa', ['siswa' => $siswa])->render();
+        return response()->json(['view' => $view]);
     }
 }

@@ -1,4 +1,4 @@
--- Active: 1723680379561@@127.0.0.1@3306
+
 @extends('layout.main')
 @section('container')
 <div class="row">

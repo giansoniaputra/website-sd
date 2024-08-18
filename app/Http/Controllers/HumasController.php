@@ -17,8 +17,8 @@ class HumasController extends Controller
     {
         $pageTitle = 'List Humas';
         return view('humas.index', [
-        'pageTitle' => $pageTitle,
-        'humas' => Humas::all()
+            'pageTitle' => $pageTitle,
+            'humas' => Humas::all()
         ]);
     }
 
@@ -26,12 +26,12 @@ class HumasController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-{
-    $pageTitle = 'Tambah Humas';
-    return view('humas.create', [
-        'pageTitle' => $pageTitle
-    ]);
-}
+    {
+        $pageTitle = 'Tambah Humas';
+        return view('humas.create', [
+            'pageTitle' => $pageTitle
+        ]);
+    }
 
     /**
      * Store a newly created resource in storage.

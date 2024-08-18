@@ -84,7 +84,7 @@ class AuthController extends Controller
     public function edit($uuid)
     {
         $user = User::where('uuid', $uuid)->first();
-        
+
         // Title for the edit user page
         $pageTitle = 'Edit User - SDIT Al-Mukrom ' . $user->name;
 
@@ -112,7 +112,7 @@ class AuthController extends Controller
         $request->validate($rules);
 
         $user->fill($request->all());
-        if ($request->password != null||$request->password != '') {
+        if ($request->password != null || $request->password != '') {
             $user->password =  Hash::make($request->password);
         } else {
             $user2 = User::where('uuid', $uuid)->first();
