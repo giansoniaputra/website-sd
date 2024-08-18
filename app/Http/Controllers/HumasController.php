@@ -15,16 +15,23 @@ class HumasController extends Controller
      */
     public function index()
     {
-        return view('humas.index', ['humas' => Humas::all()]);
+        $pageTitle = 'List Humas';
+        return view('humas.index', [
+        'pageTitle' => $pageTitle,
+        'humas' => Humas::all()
+        ]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        return view('humas.create');
-    }
+{
+    $pageTitle = 'Tambah Humas';
+    return view('humas.create', [
+        'pageTitle' => $pageTitle
+    ]);
+}
 
     /**
      * Store a newly created resource in storage.
@@ -68,7 +75,11 @@ class HumasController extends Controller
      */
     public function edit(Humas $huma)
     {
-        return view('humas.edit', ['humas' => $huma]);
+        $pageTitle = 'Edit Humas';
+        return view('humas.edit', [
+            'pageTitle' => $pageTitle,
+            'humas' => $huma
+        ]);
     }
 
     /**

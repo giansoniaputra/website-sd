@@ -1,4 +1,5 @@
 @extends('layout.main')
+@section('title', $pageTitle)
 @section('container')
     <div class="row">
         <div class="col-12">

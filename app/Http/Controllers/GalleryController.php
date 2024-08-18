@@ -15,7 +15,11 @@ class GalleryController extends Controller
      */
     public function index()
     {
+        // Title for the index page
+        $pageTitle = 'Gallery List';
+
         return view('gallery.index', [
+            'pageTitle' => $pageTitle,
             'galleries' => Gallery::latest()->paginate(10)
         ]);
     }
@@ -25,7 +29,10 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        return view('gallery.create');
+        // Title for the create page
+        $pageTitle = 'Buat Gallery Baru';
+
+        return view('gallery.create', compact('pageTitle'));
     }
 
     /**

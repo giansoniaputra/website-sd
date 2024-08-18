@@ -15,7 +15,13 @@ class VideoController extends Controller
      */
     public function index()
     {
-        return view('video.index', ['videos' => Video::all()]);
+        // Title for the index page
+        $pageTitle = 'Video List';
+
+        return view('video.index', [
+            'pageTitle' => $pageTitle,
+            'videos' => Video::all()
+        ]);
     }
 
     /**
@@ -23,8 +29,10 @@ class VideoController extends Controller
      */
     public function create()
     {
-        //
-        return view('video.create');
+        // Title for the create page
+        $pageTitle = 'Tambah Video Baru';
+
+        return view('video.create', compact('pageTitle'));
     }
 
     /**
@@ -68,7 +76,10 @@ class VideoController extends Controller
      */
     public function edit(Video $video)
     {
-        return view('video.edit', ['video' => $video]);
+        // Title for the edit page
+        $pageTitle = 'Edit Video';
+
+        return view('video.edit', compact('pageTitle', 'video'));
     }
 
     /**

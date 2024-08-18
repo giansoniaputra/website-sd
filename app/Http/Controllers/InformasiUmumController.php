@@ -14,7 +14,11 @@ class InformasiUmumController extends Controller
      */
     public function index()
     {
-        return view('profil.sekolah.informasi-umum.index', ['informasi' => InformasiUmum::all()]);
+        $pageTitle = 'List Informasi Umum';
+        return view('profil.sekolah.informasi-umum.index', [
+            'pageTitle' => $pageTitle,
+            'informasi' => InformasiUmum::all()
+        ]);
     }
 
     /**
@@ -22,7 +26,10 @@ class InformasiUmumController extends Controller
      */
     public function create()
     {
-        return view('profil.sekolah.informasi-umum.create');
+        $pageTitle = 'Tambah Informasi Umum';
+        return view('profil.sekolah.informasi-umum.create', [
+            'pageTitle' => $pageTitle
+        ]);
     }
 
     /**
@@ -60,7 +67,11 @@ class InformasiUmumController extends Controller
      */
     public function edit(InformasiUmum $informasiUmum)
     {
-        return view('profil.sekolah.informasi-umum.edit', ['data' => $informasiUmum]);
+        $pageTitle = 'Edit Informasi Umum';
+        return view('profil.sekolah.informasi-umum.edit', [
+            'pageTitle' => $pageTitle,
+            'data' => $informasiUmum
+        ]);
     }
 
     /**

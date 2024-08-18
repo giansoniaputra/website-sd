@@ -12,8 +12,11 @@ class AuthController extends Controller
 {
     public function login()
     {
-        // MENUJU HALAMAN LOGIN
-        return view('auth.login');
+        // Title for the login page
+        $pageTitle = 'Login - SDIT Al-Mukrom';
+
+        // Return view with title
+        return view('auth.login', compact('pageTitle'));
     }
 
     public function authenticate(Request $request)
@@ -47,14 +50,20 @@ class AuthController extends Controller
 
     public function register()
     {
-        // MENUJU HALAMAN REGISTER
-        return view('auth.register', ['users' => User::all()]);
+        // Title for the register page
+        $pageTitle = 'Daftar - SDIT Al-Mukrom';
+
+        return view('auth.register', ['pageTitle' => $pageTitle, 'users' => User::all()]);
     }
 
     public function create()
     {
-        return view('auth.create');
+        // Title for the create user page
+        $pageTitle = 'Buat User - SDIT Al-Mukrom';
+
+        return view('auth.create', compact('pageTitle'));
     }
+
     // REGISTRASI USER
     public function store(Request $request)
     {
@@ -75,8 +84,13 @@ class AuthController extends Controller
     public function edit($uuid)
     {
         $user = User::where('uuid', $uuid)->first();
-        return view('auth.edit', ['user' => $user]);
+        
+        // Title for the edit user page
+        $pageTitle = 'Edit User - SDIT Al-Mukrom ' . $user->name;
+
+        return view('auth.edit', compact('pageTitle', 'user'));
     }
+
     // UPDATE DATA USER
     public function update(Request $request, $uuid)
     {

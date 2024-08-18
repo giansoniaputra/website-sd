@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Dashboard | Velonic - Bootstrap 5 Admin & Dashboard Template</title>
+    <title>@yield('title', $pageTitle)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />
     <meta content="Techzaa" name="author" />
@@ -114,14 +114,13 @@
                                     class="rounded-circle">
                             </span>
                             <span class="d-lg-block d-none">
-                                <h5 class="my-0 fw-normal">{{ auth()->user()->name }}<i
-                                        class="ri-arrow-down-s-line d-none d-sm-inline-block align-middle"></i></h5>
+                                <h5 class="my-0 fw-normal">{{ auth()->user()->name }}<i class="ri-arrow-down-s-line d-none d-sm-inline-block align-middle"></i></h5>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
                             <!-- item-->
                             <div class=" dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Hallo!</h6>
+                                <h6 class="text-overflow m-0">Halo!</h6>
                             </div>
 
                             <!-- item-->

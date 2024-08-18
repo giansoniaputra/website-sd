@@ -28,7 +28,7 @@
                                         Generasi Rabbani Iman Ilmu Amal Akhlaq
                                     </p>
                                     <div class="hro-btn">
-                                        <a href="contact.html" class="theme-btn text-white">Lebih Lanjut</a>
+                                        <a href="#" class="theme-btn text-white">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                                         Generasi Rabbani Iman Ilmu Amal Akhlaq
                                     </p>
                                     <div class="hro-btn">
-                                        <a href="contact.html" class="theme-btn text-white">Lebih Lanjut</a>
+                                        <a href="#" class="theme-btn text-white">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                                         Generasi Rabbani Iman Ilmu Amal Akhlaq
                                     </p>
                                     <div class="hro-btn">
-                                        <a href="contact.html" class="theme-btn text-white">Lebih Lanjut</a>
+                                        <a href="#" class="theme-btn text-white">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
