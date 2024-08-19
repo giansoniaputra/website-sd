@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\PPDB;
+use App\Models\Humas;
+use App\Models\Kelas;
 use App\Models\Siswa;
 use App\Models\Video;
 use App\Models\Sarana;
@@ -10,9 +13,15 @@ use App\Models\Gallery;
 use App\Models\Pegawai;
 use App\Models\Profile;
 use App\Models\Prestasi;
+use App\Models\Kurikulum;
+use App\Models\SampulPpdb;
 use App\Models\TahunAjaran;
 use Illuminate\Http\Request;
+use App\Models\InformasiUmum;
+use App\Models\PelayananPublic;
 use Illuminate\Support\Facades\View;
+use App\Models\KategoriBerita;
+
 
 class LandingPageController extends Controller
 {
@@ -43,22 +52,11 @@ class LandingPageController extends Controller
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
     public function profilSekolah()
     {
-        $data = [];
-        $cek = Profile::first();
-        if ($cek) {
-            $data['visiSekolah'] = $cek->visi;
-            $data['misi'] = $cek->misi;
-            $data['tujuan'] = $cek->tujuan;
-            $data['strategi'] = $cek->strategi;
-            $data['sejarah'] = $cek->sejarah;
-        } else {
-            $data['visi'] = 'belum ada visi';
-            $data['misi'] = 'belum ada misi';
-            $data['tujuan'] = 'belum ada tujuan';
-            $data['strategi'] = 'belum ada strategi';
-            $data['sejarah'] = 'belum ada sejarah';
-        }
-        return view('landing.profilSekolah');
+        $data = [
+            'profile' => Profile::where('type', 'sekolah')->first() ?? new Profile(),
+            'informasiUmum' => InformasiUmum::all() ?? collect(),
+        ];
+        return view('landing.profilSekolah', $data);
     }
 
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
@@ -90,32 +88,59 @@ class LandingPageController extends Controller
             'sarana' => Sarana::all(),
             'tahun_ajaran' => TahunAjaran::orderBy('id', 'desc')->get(),
             'prestasi' => Prestasi::latest()->paginate(5),
+            'kurikulums' => Kurikulum::all(),
+            'humas' => Humas::all(),
         ];
+
         return view('landing.wakasek', $data);
     }
 
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
     public function guru()
     {
-        return view('landing.guru');
+        $data = [
+            'guru' => Pegawai::where('type', 'guru')->get(),
+            'staff' => Pegawai::where('type', 'staff')->get(),
+        ];
+        return view('landing.guru', $data);
     }
 
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
     public function ppdb()
     {
-        return view('landing.ppdb');
+        $data = [
+            'ppdbs' => PPDB::all(),
+            'sampulPpdbs' => SampulPpdb::all(),
+        ];
+
+        return view('landing.ppdb', $data);
     }
 
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
     public function layanan()
     {
-        return view('landing.layanan');
+        $data = [
+            'pelayananPublics' => PelayananPublic::all()
+        ];
+        return view('landing.layanan', $data);
     }
 
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
     public function berita()
     {
-        return view('landing.berita');
+        $data = [
+            'posts' => Post::latest()->paginate(5),
+            'kategoris' => KategoriBerita::all(),
+            'recentPosts' => Post::latest()->take(3)->get(),
+        ];
+        return view('landing.berita', $data);
+    }
+
+    public function filter(Request $request)
+    {
+        $kategoriId = $request->input('kategori_id');
+        $posts = Post::where('category_id', $kategoriId)->latest()->paginate(10);
+        return view('berita-list', compact('posts'));
     }
 
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan

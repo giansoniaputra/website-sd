@@ -6,16 +6,16 @@
     <div class="clearfix"></div>
     <main class="main">
         <!-- Start Breadcrumb
-        ============================================= -->
+                    ============================================= -->
         <div class="site-breadcrumb bg" style="background: url({{ asset('assets/img/shapes/rectangle.png') }})">
             <div class="container">
                 <h2 class="breadcrumb-title">{{ $post->title }}</h2>
             </div>
         </div>
         <!-- End Breadcrumb -->
-        
+
         <!-- Start Blog Single
-        ============================================= -->
+                    ============================================= -->
         <div class="blog-single de-padding">
             <div class="container">
                 <div class="row">
@@ -31,15 +31,16 @@
                                 <div class="blog-single-dte-adm">
                                     <span>Date: {{ $post->created_at->format('d F, Y') }}</span>
                                     <span>Post By: {{ $post->author }}</span>
+                                    <span>Post By: {{ $post->category->kategori }}</span>
                                 </div>
-                                <div class="blog-single-categories mt-5">
+                                {{-- <div class="blog-single-categories mt-5">
                                     <h6>Categories:</h6>
                                     <ul>
-                                        @foreach($categories as $category)
+                                        @foreach ($categories as $category)
                                             <li><a href="{{ url('category/'.$category->id) }}">{{ $category->kategori }}</a></li>
                                         @endforeach
                                     </ul>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="blog-text">
                                 <!-- Display the body content of the post -->
@@ -49,11 +50,13 @@
                             </div>
                             <div class="blog-nxt-prev mt-40">
                                 <!-- Optional previous/next post links -->
-                                @if($previousPost)
-                                    <a href="{{ url('detailBerita/'.$previousPost->slug) }}"><i class="ti ti-angle-left"></i>previous</a>
+                                @if ($previousPost)
+                                    <a href="{{ url('detailBerita/' . $previousPost->slug) }}"><i
+                                            class="ti ti-angle-left"></i>previous</a>
                                 @endif
-                                @if($nextPost)
-                                    <a href="{{ url('detailBerita/'.$nextPost->slug) }}">next <i class="ti ti-angle-right"></i></a>
+                                @if ($nextPost)
+                                    <a href="{{ url('detailBerita/' . $nextPost->slug) }}">next <i
+                                            class="ti ti-angle-right"></i></a>
                                 @endif
                             </div>
                         </div>
@@ -71,8 +74,9 @@
                             <div class="site-widget category">
                                 <h4 class="site-widget-title">Category</h4>
                                 <ul class="site-widget-list">
-                                    @foreach($categories as $category)
-                                        <li><a href="{{ url('category/'.$category->id) }}">{{ $category->kategori }} <i class="ti ti-angle-double-right"></i></a></li>
+                                    @foreach ($categories as $category)
+                                        <li><a href="{{ url('category/' . $category->id) }}">{{ $category->kategori }} <i
+                                                    class="ti ti-angle-double-right"></i></a></li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -80,12 +84,13 @@
                             <div class="site-widget post">
                                 <h4 class="site-widget-title">Recent Post</h4>
                                 <ul class="site-widget-list">
-                                    @foreach($recentPosts as $recentPost)
+                                    @foreach ($recentPosts as $recentPost)
                                         <li>
-                                            <a href="{{ url('detailBerita/'.$recentPost->slug) }}">
+                                            <a href="{{ url('detailBerita/' . $recentPost->slug) }}">
                                                 <div class="site-widget-post d-flex align-items-center">
                                                     <div class="site-widget-post-pic">
-                                                        <img src="{{ asset('storage/' . $recentPost->image) }}" alt="{{ $recentPost->title }}">
+                                                        <img src="{{ asset('storage/' . $recentPost->image) }}"
+                                                            alt="{{ $recentPost->title }}">
                                                     </div>
                                                     <div class="site-widget-post-info">
                                                         <h5>{{ $recentPost->title }}</h5>
@@ -103,8 +108,8 @@
             </div>
         </div>
         <!-- End Blog Single -->
-        
-    </main>    
-    
+
+    </main>
+
     <div class="clearfix"></div>
 @endsection

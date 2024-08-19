@@ -28,7 +28,7 @@
     <!-- End Hero -->
 
     <!-- Start Visi Misi Yayasan
-                ============================================= -->
+                    ============================================= -->
     <div class="about-12 de-padding" id="visiMisi">
         <div class="container">
             <div class="about-12-wrapper grid-12">
@@ -60,47 +60,47 @@
     </div>
     <!-- End Visi Misi Yayasan-->
 
-<!-- Start Sejarah
-    ============================================= -->
-<div class="about-12 de-padding" id="sejarah">
-    <div class="container">
-        <div class="about-12-wrapper grid-12">
-            <div class="about-12-right">
-                <div class="about-12-right-content">
-                    <span class="hero-p1">Sejarah</span>
-                    <h2>
-                        Sejarah
-                    </h2>
-                    <p>
-                        {!!$sejarah!!}
-                    </p>
+    <!-- Start Sejarah
+        ============================================= -->
+    <div class="about-12 de-padding" id="sejarah">
+        <div class="container">
+            <div class="about-12-wrapper grid-12">
+                <div class="about-12-right">
+                    <div class="about-12-right-content">
+                        <span class="hero-p1">Sejarah</span>
+                        <h2>
+                            Sejarah
+                        </h2>
+                        <p>
+                            {!! $sejarah !!}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End Sejarah-->
+    <!-- End Sejarah-->
 
-<!-- Start Pengurus ============================================= -->
-<div class="rel-project de-pb" id="pengurus">
-    <div class="container">
-        <h2 class="text-center mb-40 mt-40">Pengurus Yayasan</h2>
-        <div class="rel-wpr grid-4">
-            @foreach($pengurus as $item)
-            <div class="rel-box">
-                <div class="rel-img">
-                    <img src="{{ asset('storage/' . $item->photo) }}" alt="thumb">
-                </div>
-                <div class="rel-info mt-20 text-center">
-                    <h4 class="mb-10">{{ $item->nama }}</h4>
-                    <span><strong>Jabatan :</strong> {{ $item->jabatan }}</span>
-                </div>
+    <!-- Start Pengurus ============================================= -->
+    <div class="rel-project de-pb" id="pengurus">
+        <div class="container">
+            <h2 class="text-center mb-40 mt-40">Pengurus Yayasan</h2>
+            <div class="rel-wpr grid-4">
+                @foreach ($pengurus as $item)
+                    <div class="rel-box">
+                        <div class="rel-img">
+                            <img src="{{ asset('storage/' . $item->photo) }}" alt="thumb">
+                        </div>
+                        <div class="rel-info mt-20 text-center">
+                            <h4 class="mb-10">{{ $item->nama }}</h4>
+                            <span><strong>Jabatan :</strong> {{ $item->ampuan }}</span>
+                        </div>
+                    </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
     </div>
-</div>
-<!-- End Pengurus -->
+    <!-- End Pengurus -->
 
 
 @endsection

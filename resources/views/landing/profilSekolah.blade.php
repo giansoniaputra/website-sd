@@ -13,7 +13,7 @@
                         <div class="hero-content">
                             <span class="hero-p1 hero-sm d-block text-white">Profil Sekolah</span>
                             <h2 class="text-white">
-                                SD-IT<span>AL MUKROM</span>
+                                SD-IT<span>AL MUKRON</span>
                             </h2>
                             {{-- <p class="text-white">
                             Chap fantastic skive off chancer knees up starkers easy
@@ -28,7 +28,7 @@
     <!-- End Hero -->
 
     <!-- Start About
-                    ============================================= -->
+                                                        ============================================= -->
     <div class="about-12 de-padding" id="visiMisi">
         <div class="container">
             <div class="about-12-wrapper grid-12">
@@ -39,13 +39,13 @@
                             Visi
                         </h2>
                         <p>
-                            {!! $visiSekolah !!}
+                            {!! $profile->visi !!}
                         </p>
                         <h2>
                             Misi
                         </h2>
                         <p>
-                            {!! $misi !!}
+                            {!! $profile->misi !!}
                         </p>
                         {{-- <a href="#" class="theme-btn">Lebih Lanjut</a> --}}
                     </div>
@@ -61,7 +61,7 @@
     <!-- End About-->
 
     <!-- Start About
-                    ============================================= -->
+                                                        ============================================= -->
     <div class="about-12 de-padding" id="tujuanSekolah">
         <div class="container">
             <div class="about-12-wrapper grid-12">
@@ -72,7 +72,7 @@
                             Tujuan
                         </h2>
                         <p>
-                            {!! $tujuan !!}
+                            {!! $profile->tujuan !!}
                         </p>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
     <!-- End About-->
 
     <!-- Start About
-                    ============================================= -->
+                                                        ============================================= -->
     <div class="about-12 de-padding" id="strategi">
         <div class="container">
             <div class="about-12-wrapper grid-12">
@@ -93,8 +93,7 @@
                             Strategi
                         </h2>
                         <p>
-                            Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect
-                            bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
+                            {!! $profile->strategi !!}
                         </p>
                     </div>
                 </div>
@@ -104,7 +103,7 @@
     <!-- End About-->
 
     <!-- Start About
-                    ============================================= -->
+                                                        ============================================= -->
     <div class="about-12 de-padding" id="sejarah">
         <div class="container">
             <div class="about-12-wrapper grid-12">
@@ -115,8 +114,7 @@
                             Sejarah
                         </h2>
                         <p>
-                            Maborisum ipsum dolor seat ameat consecteturerslmore be op elite isoiel eonsect
-                            bonsecteture.Contrary to populabelief, Lorem eliti consecteturea more consecteture elite.
+                            {!! $profile->sejarah !!}
                         </p>
                     </div>
                 </div>
@@ -126,7 +124,7 @@
     <!-- End About-->
 
     <!-- Start Informasi
-                    ============================================= -->
+                                                        ============================================= -->
     <div class="about-12 de-padding" id="informasiUmum">
         <div class="container">
             <div class="about-12-wrapper grid-12">
@@ -136,7 +134,13 @@
                         <h2 class="mb-3">Informasi Sekolah SD-IT Al Mukron</h2>
                         <table class="info-table">
                             <tbody>
-                                <tr>
+                                @foreach ($informasiUmum as $info)
+                                    <tr>
+                                        <td><strong>{{ $info->title }}</strong></td>
+                                        <td>{{ $info->keterangan }}</td>
+                                    </tr>
+                                @endforeach
+                                {{-- <tr>
                                     <th>Nama Sekolah</th>
                                     <td>Contoh Sekolah</td>
                                 </tr>
@@ -159,7 +163,7 @@
                                 <tr>
                                     <th>Nomor SK Operasional</th>
                                     <td>SK1234567890</td>
-                                </tr>
+                                </tr> --}}
                             </tbody>
                         </table>
                     </div>
@@ -358,7 +362,7 @@
 <!-- End Kepala Madrasah --> --}}
 
     <!-- Start Google Maps
-                    ============================================= -->
+                                                        ============================================= -->
     <div class="map-area de-padding" id="lokasi">
         <div class="container">
             <div class="row">

@@ -78,15 +78,29 @@
                             @enderror
                         </div>
 
+                        
+                        <div class="mb-3">
+                            <label for="published_at" class="form-label">Diterbitkan Tanggal</label>
+                            <input type="date" id="published_at" name="published_at"
+                                class="form-control  @error('published_at') is-invalid @enderror"
+                                value="{{ old('published_at', $post->published_at) }}">
+                            @error('published_at')
+                                <div class="invalid-feedback">
+                                    <small class="text-danger">{{ $message }}</small>
+                                </div>
+                            @enderror
+                        </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="mb-3">
                             <label for="body" class="form-label">Body</label>
-                            <input id="body" type="hidden" name="body" value="{{ old('body', $post->body) }}">
-                            <trix-editor style="height: 350px" input="body"
-                                class="form-control @error('body') is-invalid @enderror"
-                                value="{{ old('body', $post->body) }}"></trix-editor>
+                            <input id="body" type="hidden" name="body" value="{{ old('body', $post->body) }}"">
+                            <div style="overflow-y:
+                                auto; height: 350px;">
+                                <trix-editor input="body" class="form-control @error('body') is-invalid @enderror"
+                                    value="{{ old('body', $post->body) }}""></trix-editor>
+                            </div>
                             @error('body')
                                 <span class="invalid-feedback">
                                     <strong>{{ $message }}</strong>

@@ -48,6 +48,7 @@ class PostController extends Controller
             'image' => 'required|image|file|max:2048',
             'category_id' => 'required',
             'body' => 'required',
+            'published_at' => 'required|date_format:Y-m-d', // Add this line
         ]);
 
         if ($request->file('image')) {
@@ -55,10 +56,10 @@ class PostController extends Controller
         }
 
         $data['author'] = $request->author;
-        $data['excerpt'] = Str::limit(strip_tags($request->body), 150);
+        $validateData['excerpt'] = strip_tags(substr($request->body, 0, 150));
+        $data['published_at'] = $request->published_at; // Add this line
 
         Post::create($data);
-
 
         return redirect('/news')->with('message', 'Postingan baru berhasil ditambahkan');
     }
@@ -115,6 +116,7 @@ class PostController extends Controller
             }
             $validateData['image'] = $request->file('image')->store('post-images');
         }
+        $validateData['excerpt'] = strip_tags(substr($request->body, 0, 150));
 
         Post::where('id', $post->id)->update($validateData);
 
