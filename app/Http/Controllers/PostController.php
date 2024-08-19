@@ -56,7 +56,7 @@ class PostController extends Controller
         }
 
         $data['author'] = $request->author;
-        $validateData['excerpt'] = strip_tags(substr($request->body, 0, 150));
+        $data['excerpt'] = Str::limit(strip_tags($request->body), 150);
         $data['published_at'] = $request->published_at; // Add this line
 
         Post::create($data);

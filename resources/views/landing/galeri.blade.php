@@ -110,7 +110,7 @@
                 event.preventDefault()
                 let href = event.target.getAttribute("href")
                 if (href != null) {
-                    document.location.href = href + '#galeriVideo'
+                    document.location.href = href + '#video'
                 }
 
             }
@@ -165,7 +165,7 @@
                 event.preventDefault()
                 let href = event.target.getAttribute("href")
                 if (href != null) {
-                    document.location.href = href + '#galeriPhoto'
+                    document.location.href = href + '#foto'
                 }
 
             }

@@ -65,7 +65,8 @@
                                         <a href="{{ route('detailBerita.show', $post->slug) }}">
                                             <h5>{{ $post->title }}</h5>
                                         </a>
-                                        <span>{{ date('Y-m-d', strtotime($post->published_at)) }}</span>
+                                        <span>{{ date('Y-m-d', strtotime($post->published_at)) }} &nbsp; &nbsp; Kategori:
+                                            {{ $post->category->kategori }}</span>
                                         <p>
                                             {{ Str::limit($post->excerpt, 100) }}
                                         </p>
@@ -96,45 +97,24 @@
                         <div class="site-widget post">
                             <h4 class="site-widget-title">Recent Post</h4>
                             <ul class="site-widget-list">
-                                <li>
-                                    <a href="#">
-                                        <div class="site-widget-post d-flex align-items-center">
-                                            <div class="site-widget-post-pic">
-                                                <img src="/assets2/img/singlepost/image bg shape.png" alt="thumb">
+                                @foreach ($recentPosts as $post)
+                                    <li>
+                                        <a href="{{ route('detailBerita.show', $post->slug) }}">
+                                            <div class="site-widget-post d-flex align-items-center">
+                                                <div class="site-widget-post-pic">
+                                                    <img src="{{ asset('storage/' . $post->image) }}" alt="thumb"
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="site-widget-post-info">
+                                                    <h5>{{ $post->title }}</h5>
+                                                    <span>{{ date('Y-m-d', strtotime($post->published_at)) }} &nbsp; &nbsp;
+                                                        Kategori:
+                                                        {{ $post->category->kategori }}</span>
+                                                </div>
                                             </div>
-                                            <div class="site-widget-post-info">
-                                                <h5>Maboriosam in a Nescing</h5>
-                                                <span>22 July, 2020. Monday</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="site-widget-post d-flex align-items-center">
-                                            <div class="site-widget-post-pic">
-                                                <img src="/assets2/img/singlepost/image bg shape.png" alt="thumb">
-                                            </div>
-                                            <div class="site-widget-post-info">
-                                                <h5>Maboriosam in a Nescing</h5>
-                                                <span>22 July, 2020. Monday</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="site-widget-post d-flex align-items-center">
-                                            <div class="site-widget-post-pic">
-                                                <img src="/assets2/img/singlepost/image bg shape.png" alt="thumb">
-                                            </div>
-                                            <div class="site-widget-post-info">
-                                                <h5>Maboriosam in a Nescing</h5>
-                                                <span>22 July, 2020. Monday</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </aside>
