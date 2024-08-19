@@ -51,7 +51,7 @@
 
     <!-- Start Video -->
     <div class="serv-2-area de-padding">
-        <div class="container" id="galeriVideo">
+        <div class="container" id="video">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="site-title text-center">
@@ -118,7 +118,7 @@
     </script>
 
     <!-- Start Foto -->
-    <div class="rel-project de-pb" id="galeriPhoto">
+    <div class="rel-project de-pb" id="foto">
         <div class="container">
             <h2 class="text-center mb-40 mt-40">Foto Kami</h2>
             <div class="rel-wpr grid-4">
