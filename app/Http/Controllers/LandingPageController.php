@@ -44,7 +44,6 @@ class LandingPageController extends Controller
         // Mengambil data berita dari database
         $data['posts'] = Post::latest()->limit(3)->get(); // Mengambil 3 post terbaru
         $data['carousels'] = Carousel::where('type', 'home')->get();
-
         return view('landing.index', $data); // Mengirim data ke view
     }
 

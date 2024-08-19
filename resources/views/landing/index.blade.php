@@ -7,18 +7,46 @@
     <div id="home" class="hero-section">
         <div id="heroCarousel" class="carousel slide hero-sliderr" data-ride="carousel">
             <!-- Indicators -->
-            <ol class="carousel-indicators">
-                @foreach ($carousels as $key => $carousel)
-                    <li data-target="#heroCarousel" data-slide-to="{{ $key }}"
-                        @if ($key == 0) class="active" @endif></li>
-                @endforeach
-            </ol>
-            <!-- Carousel items -->
-            <div class="carousel-inner">
-                @foreach ($carousels as $carousel)
-                    <div class="carousel-item @if ($loop->first) active @endif">
-                        <div class="hero-single bg"
-                            style="background-image: url('{{ asset('storage/' . $carousel->photo) }}');">
+            @if ($carousels->count() > 0)
+                <ol class="carousel-indicators">
+                    @foreach ($carousels as $key => $carousel)
+                        <li data-target="#heroCarousel" data-slide-to="{{ $key }}"
+                            @if ($key == 0) class="active" @endif></li>
+                    @endforeach
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    @foreach ($carousels as $carousel)
+                        <div class="carousel-item @if ($loop->first) active @endif">
+                            <div class="hero-single bg"
+                                style="background-image: url('{{ asset('storage/' . $carousel->photo) }}');">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="hero-content">
+                                                <span class="hero-p1 hero-sm">Selamat Datang Di </span>
+                                                <h2 class="text-white">
+                                                    SD-IT <br> <span>AL MUKRON</span>
+                                                </h2>
+                                                <p class="text-white">
+                                                    Generasi Rabbani Iman Ilmu Amal Akhlaq
+                                                </p>
+                                                <div class="hro-btn">
+                                                    <a href="#" class="theme-btn text-white">Lebih Lanjut</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            @else
+                <!-- Display a default carousel item or a message if no data is available -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="hero-single bg" style="background-image: url('/assets2/img/header/1280 X 720.png');">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-xl-6">
@@ -39,8 +67,11 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
-                {{-- <div class="carousel-item">
+                </div>
+            @endif
+        </div>
+    </div>
+    {{-- <div class="carousel-item">
                     <div class="hero-single bg" style="background-image: url('/assets2/img/header/1280 X 720.png');">
                         <div class="container">
                             <div class="row">
@@ -84,8 +115,8 @@
                         </div>
                     </div>
                  </div> --}}
-            </div>
-        </div>
+    </div>
+    </div>
     </div>
     <!-- Controls -->
     <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
@@ -135,7 +166,7 @@
 
 
     <!-- Start Blog
-                                            ============================================= -->
+                                                ============================================= -->
     <div class="blog-area posi-rel de-padding">
         <div class="container">
             <div class="row">
@@ -169,7 +200,7 @@
     <!-- End Blog -->
 
     <!-- Start work
-                                            ============================================= -->
+                                                ============================================= -->
     <div id="portfolio" class="portfolio-area posi-rel de-padding">
         {{-- <div class="portfolio-animation">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
@@ -218,7 +249,8 @@
                                 <div class="pf-item video photography development">
                                     <div class="course-box">
                                         <div class="course-pic">
-                                            <img src="/assets2/img/portfolio/800x600.png" class="course-img" alt="thumb">
+                                            <img src="/assets2/img/portfolio/800x600.png" class="course-img"
+                                                alt="thumb">
                                             <div class="port-overlay">
                                                 <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
                                                     <i class="ti ti-search"></i>
@@ -304,7 +336,7 @@
     <!-- End Work -->
 
     <!-- Start Service
-                                        ============================================= -->
+                                            ============================================= -->
     <div class="serv-2-area de-padding">
         <div class="container">
             <div class="row">
@@ -326,7 +358,7 @@
     <!-- End Service -->
 
     <!-- Start Google Maps
-                                            ============================================= -->
+                                                ============================================= -->
     <div class="map-area de-padding">
         <div class="container">
             <div class="row">
