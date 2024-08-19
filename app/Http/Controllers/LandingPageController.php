@@ -12,15 +12,16 @@ use App\Models\Sarana;
 use App\Models\Gallery;
 use App\Models\Pegawai;
 use App\Models\Profile;
+use App\Models\Carousel;
 use App\Models\Prestasi;
 use App\Models\Kurikulum;
 use App\Models\SampulPpdb;
 use App\Models\TahunAjaran;
 use Illuminate\Http\Request;
 use App\Models\InformasiUmum;
+use App\Models\KategoriBerita;
 use App\Models\PelayananPublic;
 use Illuminate\Support\Facades\View;
-use App\Models\KategoriBerita;
 
 
 class LandingPageController extends Controller
@@ -42,6 +43,7 @@ class LandingPageController extends Controller
 
         // Mengambil data berita dari database
         $data['posts'] = Post::latest()->limit(3)->get(); // Mengambil 3 post terbaru
+        $data['carousels'] = Carousel::where('type', 'home')->get();
 
         return view('landing.index', $data); // Mengirim data ke view
     }
@@ -56,6 +58,8 @@ class LandingPageController extends Controller
             'profile' => Profile::where('type', 'sekolah')->first() ?? new Profile(),
             'informasiUmum' => InformasiUmum::all() ?? collect(),
         ];
+        $data['sekolah'] = Carousel::where('type', 'sekolah')->get();
+
         return view('landing.profilSekolah', $data);
     }
 
@@ -77,7 +81,9 @@ class LandingPageController extends Controller
         }
 
         // Ambil data pengurus yayasan
-        $data['pengurus'] = Pegawai::all(); // Asumsikan ada model Pengurus yang sesuai
+        $data['pengurus'] = Pegawai::where('type', 'pengurus')->get(); // Filter by type = pengurus
+        $data['yayasan'] = Carousel::where('type', 'yayasan')->get();
+
         return view('landing.profilYayasan', $data);
     }
 
@@ -91,7 +97,7 @@ class LandingPageController extends Controller
             'kurikulums' => Kurikulum::all(),
             'humas' => Humas::all(),
         ];
-
+        $data['wakasek'] = Carousel::where('type', 'wakasek')->get();
         return view('landing.wakasek', $data);
     }
 
@@ -102,6 +108,8 @@ class LandingPageController extends Controller
             'guru' => Pegawai::where('type', 'guru')->get(),
             'staff' => Pegawai::where('type', 'staff')->get(),
         ];
+        $data['guru_banner'] = Carousel::where('type', 'guru')->get();
+
         return view('landing.guru', $data);
     }
 
@@ -112,6 +120,7 @@ class LandingPageController extends Controller
             'ppdbs' => PPDB::all(),
             'sampulPpdbs' => SampulPpdb::all(),
         ];
+        $data['ppdb_banner'] = Carousel::where('type', 'ppdb')->get();
 
         return view('landing.ppdb', $data);
     }
@@ -122,6 +131,8 @@ class LandingPageController extends Controller
         $data = [
             'pelayananPublics' => PelayananPublic::all()
         ];
+        $data['pelayanan'] = Carousel::where('type', 'layanan_publik')->get();
+
         return view('landing.layanan', $data);
     }
 
@@ -133,6 +144,8 @@ class LandingPageController extends Controller
             'kategoris' => KategoriBerita::all(),
             'recentPosts' => Post::latest()->take(3)->get(),
         ];
+        $data['berita_banner'] = Carousel::where('type', 'berita')->get();
+
         return view('landing.berita', $data);
     }
 
@@ -153,6 +166,8 @@ class LandingPageController extends Controller
             // 'tahun_ajaran' => TahunAjaran::orderBy('id', 'desc')->get(),
             // 'prestasi' => Prestasi::latest()->paginate(5),
         ];
+        $data['galeri_banner'] = Carousel::where('type', 'galeri')->get();
+
         return view('landing.galeri', $data);
     }
 

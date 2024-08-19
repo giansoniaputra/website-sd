@@ -5,25 +5,47 @@
 @section('content')
     <!-- Start Hero ============================================= -->
     <div id="home" class="hero-section">
-        <div class="hero-single bg"
-            style="background-image: url('/assets2/img/header/1280 X 720.png'); background-size: cover; background-position: center;">
-            <div class="container">
-                <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
-                    <div class="col-xl-6 text-center">
-                        <div class="hero-content">
-                            <span class="hero-p1 hero-sm d-block text-white">Wakasek</span>
-                            <h2 class="text-white">
-                                SD-IT<span>AL MUKRON</span>
-                            </h2>
-                            {{-- <p class="text-white">
-                            Chap fantastic skive off chancer knees up starkers easy
-                            David bleeding tomfoolery chimney.!
-                        </p> --}}
+        @if ($guru_banner->count() > 0)
+            <div class="hero-single bg"
+                style="background-image: url('{{ asset('storage/' . $guru_banner->first()->photo) }}'); background-size: cover; background-position: center;">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+                        <div class="col-xl-6 text-center">
+                            <div class="hero-content">
+                                <span class="hero-p1 hero-sm d-block text-white">Wakasek</span>
+                                <h2 class="text-white">
+                                    SD-IT<span>AL MUKROM</span>
+                                </h2>
+                                {{-- <p class="text-white">
+                                Chap fantastic skive off chancer knees up starkers easy
+                                David bleeding tomfoolery chimney.!
+                            </p> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @else
+            <div class="hero-single bg"
+                style="background-image: url('/assets2/img/header/1280 X 720.png'); background-size: cover; background-position: center;">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+                        <div class="col-xl-6 text-center">
+                            <div class="hero-content">
+                                <span class="hero-p1 hero-sm d-block text-white">Wakasek</span>
+                                <h2 class="text-white">
+                                    SD-IT<span>AL MUKROM</span>
+                                </h2>
+                                {{-- <p class="text-white">
+                                Chap fantastic skive off chancer knees up starkers easy
+                                David bleeding tomfoolery chimney.!
+                            </p> --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
     </div>
     <!-- End Hero -->
 
@@ -254,7 +276,7 @@
 
 
     <!-- Start Sarana & Prasarana
-                                                                          ============================================= -->
+                                                                                      ============================================= -->
     <div class="rel-project de-pb" id="saranaPrasarana">
         <div class="container">
             <h2 class="text-center mb-40 mt-40">Sarana & Prasarana</h2>
@@ -276,7 +298,7 @@
     </div>
     <!-- End Sarana & Prasarana -->
     <!-- Start Humas
-                                                                          ============================================= -->
+                                                                                      ============================================= -->
     <div class="service-area posi-rel bg de-padding" id="humas">
         <div class="container">
             <div class="row">

@@ -5,30 +5,52 @@
 @section('content')
     <!-- Start Hero ============================================= -->
     <div id="home" class="hero-section">
-        <div class="hero-single bg"
-            style="background-image: url('/assets2/img/header/1280 X 720.png'); background-size: cover; background-position: center;">
-            <div class="container">
-                <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
-                    <div class="col-xl-6 text-center">
-                        <div class="hero-content">
-                            <span class="hero-p1 hero-sm d-block text-white">Guru & Staff</span>
-                            <h2 class="text-white">
-                                SD-IT<span>AL MUKRON</span>
-                            </h2>
-                            {{-- <p class="text-white">
-                            Chap fantastic skive off chancer knees up starkers easy
-                            David bleeding tomfoolery chimney.!
-                        </p> --}}
+        @if ($guru->count() > 0)
+            <div class="hero-single bg"
+                style="background-image: url('{{ asset('storage/' . $guru->first()->photo) }}'); background-size: cover; background-position: center;">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+                        <div class="col-xl-6 text-center">
+                            <div class="hero-content">
+                                <span class="hero-p1 hero-sm d-block text-white">Guru & Staff</span>
+                                <h2 class="text-white">
+                                    SD-IT<span>AL MUKROM</span>
+                                </h2>
+                                {{-- <p class="text-white">
+                                Chap fantastic skive off chancer knees up starkers easy
+                                David bleeding tomfoolery chimney.!
+                            </p> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @else
+            <div class="hero-single bg"
+                style="background-image: url('/assets2/img/header/1280 X 720.png'); background-size: cover; background-position: center;">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+                        <div class="col-xl-6 text-center">
+                            <div class="hero-content">
+                                <span class="hero-p1 hero-sm d-block text-white">Guru & Staff</span>
+                                <h2 class="text-white">
+                                    SD-IT<span>AL MUKROM</span>
+                                </h2>
+                                {{-- <p class="text-white">
+                                Chap fantastic skive off chancer knees up starkers easy
+                                David bleeding tomfoolery chimney.!
+                            </p> --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
     </div>
     <!-- End Hero -->
 
     <!-- Start Guru
-              ============================================= -->
+                  ============================================= -->
     <div class="rel-project de-pb" id="guru">
         <div class="container">
             <h2 class="text-center mb-40 mt-40">Guru</h2>
@@ -52,7 +74,7 @@
     <!-- End Guru -->
 
     <!-- Start Staff
-              ============================================= -->
+                  ============================================= -->
     <div class="rel-project de-pb" id="staff">
         <div class="container">
             <h2 class="text-center mb-40 mt-40">Staff</h2>

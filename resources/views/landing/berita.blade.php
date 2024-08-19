@@ -5,25 +5,47 @@
 @section('content')
     <!-- Start Hero ============================================= -->
     <div id="home" class="hero-section">
-        <div class="hero-single bg"
-            style="background-image: url('/assets2/img/header/1280 X 720.png'); background-size: cover; background-position: center;">
-            <div class="container">
-                <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
-                    <div class="col-xl-6 text-center">
-                        <div class="hero-content">
-                            <span class="hero-p1 hero-sm d-block text-white">Berita</span>
-                            <h2 class="text-white">
-                                SD-IT<span>AL MUKRON</span>
-                            </h2>
-                            {{-- <p class="text-white">
-                            Chap fantastic skive off chancer knees up starkers easy
-                            David bleeding tomfoolery chimney.!
-                        </p> --}}
+        @if ($berita_banner->count() > 0)
+            <div class="hero-single bg"
+                style="background-image: url('{{ asset('storage/' . $berita_banner->first()->photo) }}'); background-size: cover; background-position: center;">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+                        <div class="col-xl-6 text-center">
+                            <div class="hero-content">
+                                <span class="hero-p1 hero-sm d-block text-white">Berita</span>
+                                <h2 class="text-white">
+                                    SD-IT<span>AL MUKROM</span>
+                                </h2>
+                                {{-- <p class="text-white">
+                                Chap fantastic skive off chancer knees up starkers easy
+                                David bleeding tomfoolery chimney.!
+                            </p> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @else
+            <div class="hero-single bg"
+                style="background-image: url('/assets2/img/header/1280 X 720.png'); background-size: cover; background-position: center;">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+                        <div class="col-xl-6 text-center">
+                            <div class="hero-content">
+                                <span class="hero-p1 hero-sm d-block text-white">Berita</span>
+                                <h2 class="text-white">
+                                    SD-IT<span>AL MUKROM</span>
+                                </h2>
+                                {{-- <p class="text-white">
+                                Chap fantastic skive off chancer knees up starkers easy
+                                David bleeding tomfoolery chimney.!
+                            </p> --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
     </div>
     <!-- End Hero -->
 
@@ -42,7 +64,8 @@
                                     <div class="blog-content">
                                         <a href="{{ route('detailBerita.show', $post->slug) }}">
                                             <h5>{{ $post->title }}</h5>
-                                        </a> <span>{{ $post->published_at }}</span>
+                                        </a>
+                                        <span>{{ date('Y-m-d', strtotime($post->published_at)) }}</span>
                                         <p>
                                             {{ Str::limit($post->excerpt, 100) }}
                                         </p>

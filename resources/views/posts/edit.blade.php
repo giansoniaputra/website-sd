@@ -66,7 +66,7 @@
                                 name="category_id">
                                 @foreach ($categories as $kategori)
                                     <option value="{{ $kategori->id }}"
-                                        {{ old('category_id', $kategori->id) == $kategori->id ? 'selected' : '' }}>
+                                        {{ old('category_id', $post->category_id) == $kategori->id ? 'selected' : '' }}>
                                         {{ $kategori->kategori }}
                                     </option>
                                 @endforeach
@@ -78,7 +78,7 @@
                             @enderror
                         </div>
 
-                        
+
                         <div class="mb-3">
                             <label for="published_at" class="form-label">Diterbitkan Tanggal</label>
                             <input type="date" id="published_at" name="published_at"
