@@ -5,9 +5,9 @@
 @section('content')
     <!-- Start Hero ============================================= -->
     <div id="home" class="hero-section">
-        @if ($guru_banner->count() > 0)
+        @if ($wakasek->count() > 0)
             <div class="hero-single bg"
-                style="background-image: url('{{ asset('storage/' . $guru_banner->first()->photo) }}'); background-size: cover; background-position: center;">
+                style="background-image: url('{{ asset('storage/' . $wakasek->first()->photo) }}'); background-size: cover; background-position: center;">
                 <div class="container">
                     <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
                         <div class="col-xl-6 text-center">
@@ -276,7 +276,7 @@
 
 
     <!-- Start Sarana & Prasarana
-                                                                                      ============================================= -->
+                                                                                          ============================================= -->
     <div class="rel-project de-pb" id="saranaPrasarana">
         <div class="container">
             <h2 class="text-center mb-40 mt-40">Sarana & Prasarana</h2>
@@ -298,7 +298,7 @@
     </div>
     <!-- End Sarana & Prasarana -->
     <!-- Start Humas
-                                                                                      ============================================= -->
+                                                                                          ============================================= -->
     <div class="service-area posi-rel bg de-padding" id="humas">
         <div class="container">
             <div class="row">
