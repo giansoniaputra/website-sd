@@ -23,10 +23,14 @@
                                     <tr>
                                         <td class="text-center">{{ $loop->iteration }}</td>
                                         <td>{{ $pelayanan->nama }}</td>
+
                                         <td class="text-center">
-                                            <a href="{{ asset('storage/' . $pelayanan->pdf) }}" target="_blank"
-                                                class="btn btn-primary">Download
-                                                PDF</a>
+                                            @if ($pelayanan->pdf)
+                                                <a href="{{ asset('storage/' . $pelayanan->pdf) }}" target="_blank"
+                                                    class="btn btn-primary">
+                                                    Download PDF
+                                                </a>
+                                            @endif
                                         </td>
                                         <td class="text-center">
                                             <a title="edit data" href="/pelayanan-public/{{ $pelayanan->uuid }}/edit"

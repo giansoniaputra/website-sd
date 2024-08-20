@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Log In | Velonic - Bootstrap 5 Admin & Dashboard Template</title>
+    <title>Log In SDIT Al Mukrom </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />
     <meta content="Techzaa" name="author" />
@@ -48,21 +48,25 @@
                                         </p>
 
                                         <!-- form -->
-                                        @if(session()->has('error'))
-                                        <div class="alert alert-danger alert-dismissible text-bg-danger border-0 fade show" role="alert">
-                                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            <strong>Error - </strong> {{session('error')}}
-                                        </div>
+                                        @if (session()->has('error'))
+                                            <div class="alert alert-danger alert-dismissible text-bg-danger border-0 fade show"
+                                                role="alert">
+                                                <button type="button" class="btn-close btn-close-white"
+                                                    data-bs-dismiss="alert" aria-label="Close"></button>
+                                                <strong>Error - </strong> {{ session('error') }}
+                                            </div>
                                         @endif
                                         <form action="/authenticate" method="POST">
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="emailaddress" class="form-label">Email address</label>
-                                                <input class="form-control @error('email') is-invalid @enderror" type="email" name="email" id="email" placeholder="Enter your email" value="{{old('email')}}">
+                                                <input class="form-control @error('email') is-invalid @enderror"
+                                                    type="email" name="email" id="email"
+                                                    placeholder="Enter your email" value="{{ old('email') }}">
                                                 @error('email')
-                                                <div class="invalid-feedback">
-                                                    <small class="text-danger">{{$message}}</small>
-                                                </div>
+                                                    <div class="invalid-feedback">
+                                                        <small class="text-danger">{{ $message }}</small>
+                                                    </div>
                                                 @enderror
                                             </div>
                                             <div class="mb-3">
@@ -70,15 +74,18 @@
                                                         your
                                                         password?</small></a>
                                                 <label for="password" class="form-label">Password</label>
-                                                <input class="form-control @error('password') is-invalid @enderror" type="password" name="password" id="password" placeholder="Enter your password">
+                                                <input class="form-control @error('password') is-invalid @enderror"
+                                                    type="password" name="password" id="password"
+                                                    placeholder="Enter your password">
                                                 @error('password')
-                                                <div class="invalid-feedback">
-                                                    <small class="text-danger">{{$message}}</small>
-                                                </div>
+                                                    <div class="invalid-feedback">
+                                                        <small class="text-danger">{{ $message }}</small>
+                                                    </div>
                                                 @enderror
                                             </div>
                                             <div class="mb-0 text-start">
-                                                <button class="btn btn-soft-primary w-100" type="submit"><i class="ri-login-circle-fill me-1"></i> <span class="fw-bold">Log
+                                                <button class="btn btn-soft-primary w-100" type="submit"><i
+                                                        class="ri-login-circle-fill me-1"></i> <span class="fw-bold">Log
                                                         In</span> </button>
                                             </div>
                                         </form>

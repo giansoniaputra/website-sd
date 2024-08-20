@@ -57,7 +57,7 @@
                     <div class="blog-single-wpr">
                         <div class="blog-wrapper grid-2 mb-30">
                             @foreach ($posts as $post)
-                                <div class="blog-box">
+                                <div class="blog-box" data-category="{{ $post->category_id }}">
                                     <div class="blog-pic">
                                         <img src="{{ asset('storage/' . $post->image) }}" alt="thumb">
                                     </div>
@@ -79,7 +79,9 @@
                 </div>
 
 
+
                 <div class="col-xl-4">
+
                     <aside class="sidebar">
                         <!-- Category -->
                         <div class="site-widget category">
@@ -87,7 +89,7 @@
                             <ul class="site-widget-list">
                                 @foreach ($kategoris as $kategori)
                                     <li>
-                                        <a href="#">{{ $kategori->kategori }} <i
+                                        <a href="#" data-category="{{ $kategori->id }}">{{ $kategori->kategori }} <i
                                                 class="ti ti-angle-double-right"></i></a>
                                     </li>
                                 @endforeach
@@ -96,11 +98,12 @@
                         <!-- Recent Post -->
                         <div class="site-widget post">
                             <h4 class="site-widget-title">Recent Post</h4>
-                            <ul class="site-widget-list">
+                            <ul class="widget-post">
                                 @foreach ($recentPosts as $post)
                                     <li>
                                         <a href="{{ route('detailBerita.show', $post->slug) }}">
-                                            <div class="site-widget-post d-flex align-items-center">
+                                            <div class="site-widget-post d-flex align-items-center mb-3">
+                                                <!-- added mb-3 class -->
                                                 <div class="site-widget-post-pic">
                                                     <img src="{{ asset('storage/' . $post->image) }}" alt="thumb"
                                                         class="img-fluid">
@@ -117,11 +120,47 @@
                                 @endforeach
                             </ul>
                         </div>
+                        <style>
+                            .site-widget-post {
+                                margin-bottom: 20px;
+                                /* adjust the value to your liking */
+                            }
+
+                            .site-widget-post-pic img {
+                                max-width: 100px;
+                                max-height: 100px;
+                                object-fit: cover;
+                            }
+                        </style>
                     </aside>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Blog Single -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            // Get all post elements
+            var posts = $('.blog-box');
+
+            // Get all category links
+            var categoryLinks = $('.site-widget-list a');
+
+            // Add event listener to category links
+            categoryLinks.on('click', function(e) {
+                e.preventDefault();
+
+                // Get the selected category ID
+                var selectedCategory = $(this).data('category');
+
+                // Hide all posts
+                posts.hide();
+
+                // Show only posts with the selected category
+                posts.filter('[data-category="' + selectedCategory + '"]').show();
+            });
+        });
+    </script>
 @endsection

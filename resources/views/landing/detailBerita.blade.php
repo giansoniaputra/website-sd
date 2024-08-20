@@ -6,7 +6,7 @@
     <div class="clearfix"></div>
     <main class="main">
         <!-- Start Breadcrumb
-                    ============================================= -->
+                            ============================================= -->
         <div class="site-breadcrumb bg" style="background: url({{ asset('assets/img/shapes/rectangle.png') }})">
             <div class="container">
                 <h2 class="breadcrumb-title">{{ $post->title }}</h2>
@@ -15,7 +15,7 @@
         <!-- End Breadcrumb -->
 
         <!-- Start Blog Single
-                    ============================================= -->
+                            ============================================= -->
         <div class="blog-single de-padding">
             <div class="container">
                 <div class="row">
@@ -81,20 +81,25 @@
                                 </ul>
                             </div>
                             <!-- Recent Post -->
+                            <!-- Recent Post -->
                             <div class="site-widget post">
                                 <h4 class="site-widget-title">Recent Post</h4>
-                                <ul class="site-widget-list">
-                                    @foreach ($recentPosts as $recentPost)
+                                <ul class="widget-post">
+                                    @foreach ($recentPosts as $post)
                                         <li>
-                                            <a href="{{ url('detailBerita/' . $recentPost->slug) }}">
-                                                <div class="site-widget-post d-flex align-items-center">
+                                            <a href="{{ route('detailBerita.show', $post->slug) }}">
+                                                <div class="site-widget-post d-flex align-items-center mb-3">
+                                                    <!-- added mb-3 class -->
                                                     <div class="site-widget-post-pic">
-                                                        <img src="{{ asset('storage/' . $recentPost->image) }}"
-                                                            alt="{{ $recentPost->title }}">
+                                                        <img src="{{ asset('storage/' . $post->image) }}" alt="thumb"
+                                                            class="img-fluid">
                                                     </div>
                                                     <div class="site-widget-post-info">
-                                                        <h5>{{ $recentPost->title }}</h5>
-                                                        <span>{{ $recentPost->created_at->format('d F, Y') }}</span>
+                                                        <h5>{{ $post->title }}</h5>
+                                                        <span>{{ date('Y-m-d', strtotime($post->published_at)) }} &nbsp;
+                                                            &nbsp;
+                                                            Kategori:
+                                                            {{ $post->category->kategori }}</span>
                                                     </div>
                                                 </div>
                                             </a>
@@ -102,6 +107,18 @@
                                     @endforeach
                                 </ul>
                             </div>
+                            <style>
+                                .site-widget-post {
+                                    margin-bottom: 20px;
+                                    /* adjust the value to your liking */
+                                }
+
+                                .site-widget-post-pic img {
+                                    max-width: 100px;
+                                    max-height: 100px;
+                                    object-fit: cover;
+                                }
+                            </style>
                         </aside>
                     </div>
                 </div>

@@ -36,12 +36,17 @@ class LandingPageController extends Controller
         if ($profile) {
             $data['sambutan'] = $profile->sambutan; // Mengambil sambutan
             $data['photo'] = $profile->photo; // Mengambil path gambar
+            $data['lokasi'] = $profile->lokasi; // Mengambil lokasi
+
         } else {
             $data['sambutan'] = 'Belum ada sambutan dari kepala sekolah.';
             $data['photo'] = null; // Jika gambar tidak ada
+            $data['lokasi'] = ''; // Jika lokasi tidak ada
+
         }
 
         // Mengambil data berita dari database
+        $data['foto'] = Gallery::latest()->take(6)->get(); // Mengambil 3 post terbaru
         $data['posts'] = Post::latest()->limit(3)->get(); // Mengambil 3 post terbaru
         $data['carousels'] = Carousel::where('type', 'home')->get();
         return view('landing.index', $data); // Mengirim data ke view
@@ -54,10 +59,10 @@ class LandingPageController extends Controller
     public function profilSekolah()
     {
         $data = [
-            'profile' => Profile::where('type', 'sekolah')->first() ?? new Profile(),
+            'profile' => Profile::where('type', 'sekolah')->first(),
             'informasiUmum' => InformasiUmum::all() ?? collect(),
+            'sekolah' => Carousel::where('type', 'sekolah')->get(),
         ];
-        $data['sekolah'] = Carousel::where('type', 'sekolah')->get();
 
         return view('landing.profilSekolah', $data);
     }
@@ -175,5 +180,14 @@ class LandingPageController extends Controller
         $siswa = Siswa::where('kelas_uuid', $request->uuid)->orderBy('nama_siswa')->get();
         $view = View::make('landing.partial.renderSiswa', ['siswa' => $siswa])->render();
         return response()->json(['view' => $view]);
+    }
+
+    public function footer()
+    {
+        // Ambil data humas dari database
+        $humas = Humas::all();
+
+        // Kirim data ke view
+        return view('landing.layoutLanding.footerLanding', compact('humas'));
     }
 }

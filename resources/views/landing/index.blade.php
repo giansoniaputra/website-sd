@@ -26,14 +26,11 @@
                                             <div class="hero-content">
                                                 <span class="hero-p1 hero-sm">Selamat Datang Di </span>
                                                 <h2 class="text-white">
-                                                    SD-IT <br> <span>AL MUKRON</span>
+                                                    SD-IT <br> <span>AL MUKROM</span>
                                                 </h2>
                                                 <p class="text-white">
                                                     Generasi Rabbani Iman Ilmu Amal Akhlaq
                                                 </p>
-                                                <div class="hro-btn">
-                                                    <a href="#" class="theme-btn text-white">Lebih Lanjut</a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -53,14 +50,11 @@
                                         <div class="hero-content">
                                             <span class="hero-p1 hero-sm">Selamat Datang Di </span>
                                             <h2 class="text-white">
-                                                SD-IT <br> <span>AL MUKRON</span>
+                                                SD-IT <br> <span>AL MUKROM</span>
                                             </h2>
                                             <p class="text-white">
                                                 Generasi Rabbani Iman Ilmu Amal Akhlaq
                                             </p>
-                                            <div class="hro-btn">
-                                                <a href="#" class="theme-btn text-white">Lebih Lanjut</a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -154,9 +148,8 @@
                         <span class="hero-p1">Tentang Sekolah</span>
                         <h2>Kepala Sekolah</h2>
                         <p>
-                            {!! $sambutan !!}
+                        <div class="trix-content">{!! $sambutan !!}</div>
                         </p>
-                        <a href="#" class="theme-btn">Lebih Lanjut</a>
                     </div>
                 </div>
             </div>
@@ -166,7 +159,7 @@
 
 
     <!-- Start Blog
-                                                ============================================= -->
+                                                                                                                                                            ============================================= -->
     <div class="blog-area posi-rel de-padding">
         <div class="container">
             <div class="row">
@@ -200,7 +193,7 @@
     <!-- End Blog -->
 
     <!-- Start work
-                                                ============================================= -->
+                                                                                                                                                            ============================================= -->
     <div id="portfolio" class="portfolio-area posi-rel de-padding">
         {{-- <div class="portfolio-animation">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
@@ -230,102 +223,28 @@
                     </div> --}}
                         <!-- End Mixitup Nav-->
                         <div class="magnific-mix-gallery masonary">
-                            <div id="portfolio-grid" class="portfolio-items">
-                                <div class="pf-item video branding photography">
-                                    <div class="course-box">
-                                        <div class="course-pic">
-                                            <img src="/assets2/img/portfolio/800x600.png" class="course-img" alt="thumb">
-                                            <div class="port-overlay">
-                                                <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                    <i class="ti ti-search"></i>
-                                                </a>
-                                                <a href="/landing/galeri" class="port-link">
-                                                    <i class="ti ti-link"></i>
-                                                </a>
+                            <div id="portfolio-grid-3" class="portfolio-items">
+                                @foreach ($foto as $foto)
+                                    <div class="pf-item video branding photography">
+                                        <div class="course-box">
+                                            <div class="course-pic">
+                                                {{-- <a title="lihat gambar" href="/storage/{{ $row->photo }}"
+                                                    class="btn btn-transparent" target="_blank">
+                                                    <img src="/storage/{{ $row->photo }}" alt="Foto" width="100%">
+                                                </a> --}}
+                                                <img src="/storage/{{ $foto->photo }}" class="course-img" alt="thumb">
+                                                <div class="port-overlay">
+                                                    <a href="/storage/{{ $foto->photo }}" class="item popup-link">
+                                                        <i class="ti ti-search"></i>
+                                                    </a>
+                                                    <a href="/landing/galeri" class="port-link">
+                                                        <i class="ti ti-link"></i>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="pf-item video photography development">
-                                    <div class="course-box">
-                                        <div class="course-pic">
-                                            <img src="/assets2/img/portfolio/800x600.png" class="course-img"
-                                                alt="thumb">
-                                            <div class="port-overlay">
-                                                <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                    <i class="ti ti-search"></i>
-                                                </a>
-                                                <a href="/landing/galeri" class="port-link">
-                                                    <i class="ti ti-link"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pf-item design branding">
-                                    <div class="course-box">
-                                        <div class="course-pic">
-                                            <img src="/assets2/img/portfolio/800x600.png" class="course-img"
-                                                alt="thumb">
-                                            <div class="port-overlay">
-                                                <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                    <i class="ti ti-search"></i>
-                                                </a>
-                                                <a href="/landing/galeri" class="port-link">
-                                                    <i class="ti ti-link"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pf-item development design photography">
-                                    <div class="course-box">
-                                        <div class="course-pic">
-                                            <img src="/assets2/img/portfolio/800x600.png" class="course-img"
-                                                alt="thumb">
-                                            <div class="port-overlay">
-                                                <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                    <i class="ti ti-search"></i>
-                                                </a>
-                                                <a href="/landing/galeri" class="port-link">
-                                                    <i class="ti ti-link"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pf-item development photography">
-                                    <div class="course-box">
-                                        <div class="course-pic">
-                                            <img src="/assets2/img/portfolio/800x600.png" class="course-img"
-                                                alt="thumb">
-                                            <div class="port-overlay">
-                                                <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                    <i class="ti ti-search"></i>
-                                                </a>
-                                                <a href="/landing/galeri" class="port-link">
-                                                    <i class="ti ti-link"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pf-item design photography">
-                                    <div class="course-box">
-                                        <div class="course-pic">
-                                            <img src="/assets2/img/portfolio/800x600.png" class="course-img"
-                                                alt="thumb">
-                                            <div class="port-overlay">
-                                                <a href="/assets2/img/portfolio/800x600.png" class="item popup-link">
-                                                    <i class="ti ti-search"></i>
-                                                </a>
-                                                <a href="/landing/galeri" class="port-link">
-                                                    <i class="ti ti-link"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -336,7 +255,7 @@
     <!-- End Work -->
 
     <!-- Start Service
-                                            ============================================= -->
+                                                                                                                                                        ============================================= -->
     <div class="serv-2-area de-padding">
         <div class="container">
             <div class="row">
@@ -349,8 +268,13 @@
             </div>
             <div class="serv-wrapper">
                 <div class="video-box">
-                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
-                        allowfullscreen></iframe>
+                    <iframe width="100%" height="500"
+                        src="https://www.youtube.com/embed/pYsnG1B3EdI?si=yjpEtXyWerB2nTAg" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    {{-- <iframe width="100%" height="500" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+                        allowfullscreen></iframe> --}}
                 </div>
             </div>
         </div>
@@ -358,7 +282,7 @@
     <!-- End Service -->
 
     <!-- Start Google Maps
-                                                ============================================= -->
+                                                                                                                                                            ============================================= -->
     <div class="map-area de-padding">
         <div class="container">
             <div class="row">
@@ -371,9 +295,7 @@
             </div>
             <div class="map-wrapper">
                 <div class="map-box">
-                    <iframe width="100%" height="500"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317713.62740942194!2d106.68942902797458!3d-6.229386700639953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1c5c78ba617%3A0xa4875c2b1c2c8f8d!2sYour+School+Name!5e0!3m2!1sen!2sid!4v1598499656371!5m2!1sen!2sid"
-                        frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    {!! str_replace(['width="600"', 'height="450"'], ['width="100%"', 'height="250"'], html_entity_decode($lokasi)) !!}
                 </div>
             </div>
         </div>

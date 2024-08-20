@@ -18,6 +18,9 @@ Route::get('/landing/berita', [LandingPageController::class, 'berita']);
 Route::get('/landing/galeri', [LandingPageController::class, 'galeri']);
 Route::get('/renderSiswa', [LandingPageController::class, 'renderSiswa']);
 Route::get('/detailBerita/{slug}', [DetailBeritaController::class, 'show'])->name('detailBerita.show');
+Route::get('/landing/layoutLanding/footerLanding', [LandingPageController::class, 'footer']);
+
+
 // Route::get('/category/{id}', [CategoryController::class, 'show'])->name('category.show');
 
 // Tambahkan route untuk halaman detail berita

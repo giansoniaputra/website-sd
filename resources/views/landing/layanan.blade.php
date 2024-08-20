@@ -86,10 +86,12 @@
                                     <tr>
                                         <td>{{ $pelayananPublic->nama }}</td>
                                         <td>
-                                            <a href="{{ asset('storage/' . $pelayananPublic->pdf) }}" target="_blank"
-                                                class="btn btn-primary">
-                                                Download PDF
-                                            </a>
+                                            @if ($pelayananPublic->pdf)
+                                                <a href="{{ asset('storage/' . $pelayananPublic->pdf) }}" target="_blank"
+                                                    class="btn btn-primary">
+                                                    Download PDF
+                                                </a>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach
@@ -99,9 +101,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Layanan Publik -->
+        <!-- End Layanan Publik -->
 
 
-
-@endsection
+    @endsection

@@ -5,9 +5,9 @@
 @section('content')
     <!-- Start Hero ============================================= -->
     <div id="home" class="hero-section">
-        @if ($guru->count() > 0)
+        @if ($guru_banner->count() > 0)
             <div class="hero-single bg"
-                style="background-image: url('{{ asset('storage/' . $guru->first()->photo) }}'); background-size: cover; background-position: center;">
+                style="background-image: url('{{ asset('storage/' . $guru_banner->first()->photo) }}'); background-size: cover; background-position: center;">
                 <div class="container">
                     <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
                         <div class="col-xl-6 text-center">
@@ -49,8 +49,7 @@
     </div>
     <!-- End Hero -->
 
-    <!-- Start Guru
-                  ============================================= -->
+    <!-- Start Guru -->
     <div class="rel-project de-pb" id="guru">
         <div class="container">
             <h2 class="text-center mb-40 mt-40">Guru</h2>
@@ -74,7 +73,7 @@
     <!-- End Guru -->
 
     <!-- Start Staff
-                  ============================================= -->
+                      ============================================= -->
     <div class="rel-project de-pb" id="staff">
         <div class="container">
             <h2 class="text-center mb-40 mt-40">Staff</h2>
