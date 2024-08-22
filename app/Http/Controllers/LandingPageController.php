@@ -58,12 +58,37 @@ class LandingPageController extends Controller
     // Tambahkan fungsi lain untuk halaman lain yang dibutuhkan
     public function profilSekolah()
     {
-        $data = [
-            'profile' => Profile::where('type', 'sekolah')->first(),
-            'informasiUmum' => InformasiUmum::all() ?? collect(),
-            'sekolah' => Carousel::where('type', 'sekolah')->get(),
-        ];
-
+        // $data = [
+        //     'profile' => Profile::where('type', 'sekolah')->first(),
+        //     'informasiUmum' => InformasiUmum::all() ?? collect(),
+        //     'sekolah' => Carousel::where('type', 'sekolah')->get(),
+        // ];
+        $informasiUmum = InformasiUmum::all() ?? collect();
+        $sekolah = Carousel::where('type', 'sekolah')->get();
+        $data = [];
+        $cek = Profile::where('type', 'sekolah')->first();
+        if ($cek) {
+            $data['visi'] = $cek->visi;
+            $data['misi'] = $cek->misi;
+            $data['sejarah'] = $cek->sejarah;
+            $data['tujuan'] = $cek->tujuan;
+            $data['lokasi'] = $cek->lokasi;
+            $data['strategi'] = $cek->strategi;
+            $data['sambutan'] = $cek->sambutan;
+            $data['photo'] = $cek->photo;
+        } else {
+            $data['visi'] = 'belum ada visi';
+            $data['misi'] = 'belum ada misi';
+            $data['sejarah'] = 'belum ada sejarah';
+            $data['tujuan'] = 'belum ada tujuan';
+            $data['lokasi'] = 'belum ada lokasi';
+            $data['strategi'] = 'belum ada strategi';
+            $data['sambutan'] = 'belum ada sambutan';
+            $data['photo'] = 'belum ada photo';
+        }
+        $data['sekolah'] = $sekolah;
+        $data['informasiUmum'] = $informasiUmum;
+        // Mengirim data ke view
         return view('landing.profilSekolah', $data);
     }
 
@@ -80,7 +105,6 @@ class LandingPageController extends Controller
         } else {
             $data['visi'] = 'belum ada visi';
             $data['misi'] = 'belum ada misi';
-            $data['sejarah'] = 'belum ada sejarah';
             $data['sejarah'] = 'belum ada sejarah';
         }
 

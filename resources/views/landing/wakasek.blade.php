@@ -202,31 +202,32 @@
                         <h2 class="text-center">
                             Prestasi Peserta Didik
                         </h2>
-                        <table id="prestasiTable" class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Event</th>
-                                    <th>Penyelenggara</th>
-                                    <th>Tanggal</th>
-                                    <th>Prestasi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($prestasi as $i => $data)
+                        <div class="table-responsive">
+                            <table id="prestasiTable" class="table table-striped table-bordered">
+                                <thead>
                                     <tr>
-                                        <td>{{ ($prestasi->currentPage() - 1) * $prestasi->perPage() + $i + 1 }}</td>
-                                        <!-- Nomor urut otomatis sesuai dengan pagination -->
-                                        <td>{{ $data->acara }}</td>
-                                        <td>{{ $data->penyelenggara }}</td>
-                                        <td>{{ \Carbon\Carbon::parse($data->tanggal)->format('d F Y') }}</td>
-                                        <!-- Format tanggal -->
-                                        <td>{{ $data->prestasi }}</td>
+                                        <th>No</th>
+                                        <th>Event</th>
+                                        <th>Penyelenggara</th>
+                                        <th>Tanggal</th>
+                                        <th>Prestasi</th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-
+                                </thead>
+                                <tbody>
+                                    @foreach ($prestasi as $i => $data)
+                                        <tr>
+                                            <td>{{ ($prestasi->currentPage() - 1) * $prestasi->perPage() + $i + 1 }}</td>
+                                            <!-- Nomor urut otomatis sesuai dengan pagination -->
+                                            <td>{{ $data->acara }}</td>
+                                            <td>{{ $data->penyelenggara }}</td>
+                                            <td>{{ \Carbon\Carbon::parse($data->tanggal)->format('d F Y') }}</td>
+                                            <!-- Format tanggal -->
+                                            <td>{{ $data->prestasi }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                         <!-- Pagination -->
                         <style>
                             #paginate nav .pagination {
@@ -275,8 +276,7 @@
 
 
 
-    <!-- Start Sarana & Prasarana
-                                                                                          ============================================= -->
+    <!-- Start Sarana & Prasarana -->
     <div class="rel-project de-pb" id="saranaPrasarana">
         <div class="container">
             <h2 class="text-center mb-40 mt-40">Sarana & Prasarana</h2>
@@ -297,8 +297,7 @@
         </div>
     </div>
     <!-- End Sarana & Prasarana -->
-    <!-- Start Humas
-                                                                                          ============================================= -->
+    <!-- Start Humas -->
     <div class="service-area posi-rel bg de-padding" id="humas">
         <div class="container">
             <div class="row">

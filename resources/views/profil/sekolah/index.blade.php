@@ -59,13 +59,7 @@
             <div class="card-header">
                 <h4 class="header-title">Lokasi</h4>
                 <p class="text-muted mb-0">
-                    {!! str_replace(
-                        ['width="600"', 'height="450"'],
-                        ['width="100%"', 'height="250"'],
-                        html_entity_decode($data->lokasi),
-                    ) !!}
-                    {{-- 
-                {!!(isset($data))? $data->lokasi: ""!!} --}}
+                    {!! isset($data) ? $data->lokasi : '' !!}
                 </p>
             </div>
         </div>

@@ -109,9 +109,6 @@
                         </div>
                     </div>
                  </div> --}}
-    </div>
-    </div>
-    </div>
     <!-- Controls -->
     <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -121,8 +118,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-    </div>
-    </div>
+
     <!-- End Hero -->
 
 
@@ -159,7 +155,7 @@
 
 
     <!-- Start Blog
-                                                                                                                                                            ============================================= -->
+                                                                                                                                                                                ============================================= -->
     <div class="blog-area posi-rel de-padding">
         <div class="container">
             <div class="row">
@@ -193,7 +189,7 @@
     <!-- End Blog -->
 
     <!-- Start work
-                                                                                                                                                            ============================================= -->
+                                                                                                                                                                                ============================================= -->
     <div id="portfolio" class="portfolio-area posi-rel de-padding">
         {{-- <div class="portfolio-animation">
         <img src="/assets2/img/animation/ani-3.png" alt="thumb">
@@ -255,7 +251,7 @@
     <!-- End Work -->
 
     <!-- Start Service
-                                                                                                                                                        ============================================= -->
+                                                                                                                                                                            ============================================= -->
     <div class="serv-2-area de-padding">
         <div class="container">
             <div class="row">
@@ -282,7 +278,7 @@
     <!-- End Service -->
 
     <!-- Start Google Maps
-                                                                                                                                                            ============================================= -->
+                                                                                                                                                                                ============================================= -->
     <div class="map-area de-padding">
         <div class="container">
             <div class="row">
