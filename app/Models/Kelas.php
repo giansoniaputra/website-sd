@@ -44,4 +44,20 @@ class Kelas extends Model
                 ->get();
         }
     }
+     // Fungsi untuk mengambil kelas unik dari field 'kelas'
+     public static function getUniqueKelas($tahun_ajaran_uuid)
+     {
+         return self::where('tahun_ajaran_uuid', $tahun_ajaran_uuid)
+                    ->select('kelas') // Ambil field 'kelas' saja
+                    ->distinct() // Pastikan nilai yang diambil unik
+                    ->get();
+     }
+ 
+     // Fungsi untuk mengambil data kelas berdasarkan nomor kelas
+     public static function getKelasByNumber($tahun_ajaran_uuid, $kelas_number)
+     {
+         return self::where('tahun_ajaran_uuid', $tahun_ajaran_uuid)
+                    ->where('kelas', $kelas_number)
+                    ->get();
+     }
 }
