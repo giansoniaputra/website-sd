@@ -22,7 +22,7 @@
                                 style="background-image: url('{{ asset('storage/' . $carousel->photo) }}');">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-xl-6">
+                                        <div class="col-xl-6">`
                                             <div class="hero-content">
                                                 <span class="hero-p1 hero-sm">Selamat Datang Di </span>
                                                 <h2 class="text-white">
@@ -65,50 +65,7 @@
             @endif
         </div>
     </div>
-    {{-- <div class="carousel-item">
-                    <div class="hero-single bg" style="background-image: url('/assets2/img/header/1280 X 720.png');">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-6">
-                                    <div class="hero-content">
-                                        <span class="hero-p1 hero-sm">Selamat Datang Di </span>
-                                        <h2 class="text-white">
-                                            SD-IT <br> <span>AL MUKRON</span>
-                                        </h2>
-                                        <p class="text-white">
-                                            Generasi Rabbani Iman Ilmu Amal Akhlaq
-                                        </p>
-                                        <div class="hro-btn">
-                                            <a href="#" class="theme-btn text-white">Lebih Lanjut</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="hero-single bg" style="background-image: url('/assets2/img/header/1280 X 720.png');">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-6">
-                                    <div class="hero-content">
-                                        <span class="hero-p1 hero-sm">Selamat Datang Di </span>
-                                        <h2 class="text-white">
-                                            SD-IT <br> <span>AL MUKRON</span>
-                                        </h2>
-                                        <p class="text-white">
-                                            Generasi Rabbani Iman Ilmu Amal Akhlaq
-                                        </p>
-                                        <div class="hro-btn">
-                                            <a href="#" class="theme-btn text-white">Lebih Lanjut</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                 </div> --}}
+    
     <!-- Controls -->
     <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -3856,3 +3856,37 @@ header.header.single-head .navbar.in {
     object-fit: cover; /* Memastikan gambar mengisi kontainer tanpa merusak rasio aspek */
 }
 
+@media (max-width: 991.98px) { /* Untuk tablet */
+    .hero-single {
+        height: 80vh;
+        padding-top: 8rem;
+        background-size: contain !important;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) { /* Untuk hp */
+    .hero-single {
+        height: 70vh;
+        padding-top: 6rem;
+        background-size: contain !important;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
